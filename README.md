@@ -1,3 +1,3 @@
 # PythonBasic
 
-pythonclass
+python class
