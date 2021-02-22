@@ -1,0 +1,179 @@
+41. What will be the data type of x after the following 
+statement if input entered is 18? 
+x = input('Enter a number: ') 
+
+a. Float 	b. String 	c. List 	d. Integer 
+
+My Answer: b
+
+
+42. What will be the data type of x after the following 
+statement if input entered is 50? 
+x = input('Enter a number: ') 	y = int(x)
+
+a. Float 	b. String 	c. List 	d. Integer 
+
+My Answer: d
+
+
+43. What will be the data type of y after the following 
+statements?
+x = 71 	y = float(x) 
+
+a. Float 	b. String 	c. List 	d. Integer 
+
+My Answer: a
+
+
+44. What will be the data type of y after the following 
+statements?
+x = 48 	y = str(x) 
+
+a. Float 	b. String 	c. List 	d. Integer 
+
+My Answer: b
+
+
+45. What will be the data type of y after the following 
+statements?
+x = y = z = 8 	print(y) 
+
+a. x 	b. 8 	c. z 	d. y 
+
+My Answer: b
+
+
+46. What will be the value of x, y and z after the following 
+statement? 
+x = y = z = 300 
+
+a. All three will have the value of 3
+b. All three will have the value of 100 
+c. All three will have the value of 300 
+d. x and y will have arbitrary values, while z will have 
+the value of 300 
+
+My Answer: c
+
+
+47. What will be the value of x, y and z after the following 
+statement? 
+x, y, z = 3, 4, 5 
+
+a. All three will have the value of 3
+b. All three will have the value of 345 
+c. x will have the value of 3, y will have the value 4 
+and z will have the value of 5  
+d. x and y will have arbitrary values, while z will have 
+the value of 345 
+
+My Answer: c
+
+
+48. What is the data type of x after the following statement? 
+x = [7, 8, 9, 10] 
+
+a. List 	b. Dictionary 	c. Tuple 	d. String 
+
+My Answer: a
+
+
+49. What is the data type of x after the following statement? 
+x = ['Today', 'Tomorrow', 'Yesterday'] 
+
+a. List 	b. Dictionary 	c. Tuple 	d. String 
+
+My Answer: a
+
+
+50. What will be the output after the following statements? 
+x = ['Today', 'Tomorrow', 'Yesterday'] 	y = x[1] 	print(y)
+
+a. x1 	b. Today 	c. Tomorrow 	d. Yesterday 
+
+My Answer: c
+
+
+51. What will be the output after the following statements? 
+x = [25, 35, 45] 	y = x[0] 	print(y) 
+
+a. x0 	b. 25 	c. 35 	d. 45
+
+My Answer: b
+
+
+52. What will be the output after the following statements? 
+x = [10, 20, 30] 	y = x[1] + x[2] 	print(y) 
+
+a. 20 	b. 30	c. 40 	d. 50
+
+My Answer: d
+
+
+53. What will be the output after the following statements? 
+x = ['Sunday', 'Monday', 'Tuesday'] 	y = x[1] + x[2] 	
+print(y) 
+
+a. MondayTuesday 	b. SundayMonday 
+c. SunMonday 	d. Monday Tuesday
+
+My Answer: a
+
+
+54. What will be the output after the following statements? 
+x = [[0.0, 1.0, 2.0], [4.0, 5.0, 6.0]] 	y = x[1][2] 	
+print(y) 
+
+a. 0.0 	b. 1.0	c. 5.0 	d. 6.0
+
+My Answer: d
+
+
+55. What will be the output after the following statements? 
+x = [[0.0, 1.0, 2.0], [4.0, 5.0, 6.0]] 	y = x[0][1] + x[1][0] 
+print(y) 
+
+a. 1.0 	b. 4.0	c. 5.0 	d. 6.0
+
+My Answer: c
+
+
+56. What will be the output after the following statements? 
+x = 3 	y = 4 	print(x * y) 
+
+a. 3 	b. 4 	c. 3 4 	d. 12 
+
+My Answer: d
+
+
+57. What will be the output after the following statements? 
+x = [15, 45, 85, 95] 	print(x[3] - x[1]) 
+
+a. 30 	b. 40 	c. 50 	d. 10 
+
+My Answer: c
+
+
+58. What will be the output after the following statements? 
+x = [5, 4, 3, 2] 	print(x)
+
+a. [5, 4, 3, 2]  	b = 5, 4, 3, 2  	c. 5432 	d. (5, 4, 3, 2) 
+
+My Answer: a
+
+
+59. What will be the output after the following statements? 
+x = [5, 4, 3, 2] 	x.append(1)	print(x)
+
+a. [5, 4, 3, 2]  	b = 5, 4, 3, 2, 1  	c. 5432 	d. [5, 4, 3, 2, 1] 
+
+My Answer: d
+
+
+60. What will be the output after the following statements? 
+x = [5, 4, 3, 2] 	x.insert(1, 0) 	print(x)
+
+a. [5, 1, 3, 2, 0]  	b. [5, 0, 4, 3, 2]  	
+c. [0, 5, 4, 3, 2] 	d. [1, 5, 4, 3, 2]
+
+My Answer: b

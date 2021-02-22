@@ -1,0 +1,82 @@
+11. Output displayed by the print function will add this invisible 
+character at the end of the line by default... 
+
+a. \t 	b. \n 	c. \s 	d. \r 
+
+My Answer: b
+
+
+12. Multiple values specified in parentheses to print function will 
+display each value separated with this by default... 
+
+a. Single Space 	b. Double Space 	c. A new Line 	d. Double Lines 
+
+My Answer: a
+
+
+13. Which of the following will provide an ! character as 
+alternative separator for the print function? 
+
+a. sep is ! 	b. separate = ! 	c. sep >> '!' 	d. sep = '!' 
+
+My Answer: d
+
+
+14. Which of the following will provide a * character as alternative 
+line ending for the print function? 
+
+a. end to * 	b. end as * 	c. end = '*' 	d. ending = '*' 
+
+My Answer: c 
+
+
+15. For which type of error does the interpreter halts and reports 
+the error but does not execute the program? 
+
+a. Semantic error 	b. Syntax error 	c. Runtime error 	d. All type of errors 
+
+My Answer: b
+
+
+16. For which type of error does the interpreter runs the program 
+but halts at error and reports the error as an "Exception"? 
+
+a. Semantic error 	b. Syntax error 	c. Runtime error 	d. All type of errors 
+
+My Answer: d
+Answer: c 
+
+Solve: 
+
+Runtime error - 실행 도중에 오류가 나는 것 
+
+17. For which type of error does the interpreter runs the program 
+and does not report an error? 
+
+a. Semantic error 	b. Syntax error 	c. Runtime error 	d. All type of errors 
+
+My Answer: a
+
+
+18. What will be the output after the following statements? 
+x = 6 y = 3 print(x / y) 
+
+a. 2.0 	b. 2 	c. 18 	d. 18.0
+
+My Answer: a
+
+
+19. What will be the output after the following statements? 
+x = 8 y = 2 print(x // y) 
+
+a. 4.0 	b. 4 	c. 16 	d. 16.0 
+
+My Answer: b
+
+
+20. What will be the output after the following statements? 
+x = 5 y = 4 print(x % y) 
+
+a. 0 	b. 20 	c. 1.0 	d. 1 
+
+My Answer: d

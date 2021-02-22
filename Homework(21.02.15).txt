@@ -1,0 +1,72 @@
+1. Which of the following version of Python was released in October, 2020 by Python.org?
+
+a. 3.3	b. 3.9 	c. 2.4 	d. 2.6
+
+My Answer: b
+
+
+2. Python files are saved with the extension as...? 
+
+a. .python	b. .pe	c. .py	d. .pi 
+
+My Answer: c
+
+
+3. What is the name of the GUI that comes in-built as an interactive shell with Python? 
+
+a. PGUI	b. Pyshell 	c. IDLE 	d. PythonSh 
+
+My Answer: c 
+
+
+4. IDLE stands for...? 
+
+a. Indigenous Development Lab 
+b. Integrated DeveLopment Environment
+c. Integrated Developers Local Environment
+d. Indie Developers Environment 
+
+My Answer: c 
+Answer: b
+
+
+5. The function to display a specified message on the screen is...? 
+
+a. print 	b. display 	c. run 	d. output 
+
+My Answer: a
+
+
+6. Which of the following is an assignment operator in Python? 
+
+a. == 	b. === 	c. >>> 	d. = 
+
+My Answer: d
+
+
+7. Which of the following is used to initialize multiple variables with a common value? 
+
+a. x = y : y = 33 	b. x = y = z = 33 	c. x = z; y = z; x = 33; 	d. x & y & z = 33
+
+My Answer: b
+
+
+8. Comments in Python begin with...? 
+
+a. { 	b. % 	c. * 	d. # 
+
+My Answer: d
+
+
+9. A user-specified value can be assigned to a variable with this function... 
+
+a. user 	b. enter 	c. input 	d. value 
+
+My Answer: c
+
+
+10. User input is read as...? 
+
+a. Floating Decimal 	b. Text String 	c. Boolean Value 	d. Integer 
+
+My Answer: b

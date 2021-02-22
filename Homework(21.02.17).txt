@@ -1,0 +1,184 @@
+21. What will be the output after the following statements?
+x = 3 y = 2 x += y 
+print(x) 
+
+a. 3 	b. 2 	c. 5 	d. 1
+
+My Answer: c
+
+
+22. What will be the output after the following statements?
+x = 5 y = 7 x *= y 
+print(x) 
+
+a. 7 	b. 12 	c. 5 	d. 35 
+
+My Answer: d
+
+
+23. What will be the output after the following statements?
+x = 25 y = 15 x -= y 
+print(x) 
+
+a. 10 	b. 25 	c. 15 	d. -15 
+
+My Answer: a
+
+
+24. What will be the output after the following statements?
+x = 30 y = 7 x %= y 
+print(x) 
+
+a. 4 	b. 28 	c. 2 	d. 37 
+
+My Answer: c
+
+25. What will be the output after the following statements?
+x = 3 y = 7 
+print(x == y) 
+
+a. y = 7 and x = 3 	b. True 	c. x = 3 and y = 3 	d. False 
+
+My Answer: d
+
+26. What will be the output after the following statements?
+x = 8 y = 6 
+print(x != y) 
+
+a. y = 6 and x = 8 	b. True 	c. x = 6 and y = 6 	d. False 
+
+My Answer: b
+
+
+27. What will be the output after the following statements?
+x = 83 y = 57 
+print(x > y) 
+
+a. True 	b. False 	c. Yes 	d. No 
+
+My Answer: a
+
+
+28. What will be the output after the following statements?
+x = 72 y = 64 
+print(x < y) 
+
+a. True 	b. False 	c. Yes 	d. No 
+
+My Answer: b 
+
+
+29. What will be the output after the following statements?
+x = True y = False 
+print(x and y) 
+
+a. True 	b. False 	c. Not defined 	d. xy 
+
+My Answer: b
+
+
+30. What will be the output after the following statements?
+x = True y = False 
+print(x or y) 
+
+a. True 	b. False 	c. Not defined 	d. xy 
+
+My Answer: a
+
+
+31. What will be the output after the following statements?
+x = True y = False 
+print(not x) 
+
+a. True 	b. False 	c. Not defined 	d. y 
+
+My Answer: b
+
+
+32. What will be the output after the following statements?
+x = True y = False 
+print(not y) 
+
+a. True 	b. False 	c. Not defined 	d. xy 
+
+My Answer: a
+
+
+33. What will be the output after the following statements?
+x = 20 y = 40  
+if (y > x) 
+    z = y
+else x 
+print(z) 
+
+a. True 	b. False 	c. 20 	d. 40 
+
+My Answer: d
+
+
+34. What will be the output after the following statements?
+x = 50 y = 10 
+z = y if (y > x) else x 
+print(z) 
+
+a. True 	b. False 	c. 50 	d. 10 
+
+My Answer: c
+
+35. What will be the output after the following statements?
+x = 65 y = 53 
+z = y if (x % 2 == 0) else x
+print(z)
+
+a. True 	b. False 	c. 65 	d. 53 
+
+My Answer: c
+
+
+36. What will be the output after the following statements?
+x = 46 y = 98 
+z = y if (y % 2 == 0) else x
+print(z)
+
+a. True 	b. False 	c. 46 	d. 98 
+
+My Answer: a
+Answer: d 
+
+ # if 문이 참이므로 else는 무시되고 z = y이므로 y 값 출력
+
+
+37. What will be the output after the following statements?
+x = 2 * 4 + 7 
+print(x) 
+
+a. 30 	b. 15 	c. 22	d. 247
+
+My Answer: b
+
+
+38. What will be the output after the following statements?
+x = 7 * (4 + 5) 
+print(x) 
+
+a. 63 	b. 16 	c. 33	d. 35
+
+My Answer: a
+
+
+39. What will be the output after the following statements?
+x = '24' + '16' 
+print(x) 
+
+a. 40 	b. 2416 	c. 21	d. 46
+
+My Answer: b
+
+
+40. What will be the output after the following statements?
+x = 15 + 35 
+print(x) 
+
+a. 40 	b. 153 	c. 50	d. 1535
+
+My Answer: c
