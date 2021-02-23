@@ -1,0 +1,179 @@
+61. What will be the output after the following statements?
+x = [5,4,3,2] 	x.remove(2) 	print(x)
+
+a. [5,3,2] 	b. [5,4,3] 	c. [5,4,2] 	d. [3,2]
+
+My Answer: b
+
+
+62. What will be the output after the following statements?
+x = [5,4,3,2,1] 	print(x.pop(3))
+
+a. 4 	b. 3 	c. 2 	d. 1
+
+My Answer: c
+
+
+63. What will be the output after the following statements?
+x = [5,4,3,2,1] 	print(x.index(1))
+
+a. 4 	b. 3 	c. 2 	d. 1
+
+My Answer: a
+
+
+64. What will be the output after the following statements?
+x = [5,4,3,2,1] 	x.extend(x) 	print(x)
+
+a. [5,4,3,2,1] 	b. [] 	c. [1,2,3,4,5] 	
+d. [5,4,3,2,1,5,4,3,2,1]
+
+My Answer: d
+
+
+65. What will be the output after the following statements?
+x = [5,4,3,2,1] 	y = [0,5,10] 	x.extend(y) 	
+print(x)
+
+a. [5,4,3,2,1,0,5,10] 	b. [] 	c. [5,4,3,2,1] 	
+d. [0,5,10,5,4,3,2,1]
+
+My Answer: a
+
+
+66. What will be the output after the following statements?
+x = [5,4,3,2,1] 	y = [10,5,0] 	x.extend(y) 
+print(y)
+
+a. [5,4,3,2,1,10,5,0] 	b. [] 	c. [10,5,0,5,4,3,2,1] 	
+d. [10,5,0]
+
+My Answer: d
+
+
+67. What will be the output after the following statements?
+x = [5,4,3,2,1] 	y = [10,5,0] 	y.extend(x) 
+print(y)
+
+a. [5,4,3,2,1,10,5,0] 	b. [10,5,0,5,4,3,2,1] 	c. [5,4,3,2,1] 	
+d. [10,5,0]
+
+My Answer: b
+
+
+68. What will be the output after the following statements?
+x = [5,4,3,2,1] 	x.reverse() 	print(x)
+
+a. [0,1,2,3,4,5] 	b. [0,5,4,3,2,1] 	c. [5,4,3,2,1,0] 	
+d. [1,2,3,4,5]
+
+My Answer: d
+
+
+69. What will be the output after the following statements?
+x = [25,14,53,62,11] 	x.sort() 	print(x)
+
+a. [11,14,25,53,62] 	b. [25,14,53,62,11]	c. [62,53,25,14,11] 	
+d. [25,53,62,14,11]
+
+My Answer: a
+
+
+70. What will be the output after the following statements?
+x = ['25','Today','53','Sunday','15'] 	x.sort() 	print(x)
+
+a. ['Today','Sunday','15','25','53'] 	
+b. ['Sunday','Today','15','25',53']	
+c. ['15','25','53','Sunday','Today'] 	
+d. ['15','25','53','Today','Sunday']
+
+My Answer: c
+
+
+71. What will be the output after the following statements?
+x = [25,'Today',53,'Sunday',15] 	x.reverse() 	
+print(x)
+
+a. ['Today','Sunday',15,25,53] 	
+b. [15,'Sunday',53,'Today',25]	
+c. [15,25,53,'Sunday','Today'] 	
+d. [15,25,53,'Today','Sunday']
+
+My Answer: b
+
+
+72. What will be the output after the following statements?
+x = [25,35,53,25,52,35,25] 	print(x.count(25)) 	
+
+a. 25 	b. 3	c. 53 	d. 35
+
+My Answer: b
+
+
+73. What will be the output after the following statements?
+x = [25,35,53,25,52,35,25] 	print(len(x)) 	
+
+a. 25 	b. 5	c. 7 	d. 35
+
+My Answer: c
+
+
+74. What will be the output after the following statements?
+x = [25,35,53,25,52,35,25] 	len(x) 	print(x) 	
+
+a. 25 	b. 5	c. 7 	d. [25,35,53,25,52,35,25]
+
+My Answer: d
+
+
+75. What will be the output after the following statements?
+x = [25,35,53,25,52,35,25] 	del x[3] 	print(x) 	
+
+a. [25,35,53,52,35,25] 	b. [25,5,5,25,52,5,25]	
+c. [35,53,52,35] 	d. [25,35,53,25,52,35,25]
+
+My Answer: a
+
+
+76. What will be the output after the following statements?
+x = [5,3,6,2,4,0,1] 	del x[2:3] 	print(x) 	
+
+a. [5,3,6,4,0,1] 	b. [5,3,2,4,0,1]	
+c. [5,6,2,4,0,1] 	d. [5,4,0,1]
+
+My Answer: b
+
+
+77. What will be the output after the following statements?
+x = [5,3,6,2,4,0,7] 	del x[0:7] 	print(x) 	
+
+a. [] 	b. [5,3,6,2,4,0,7]	
+c. [5,3,6,2,4,0] 	d. [3,6,2,4,0]
+
+My Answer: a
+
+
+78. What will be the output after the following statements?
+x = [5,3,6,2,4,0,7] 	del x[0:4] 	print(x) 	
+
+a. [] 	b. [5,3,6,2,7]	
+c. [5,3,6,2,4,0] 	d. [4,0,7]
+
+My Answer: d
+
+
+79. What will be the output after the following statements?
+x = [5,3,6,2,4,0,7] 	del x[:] 	print(x) 	
+
+a. [] 	b. [5,3,6,2,7]	
+c. [5,3,6,2,4,0] 	d. [4,0,7]
+
+My Answer: a
+
+
+80. What will be the output after the following statements?
+x = [4,0,7] 	y = str(x[0]) 	print(y) 	
+
+a. 11 	b. 4	c. 40 	d. 7
+
+My Answer: b
