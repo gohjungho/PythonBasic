@@ -1,0 +1,163 @@
+81. What will be the output after the following statements? 
+x = [4,0,7] 	y = float(x[0] + x[2]) 	print(y)
+
+a. 11 	b. 11.0 	c. 47.0 	d. 47 
+
+My Answer: b
+
+
+82. What will be the data type of x after the following statements? 
+x = (34,81,50) 
+
+a. List 	b. String 	c. Dictionary 	d. Tuple 
+
+My Answer: d
+
+
+83 What will be the data type of x after the following statements? 
+x = 'Python 3 Test'
+
+a. List 	b. String 	c. Dictionary 	d. Tuple 
+
+My Answer: b
+
+
+84. What will be the data type of x after the following statements? 
+x = [2290,376,198]
+
+a. List 	b. String 	c. Dictionary 	d. Tuple 
+
+My Answer: a
+
+
+85. What will be the data type of x after the following statements? 
+x = {'lang':'Python','version':'3'}
+
+a. List 	b. Set 	c. Dictionary 	d. Tuple 
+
+My Answer: c
+
+
+86. What will be the data type of x after the following statements? 
+x = {2015, 2016, 2017, 2018}
+
+a. List 	b. Set 	c. Dictionary 	d. Tuple 
+
+My Answer: b
+
+
+87. What will be the data type of x after the following statements? 
+x = [2016, 'Leap Year', 'True']
+
+a. List 	b. String 	c. Dictionary 	d. Boolean 
+
+My Answer: a
+
+
+88. What will be the data type of x after the following statements? 
+x = False
+
+a. List 	b. String 	c. Dictionary 	d. Boolean 
+
+My Answer: d
+
+
+89. Which of the following function can be used to find the data type of a variable? 
+
+a. data() 	b. type() 	c. ture() 	d. str() 
+
+My Answer: b
+
+
+90. What will be the output after the following statements?
+x = [24,50,37] 	y = 24 in x 	print(y)
+# x안에 24가 있는가 
+
+a. x[0] 	b. [24] 	c. True 	d. False 
+
+My Answer: c
+
+
+91. What will be the output after the following statements?
+x = {'A','B','C'} 	y = 'b' in x 	print(y)
+
+a. x[1] 	b. ['B'] 	c. True 	d. False 
+
+My Answer: d
+
+
+92. What will be the output after the following statements?
+x = 'Python' 	y = 'y' in x 	print(y)
+
+a. [1] 	b. y 	c. True 	d. False 
+
+My Answer: c
+
+
+93. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	y = 0 in x 	print(y)
+
+a. x[0] 	b. [24] 	c. True 	d. False 
+# x에서 값을 찾는 건 key 기준 
+
+My Answer: c
+
+
+94. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	y = 8 in x 	print(y)
+
+a. x[0] 	b. [24] 	c. True 	d. False 
+
+My Answer: d
+
+
+95. What will be the data type of x after the following statements?
+false = "This is not true" 	x = false 
+# 여기서의 false는 불의 false가 아닌 변수를 가리킴
+
+a. List 	b. String 	c. Dictionary 	d. Boolean 
+
+My Answer: b
+
+
+96. Which of the following is immutable (values that cannot be changed)?
+# 수정이 불가한 것 찾기
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set 
+
+My Answer: c
+
+
+97. Which of the following has only unique values? 
+# 중복을 허용하지 않는 것 찾기
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set 
+
+My Answer: d
+
+
+98. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	print(x.keys())
+
+a. dict_keys([0,1,2,3]) 	b. dict_keys{0,1,2,3} 
+c. dict_keys(0,1,2,3) 	d. dict_keys[0,1,2,3] 
+
+My Answer: a
+
+
+99. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	print(x.values())
+
+a. dict_values([4,8,16,32]) 	b. dict_values{4,8,16,32} 
+c. dict_values(4,8,16,32) 	d. dict_values[4,8,16,32] 
+
+My Answer: a
+
+
+100. What will be the output after the following statements?
+x = {1:'Jan', 2:'Feb', 3:'March', 4:'April'} 	print(x[2])
+# 딕셔너리는 순서가 없으므로 인덱싱이 없음 
+
+a. Jan 	b. Feb 	c. March 	d. April 
+
+My Answer: b

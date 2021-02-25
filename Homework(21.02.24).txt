@@ -1,0 +1,199 @@
+101. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	print(list(x.values())[2])
+
+a. [4,8] 	b. [4,8,16] 	c. 16 	d. 8 
+
+My Answer: c
+
+
+102. What will be the output after the following statements?
+x = {0:4, 1:8, 2:16, 3:32} 	print(x.items())
+
+a. dict_items(4,8,16,32) 	b. dict_items([4,8,16,32])
+c. dict_items[0,1,2,3] 	d. dict_items([(0,4), (1,8), (2,16), (3,32)]) 
+
+My Answer: d
+
+
+103. What will be the output after the following statements?
+x = {5:4, 8:8, 3:16, 9:32} 	print(sorted(x.items()))
+
+a. [4,8,16,32] 	b. [(3,16), (5,4), (8,8), (9,32)] 
+c. [3,5,8,9] 	d. [(4,5}, (8,8), (16,3), (32,9)] 
+
+My Answer: b
+
+
+104. What will be the output after the following statements?
+x = 7 	if x > 5: print(20)
+
+a. 20 	b. 5 	c. x 	d. 7 
+
+My Answer: a
+
+
+105. What will be the output after the following statements?
+x = 8 	if x > 8: print(20) 	else: print(10)
+
+a. 20 	b. x 	c. 10 	d. 8 
+
+My Answer: c
+
+
+106. What will be the output after the following statements?
+x = 40 	if x > 10: print(20) 	elif x == 40: print(10) 
+else: print(30)
+
+a. 20 	b. 40 	c. 10 	d. 30 
+
+My Answer: a
+
+
+107. What will be the output after the following statements?
+x = 15 	if x > 15: print(0) 	elif x == 15: print(1) 
+else: print(2)
+
+a. 0 	b. 1 	c. 2 	d. 15 
+
+My Answer: b
+
+
+108. What will be the output after the following statements?
+x = 5 	if x > 15: print('yes') 
+elif x == 15: print('equal') 	else: print('no')
+
+a. 15 	b. yes 	c. equal 	d. no 
+
+My Answer: d
+
+
+109. What will be the output after the following statements?
+x = 50 	if x > 10 and x < 15: print('true') 
+elif x > 15 and x < 25: print('not true') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: d
+
+
+110. What will be the output after the following statements?
+x = 25 	if x > 10 and x < 15: print('true') 
+elif x > 15 and x < 25: print('not true') 
+elif x > 25 and x < 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: d
+
+
+111. What will be the output after the following statements?
+x = 15 	if x > 10 and x <= 15: print('true') 
+elif x > 15 and x < 25: print('not true') 
+elif x > 25 and x < 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: a
+
+
+112. What will be the output after the following statements?
+x = 25 	if x > 10 and x <= 15: print('true') 
+elif x >= 15 and x < 25: print('not true') 
+elif x >= 25 and x < 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: b
+
+
+113. What will be the output after the following statements?
+x = 25 	if x >= 10 and x <= 15: print('true') 
+elif x >= 15 and x <= 25: print('not true') 
+elif x >= 25 and x <= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: c
+
+
+114. What will be the output after the following statements?
+x = 20 	if x <= 10 or x >= 75: print('true') 
+elif x <= 15 or x >= 55: print('not true') 
+elif x <= 25 or x >= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: b
+
+
+115. What will be the output after the following statements?
+x = 30 	if x <= 10 or x >= 75: print('true') 
+elif x <= 15 or x >= 55: print('not true') 
+elif x <= 25 or x >= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: d
+
+
+116. What will be the output after the following statements?
+x = 80 	if x <= 10 or x >= 75: print('true') 
+elif x <= 15 or x >= 55: print('not true') 
+elif x <= 25 or x >= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: a
+
+
+117. What will be the output after the following statements?
+x = 60 	if x <= 10 or x >= 75: print('true') 
+elif x <= 15 or x >= 55: print('not true') 
+elif x <= 25 or x >= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: c
+
+
+118. What will be the output after the following statements?
+x = 68 	if x <= 50 and x >= 25: print('true') 
+elif x <= 60 or x >= 55: print('not true') 
+elif x <= 70 and x >= 35: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: a
+Answer: c 	# 오타.... and를 or로 바꿔씀......
+
+
+119. What will be the output after the following statements?
+x = 99 	if x <= 30 or x >= 100: print('true') 
+elif x >= 50 or x <= 80: print('not true') 
+elif x >= 100 or x <= 75: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: d
+
+
+120. What will be the output after the following statements?
+x = 70 	if x <= 30 or x >= 100: print('true') 
+elif x <= 50 or x == 50: print('not true') 
+elif x >= 150 or x <= 75: print('false') 
+else: print('not false')
+
+a. true 	b. false 	c. not true 	d. not false 
+
+My Answer: b
