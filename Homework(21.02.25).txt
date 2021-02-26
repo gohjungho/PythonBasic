@@ -1,0 +1,215 @@
+121. What will be the output after the following statements?
+x = 40 	y = 25 	
+if x + y >= 100: print('true’) 
+elif x + y == 50: print('not true’)
+elif x + y <= 90: print('false’) 
+else: print('not false’)
+
+a. true 	b. false 	c. not true 	d. not false
+
+My Answer: b
+
+
+122. What will be the output after the following statements?
+x = 1 
+while x < 10: 
+    print(x, end=’’) 	
+    x = x + 1
+
+a. 123456789 	b. 1 	c. 10 	d. 2
+
+My Answer: a
+
+
+123. What will be the output after the following statements?
+x = 0 
+while x < 10: 
+    print(x, end=’’) 
+    x += 4
+
+a. 0123456789 	b. 123456789 
+c. 4123456789 	d. 048
+
+My Answer: d
+
+
+124. What will be the output after the following statements?
+x = 0 	y = 4 
+while x + y < 10: 
+    print(x, end=’’) 
+    x += 1
+
+a. 012345 	b. 0123456789 
+c. 4123456789 	d. 048
+
+My Answer: a
+
+
+125. What will be the output after the following statements?
+x = 0 	y = 4 
+while x + y < 10: 
+    x += 1 
+    print(x, end=’’)
+a. 012345 	b. 0123456 
+c. 123456 	d. 0123456
+
+My Answer: c
+
+
+126. What will be the output after the following statements?
+x = 1 	y = 4 
+while x * y < 10: 
+    print(y, end=’’) 
+    y += 1
+
+a. 012345 	b. 456789 
+c. 123456789 	d. 0123456789
+
+My Answer: b
+
+
+127. What will be the output after the following statements?
+x = 1 	y = 4 
+while x * y < 10: 
+    print(y, end=’’) 
+    x += 1 
+    y += 1
+
+a. 4 	b. 48 	c. 148 	d. 0123456789
+
+My Answer: a
+
+
+128. What will be the output after the following statements?
+x = 1 	y = 4 
+while x * y <= 10: 
+    print(x, end=’’) 
+    x += 1 
+    y += 1
+
+a. 4 	b. 48 	c. 14 	d. 12
+
+My Answer: b
+Answer: d 	# x * y값이 아닌 x값 찍기..... 
+
+
+129. What will be the output after the following statements?
+x, y = 2, 5 
+while y - x < 5: 
+    print(x*y, end=' ') 
+    x += 3 
+    y += 4
+
+a. 1045 	b. 10 45 	c. 34 	d. 3 4 10 45
+
+My Answer: a
+Answer: b 	# 띄어쓰기(공백) 있음 
+
+
+130. What will be the output after the following statements?
+x, y = 0, 1 
+while y < 10: 
+    print(y, end=' ') 
+    x, y = y, x + y
+
+a. 1 1 2 3 5 8 	b. 112358 
+c. 0123456789 	d. 0 2 4 6 8
+
+My Answer: a
+
+
+131. What will be the output after the following statements?
+x = 1 
+while x < 4: 
+    x += 1 
+    y = 1 
+    while y < 3: 
+        print(y, end=' ‘) 
+        y += 1
+
+a. 1 1 2 2 	b. 1 1 2 2 3 3 4 4 
+c. 1 2 3 4 	d. 1 2 1 2 1 2
+
+My Answer: d
+
+
+132. What will be the output after the following statements?
+x = y = 1 
+while x < 4: 
+    x += 1 
+    while y < 3: 
+        print(y, end=' ‘) 
+        y += 1
+
+a. 1 1 2 2 	b. 1 2 
+c. 1 2 3 4 	d. 1 2 1 2 1 2
+
+My Answer: b
+
+
+133. What type of loop is this?
+x = 1 
+while x < 5: print(x, end='')
+
+a. Closed loop 	b. One time loop 
+c. Infinite loop 	d. Evergreen loop
+
+My Answer: c
+
+
+134. What will be the output after the following statements?
+x = 'hello’ 	for i in x: print(i, end=’’)
+
+a. h 	b. hello 	c. h e l l o 	d. i x
+
+My Answer: b
+
+
+135. What will be the output after the following statements?
+for i in range(5): print(i, end=’’)
+
+a. 5 	b. 1 5 	c. 012345 	d. 01234
+
+My Answer: d
+
+
+136. What will be the output after the following statements?
+for i in range(1,5): print(i, end=’’)
+
+a. 15 	b. 12345 	c. 1234 	d. 012345
+
+My Answer: c
+
+
+137. What will be the output after the following statements?
+for i in range(1,25,5): print(i, end=' ‘)
+
+a. 1 6 11 16 21 	b. 1 5 10 15 20 25 
+c. 1 5 25 		d. 16111621
+
+My Answer: a
+
+
+138. What will be the output after the following statements?
+x = ['P', 'y', 't', 'h', 'o', 'n’] 	for i in x: print(i, end=’’)
+
+a. P 	b. python 	c. Pytho 		d. Python
+
+My Answer: d
+
+
+139. What will be the output after the following statements?
+x = ('a', 'b', 'c', 'd’) 		for i in x: print(i, end=' ‘)
+
+a. abcd 	b. a b c d 	c. False 	d. True
+
+My Answer: b
+
+
+140. What will be the output after the following statements?
+x = {'x', 'z', 'y’} 	for i in x: print(i, end='')
+
+a. x z y 	b. xzy 	c. False 	d. True
+
+My Answer: b(잘못된 문제) 
+# set은 순서가 없으므로 실행시마다 값이 계속 달라진다.
