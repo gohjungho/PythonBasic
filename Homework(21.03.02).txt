@@ -1,0 +1,198 @@
+141. What will be the output after the following statements?
+x = {'z:1', 'y:2', 'x:3’} 
+for i in x: print(i, end=' ‘)
+
+a. x y z 	b. 1 2 3 	c. x:3 y:2 z:1 	d. True
+
+My Answer: c
+
+
+142. What will be the output after the following statements?
+x = ['P', 'y', 't', 'h', 'o', 'n'] 
+for i in enumerate(x): print(i, end=’’)
+
+a. ('P')('y')('t')('h')('o')('n’) 	b. python 
+c. python 	d. (0, 'P')(1, 'y')(2, 't')(3, 'h')(4, 'o')(5, 'n’)
+
+My Answer: d
+
+
+143. What will be the output after the following statements?
+x = {'x':1, 'y':2, 'z':3} 
+for i in x: print(i, end=' ‘)
+
+a. x y z 	b. 1 2 3 	c. x:1 y:2 z:3 	d. True
+
+My Answer: a
+
+
+144. What will be the output after the following statements?
+x = {'x':1, 'y':2, 'z':3} 
+for i, j in x.items(): print(i, j, end=' ‘)
+
+a. x y z 	b. x 1 y 2 z 3 	c. x:1 y:2 z:3 	d. x, 1, y, 2, z, 3
+
+My Answer: b
+
+
+145. What will be the output after the following statements?
+x = ['p', 'y', 't', 'h', 'o', 'n’] 
+y = ['0', '1', '2', '3', '4', '5’] 
+for i in zip(x, y): print(i, end=’’)
+
+a. ('P')('y')('t')('h')('o')('n’) 	
+b. python 0 1 2 3 4 5
+c. ('p', '0')('y', '1')('t', '2')('h', '3')('o', '4')('n', '5’) 
+d. (0, 'P')(1, 'y')(2, 't')(3, 'h')(4, 'o')(5, 'n')
+
+My Answer: c
+
+
+146. What will be the output after the following statements?
+for i in range(1,5): print(i, end=’’) 
+if i == 3: break
+
+a. 123 	b. 1234 	c. 12 	d. 12345
+
+My Answer: a
+
+
+147. What will be the output after the following statements?
+for i in range(0,5): 
+    If i == 2: break 
+    print(i, end=’’)
+
+a. 12 	b. 01 	c. 012 	d. 0123
+
+My Answer: b
+
+
+148. What will be the output after the following statements?
+for i in range(1,5): 
+    if i == 3: continue 
+print(i, end=‘ ‘)
+
+a. 1 2 4 	b. 1 2 3 4 	c. 1 2 	d. 1 2 3
+
+My Answer: a
+
+
+149. What will be the output after the following statements?
+for i in range(0,5): 
+    print(i, end=’’) 
+    if i == 2: continue
+
+a. 0124 	b. 01234 	c. 12 	d. 1345
+
+My Answer: b
+
+
+150. What will be the output after the following statements?
+myvar = 5 
+def printvar() : 
+    print(myvar) 
+printvar()
+
+a. 01245 	b. 12345 	c. 5 	d. 1234
+
+My Answer: c
+
+
+151. What is printvar in the following statements?
+myvar = 5 
+def printvar() : print(myvar) 
+printvar()
+
+a. A list 	b. A string 	c. An integer 	d. A function
+
+My Answer: d
+
+
+152. What will be the output after the following statements?
+myvar = 5 
+def printvar() : print(myvar, end =’’) 
+printvar() 
+printvar()
+
+a. 55 	b. 5 5 	c. 5 	d. 10
+
+My Answer: a
+
+
+153. What will be the output after the following statements?
+def call(var) : print(var, end =’’) 
+call(45)
+
+a. 55 	b. 4 5 	c. 45 	d. var
+
+My Answer: c
+
+
+154. What will be the output after the following statements?
+def call(var1, var2) : print(var1 + var2, end =’’) 
+call(10, 40)
+
+a. 10 	b. 50 	c. 40 	d. 10 + 40
+
+My Answer: b
+
+
+155. What will be the output after the following statements?
+def call(var1, var2, var3) : 
+    print(var1, var2, var3, end =’’) 
+a = b = c = 10 
+call(a, b, c)
+
+a. 1000 	b. 10 	c. 30 	d. 10 10 10
+
+My Answer: d
+
+
+156. What will be the output after the following statements?
+def call(var1=20, var2=5, var3=2) : 
+    print(var1, var2, var3, end =’’) 
+call()
+
+a. 100 	b. 1000 	c. 20 5 2 	d. 200
+
+My Answer: c
+
+
+157. What will be the output after the following statements?
+def call(var1=20, var2=5, var3=2) : 
+    print(var1, var2, var3, end =’’) 
+call(5,9,7)
+
+a. 5 9 7 b. 315 c. 2052 d. 200
+
+My Answer: a
+
+
+158. What will be the output after the following statements?
+def call(var1=20, var2=5, var3=2) : 
+    print(var1, var2, var3, end =’’) 
+call(5,7)
+
+a. 57 	b. 315 	c. 70 	d. 200
+
+My Answer: 답 없음 > 5 7 2
+
+
+159. What will be the output after the following statements?
+def call(var1=20, var2=5, var3=2) : 
+    print((var1 * var2) - var3, end =’’)
+call(var2=5, var3=3, var1=4)
+
+a. 17 	b. 98 	c. 70 	d. 11
+
+My Answer: a
+
+
+160. What will be the output after the following statements?
+def call(var1=20, var2=5, var3=2) : 
+    print((var1 * var2) - var3, end =’’) 
+call(7,4)
+
+a. 17 	b. 98 	c. 26 	d. 11
+
+My Answer: c

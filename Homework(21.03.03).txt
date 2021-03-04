@@ -1,0 +1,229 @@
+161. What will be the output after the following statements?
+def call(x, y) : 
+    return x * y 
+print(call(5, 3))
+
+a. 18 	b. 5, 3 	c. 15 	d. 8
+
+My Answer: c
+
+
+162. What will be the output after the following statements?
+def call(y, x) : 
+    return x / y 
+z = call(4, 9) 
+print(z)
+
+a. 0.444445 	b. 2 	c. 0 	d. 2.25
+
+My Answer: d
+
+
+163. What will be the output after the following statements?
+def call(x,y) : 
+    if y == 0: return 
+    return y - x 
+print(call(8,2))
+
+a. 6 	b. -6 	c. 2 	d. 6.0
+
+My Answer: b
+
+
+164. What will be the output after the following statements?
+def call(x,y) : 
+    if x == 0: return 
+    return y + x 
+print(call(0,5))
+
+a. 5 	b. 5.0 	c. 0 	d. None
+
+My Answer: a
+Answer: d
+
+
+165. What will be the output after the following statements?
+y = lambda x: x*4 
+print(y(6))
+
+a. 24 	b. 24.0 	c. 6: 24 	d. 36
+
+My Answer: a
+
+
+166. What will be the output after the following statements?
+x = 27 
+if x < 25: 
+    print(x) 
+else: pass
+
+a. None 	b. 25 	c. 27 	d. No output
+
+My Answer: d
+
+
+167. Which of the following is not a core data structure in Python?
+
+a. List 	b. Module 	c. Dictionary 	d. Tuple
+
+My Answer: b
+
+
+168. What will be the output after the following statements?
+def gen(): 
+    x = 0 
+    while True: 
+        yield x 
+        x += 1 
+y = gen()
+print(next(y), end=’’) 
+print(next(y), end=’’) 
+print(next(y), end=’’)
+
+a. 012 	b. 123 	c. 111 	d. 000
+
+My Answer: a
+
+# yield는 여러 개 쓰일 수 있다. 
+# yield가 있으면 제너레이터(일반적인 함수가 아님). 
+# yield를 만나면 거기서 멈춘다. 그리고 next를 만나면 그 자리로 다시 들어가서 루프를 돈다.
+## 즉 위 문제에서는 값 하나씩만을 출력하고 함수를 빠져나왔다가 next로 인해 다시 들어가 1을 더하고 
+루프를 다시 돌아 yield를 만나 다음 숫자를 뽑아낸다. 이를 값 3개를 뽑아낼 때까지 반복. 
+
+
+169. What will be the output after the following statements?
+def gen(): 
+    x = 2 
+    while True: 
+        yield x 
+        x += 1 
+y = gen()
+for i in y: 
+    if i >= 5: break 
+    else: print(i, end=’’)
+
+a. 0123 	b. 123 	c. 12345 	d. 234
+
+My Answer: d
+
+
+170. What do you type to enter the interactive help mode of Python?
+
+a. HELP 	b. save 	c. help() 	d. help
+
+My Answer: c
+
+
+171. What does the following statement do? 
+import random
+
+a. Imports the random module 
+b. Imports a random module from a list of modules
+c. Imports the random function 
+d. imports the directory named random
+
+My Answer: a
+
+
+172. What does the following statement do? 
+import keyword, sys
+
+a. Imports all the python keywords 
+b. Imports the keyword and sys modules
+c. Imports the keyword and sys functions 
+d. imports the directories named keyword and sys
+
+My Answer: b
+
+
+173. What will be the output after the following statements? 
+import random as rd 
+print(rd.randint(4,7))
+
+a. A random float value between 4 and 7, including 4 and 7
+b. A random float value between 4 and 7, excluding 4 and 7
+c. A random integer value between 4 and 7, excluding 4 and 7
+d. A random integer value between 4 and 7, including 4 and 7
+
+My Answer: d
+
+
+174. What will be the output after the following statements? 
+import random as rd 
+print(rd.random())
+
+a. A random float value between 0 and 1 
+b. A random integer value between 0 and 1
+c. A random float value between 0 and 10 
+d. A random integer value between 0 and 10
+
+My Answer: a
+
+
+175. What will be the output after the following statements?
+from random import * 
+x = [0, 2, 4, 6, 8, 10] 
+print(sample(x, 3))
+
+a. A dictionary containing 3 random keys from list x 
+b. Three random integer values between 0 and 10
+c. A list containing 3 random elements from list x 
+d. A tuple containing 2 random elements from list x
+
+My Answer: c
+
+
+176. Which of the following can be a possible output after the following statements?
+from random import * 
+print(sample(range(0,10), 3))
+
+a. [4, 11, 30] 	b. [3, 15, 10] 
+c. [1, 5, 7, 4] 	d. [1, 5, 0]
+
+My Answer: d
+
+177. What does the following statements do?
+import sys 
+print(sys.version)
+
+a. Displays the Python version 
+b. Displays the operating system version
+c. Displays the date 
+d. Displays the year
+
+My Answer: a
+
+
+178. What does the following statements do?
+import sys 
+print(sys.executable)
+
+a. Displays the Python version 
+b. Displays the operating system version
+c. Displays the location of the Python interpreter 
+d. Displays the date and time
+
+My Answer: c
+
+
+179. What does the following statements do?
+import keyword 
+print(keyword.kwlist)
+
+a. Displays the list of Python modules 
+b. Displays a list of all the Python keywords
+c. Displays a random keyword from the Python keywords 
+d. Displays the date and time
+
+My Answer: b
+
+
+180. What will be the output after the following statements?
+import math 
+print(math.floor(67.3))
+
+a. 67 	b. 68 	c. 67.0 	d. 68.0
+
+My Answer: a
+# math.(ceil, floor, round) - 올림, 내림, 반올림 
+
