@@ -1,0 +1,231 @@
+201. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%x’))
+
+a. Displays the time appropriate for locale 
+b. Displays the current year as 00 to 99
+c. Displays the current year as 0001 to 9999 
+d. Displays the date appropriate for locale
+
+My Answer: d
+# MM/DD/YY 형태로 오늘 날짜 반환 
+
+
+202. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%X’))
+
+a. Displays the current year as 0001 to 9999 
+b. Displays the timezone name
+c. Displays the time appropriate for locale 
+d. Displays the current year as 00 to 99
+
+My Answer: c
+# hh/mm/ss 형태로 현재시간 반환 
+
+
+203. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%y’))
+
+a. Displays the current year as 00 to 99 
+b. Displays the current year as 0001 to 9999
+c. Displays the timezone name 
+d. Displays the timezone offset from UTC as +HHMM or -HHMM
+
+My Answer: a
+# 연도 반환(두 자리) ex) 2021년 > 21
+
+
+204. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%Y’))
+
+a. Displays the current year as 0001 to 9999 
+b. Displays the timezone name
+c. Displays the timezone offset from UTC as +HHMM or -HHMM 
+d. Displays the full month name
+
+My Answer: a
+# 연도 반환(네 자리)
+
+
+205. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%Z’))
+
+a. Displays the timezone offset from UTC as +HHMM or -HHMM 
+b. Displays the timezone name
+c. Displays the abbreviated month name 
+d. Displays the full month name
+
+My Answer: b
+# 시간대 이름 (객체가 나이브하면 빈 문자열). 
+
+
+206. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%z’))
+
+a. Displays the full month name 
+b. Displays the abbreviated month name
+c. Displays the abbreviated day name 
+d. Displays the timezone offset from UTC as +HHMM or –HHMM
+
+My Answer: d
+# ±HHMM[SS[.ffffff]] 형태의 UTC 오프셋 (객체가 나이브하면 빈 문자열).
+
+
+207. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%a’))
+
+a. Displays the full month name 
+b. Displays the full day name
+c. Displays the abbreviated day name 
+d. Displays the abbreviated month name
+
+My Answer: c
+# 요일을 지역(내 위치)의 축약된 이름으로
+# ex) 금요일 > Fri
+
+
+208. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%b’))
+
+a. Displays the full month name 
+b. Displays the abbreviated month name
+c. Displays the full day name 
+d. Displays the abbreviated day name
+
+My Answer: b
+# 월을 지역(내 위치)의 축약된 이름으로
+# 3월 > Mar
+
+209. What does the following statements do? 
+from time import * 
+print(time())
+
+a. Displays the current time in seconds since the Epoch as a floating point number
+b. Displays the current time in minutes since the Epoch as a floating point number
+c. Displays the current time in seconds since the Epoch as an integer
+d. Displays the current time in minutes since the Epoch as an integer
+
+My Answer: a
+# 현재 시간을 Epoch Time을 기준으로 마이크로초 단위로 반환
+# Epoch Time(1970년 1월 1일 0시 0분 0초부터의 경과 시간)
+
+
+210. What does the following statements do? 
+from time import * 
+sleep(3)
+
+a. Pauses the execution of the program by 3 minutes 
+b. Pauses the execution of the program by 3 seconds
+c. Displays the current time in seconds since the Epoch as an integer
+d. Displays the current time in minutes since the Epoch as an integer
+
+My Answer: b
+# 3초의 시간 간격을 줌 
+
+
+211. What will be the output after the following statements?
+x = 'Python' 
+y = 'MCQ’'
+print(x + y)
+
+a. Python Python 
+b. MCQ MCQ 
+c. Python MCQ 
+d. PythonMCQ
+
+My Answer: d
+
+
+212. What will be the output after the following statements?
+x = 'Python ' 
+print(x*3)
+
+a. Pyt Pyt Pyt 	b. t 
+c. Python Python Python 	d. PythonPythonPython
+
+My Answer: c
+
+
+213. What will be the output after the following statements?
+x = 'Python' 
+print(x[4])
+
+a. h 	b. t 
+c. Python Python Python Python 	d. o
+
+My Answer: d
+
+
+214. What will be the output after the following statements?
+x = 'Python' 
+print(x[2:4])
+
+a. Pyth 	b. th 	c. tho 	d. thon
+
+My Answer: b
+
+
+215. What will be the output after the following statements?
+x = 'Python' 
+print(x[:])
+
+a. yth 	b. Pn 	c. Python 	d. PythonPythonPython
+
+My Answer: c
+
+
+216. What will be the output after the following statements?
+x = 'Python' 
+print('y' in x)
+
+a. y 	b. Y 	c. Python 	d. True
+
+My Answer: d
+# 'y'가 x에 있는가. 
+
+
+217. What will be the output after the following statements?
+x = 'Python' 
+print('p' not in x)
+
+a. p 	b. P 	c. True 	d. False
+
+My Answer: c
+
+
+218. What will be the output after the following statements?
+x = '{} 3 {}'.format('Python', 'Test’) 
+print(x)
+
+a. Python 3 Test 	b. Python Test 
+c. Test 3 Python 	d. Test Python
+
+My Answer: a
+
+
+219. What will be the output after the following statements?
+x = '{1} for {0}'.format('Python', 'Questions') 
+print(x)
+
+a. Python for Questions 	b. Questions for Python
+c. 1 for 0 	d. Python 1 for 0 Questions
+
+My Answer: b
+
+
+220. What will be the output after the following statements?
+x = '%s MCQ %s' %('Python', 'Test’) 
+print(x)
+
+a. Python MCQ 	b. MCQ Test 
+c. Test MCQ Python 	d. Python MCQ Test
+
+My Answer: d
+

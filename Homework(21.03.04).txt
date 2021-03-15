@@ -1,0 +1,260 @@
+181. What will be the output after the following statements?
+import math 
+print(math.ceil(21.4))
+
+a. 21 	b. 22 	c. 21.0 	d. 22.0
+
+My Answer: b
+# ceil: 올림 / floor: 내림 / round: 반올림 
+# 제일 가까운 정수가 오는 것이므로 실수가 나오지 않는다. 
+
+
+182. What will be the output after the following statements?
+import math 
+print(math.sqrt(4))
+
+a. 2.1 	b. 2 	c. 2.0 	d. 4.0
+
+My Answer: c
+# sqrt: 제곱근을 구하는 함수. 실수로 반환 
+
+
+183. What will be the output after the following statements?
+import math 
+print(math.pow(3,2))
+
+a. 6 	b. 9 	c. 6.0 	d. 9.0
+
+My Answer: d
+# pow: 제곱을 구하는 함수. 실수로 반환 
+
+
+184. What does the following statements do?
+import datetime 
+print(datetime.datetime.today())
+
+a. Displays current date and time 
+b. Displays a list of all the hours remaining till midnight
+c. Displays a random time from today's date 
+d. Displays today's weekday name
+
+My Answer: a
+# 현재 날짜와 시각을 반환
+
+
+185. What does the following statements do?
+from datetime import * 
+print(getattr(datetime.today(),'hour’))
+
+a. Displays current date and time 
+b. Displays a list of all the hours remaining till midnight
+c. Displays current hour of the day 
+d. Displays the number of hours in a day
+
+My Answer: c
+# 현재 날짜의 '시'만 뽑아서 반환
+
+
+186. What does the following statements do?
+from datetime import * 
+print(getattr(datetime.today(),'year’))
+
+a. Displays current date and year 
+b. Displays current year
+c. Displays the number of months in a year 
+d. Displays the number of days in a year
+
+My Answer: b
+# 현재 날짜의 '연'만 뽑아서 반환
+
+
+187. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%A’))
+
+a. Displays the full month name 
+b. Displays the abbreviated month name 
+c. Displays the abbreviated day name 
+d. Displays the full weekday name
+
+My Answer: d
+# 현재 날짜의 '요일'만 뽑아서 반환. 
+# %a는 요일 줄임말(Sun, Mon, ...)
+# abbreviated는 '줄인', '짧은'이라는 뜻
+
+
+188. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%B’))
+
+a. Displays the full weekday name 
+b. Displays the full month name
+c. Displays the abbreviated day name 
+d. Displays the abbreviated month name
+
+My Answer: b
+# 현재 날짜의 '월'만 뽑아서 반환. 
+# %b는 월 줄임말(Jan, Feb, ...) 
+
+
+189. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%d’))
+
+a. Displays the hour number of 12-hour clock 
+b. Displays the date and time appropriate for locale
+c. Displays the day of the month number (from 01 to 31) 
+d. Displays the microsecond number (from 0 to 999999)
+
+My Answer: c
+# 현재 날짜의 '일'만 뽑아서 줄임말로 반환. 
+# 요일(%A, %a), 월(%B, %b)과는 다르게 %D는 없음 
+
+
+190. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%c’))
+
+a. Displays the date and time appropriate for locale 
+b. Displays the microsecond number (from 0 to 999999)
+c. Displays the hour number of 12-hour clock 
+d. Displays the hour number of 24-hour clock
+
+My Answer: a
+# 날짜, 요일, 시간을 출력. 현재 시간대 기준 
+
+
+191. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%f’))
+
+a. Displays the date and time appropriate for locale 
+b. Displays the microsecond number (from 0 to 999999)
+c. Displays the hour number of 24-hour clock 
+d. Displays the hour number of 12-hour clock
+
+My Answer: b
+# 초 미만 자리의 시간을 6자리까지 출력
+
+
+192. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%I’))
+
+a. Displays the hour number of 12-hour clock 
+b. Displays the minute number from 00 to 59
+c. Displays the hour number of 24-hour clock 
+d. Displays the day number of the year from 000 to 366
+
+My Answer: a
+# 12시긴을 기준으로 '시' 반환 
+
+
+193. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%H’))
+
+a. Displays the minute number from 00 to 59 
+b. Displays the hour number of 12-hour clock
+c. Displays the hour number of 24-hour clock 
+d. Displays the day number of the year from 000 to 366
+
+My Answer: c
+# 24시간을 기준으로 '시' 반환 
+
+
+194. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%j’))
+
+a. Displays the month number from 01 to 12 
+b. Displays the minute number from 00 to 59
+c. Displays the day number of the year from 000 to 366 
+d. Displays the second number from 00 to 59
+
+My Answer: c
+# 1월 1일부터 경과한 일수
+# 세 자리 수로 반환 
+
+
+195. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%M’))
+
+a. Displays the month number from 01 to 12 
+b. Displays the second number from 00 to 59
+c. Displays the AM or PM equivalent for locale 
+d. Displays the minute number from 00 to 59
+
+My Answer: d
+# 현재 날짜의 '분'만 뽑아서 반환. 
+# %M(분)과 %m(숫자-월)은 서로 가리키는 것이 다르다. 
+
+
+196. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%m’))
+
+a. Displays the minute number from 00 to 59 
+b. Displays the month number from 01 to 12
+c. Displays the second number from 00 to 59 
+d. Displays the AM or PM equivalent for locale
+
+My Answer: b
+# 현재 날짜의 '월'의 숫자를 반환 
+# %M(분)과 %m(숫자-월)은 서로 가리키는 것이 다르다. 
+
+
+197. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%p’))
+
+a. Displays the AM or PM equivalent for locale 
+b. Displays the minute number from 00 to 59
+c. Displays the month number from 01 to 12 
+d. Displays the second number from 00 to 59
+
+My Answer: a
+# 현재 시간이 오전(AM)인지 오후(PM)인지 반환 
+
+
+198. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%S'))
+
+a. Displays the AM or PM equivalent for locale 
+b. Displays the second number from 00 to 59
+c. Displays the week number of the year from 00 to 53 
+d. Displays the month number from 01 to 12
+
+My Answer: b
+# 현재 날짜의 '초'만 뽑아서 반환
+
+
+199. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%W’))
+
+a. Displays the weekday number from 0(Sunday) to 6(Saturday) 
+b. Displays the AM or PM equivalent for locale
+c. Displays the date appropriate for locale 
+d. Displays the week number of the year from 00 to 53
+
+My Answer: d
+# 1년 중 주차를 반환. 월요일이 한 주의 시작 
+# %W(주자 반환), %w(숫자-요일(0-6))는 서로 가리키는 것이 다르다.
+
+
+200. What does the following statements do?
+from datetime import * 
+print(datetime.today().strftime('%w’))
+
+a. Displays the week number of the year from 00 to 53 
+b. Displays the date appropriate for locale
+c. Displays the weekday number from 0(Sunday) to 6(Saturday) 
+d. Displays the time appropriate for locale
+
+My Answer: c
+# 현재 날짜의 요일을 숫자로 표시해 반환. 일요일이 0 
+# %W(주자 반환), %w(숫자-요일(0-6))는 서로 가리키는 것이 다르다.
+

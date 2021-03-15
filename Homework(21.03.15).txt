@@ -1,0 +1,161 @@
+326. What is the data type of a after the following statement?
+a = {'A':1, 'B':2, 'C':3, 'D':4}
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set
+
+Answer: b
+
+
+327. What is the data type of a after the following statement?
+a = (1, 4, 3, 6)
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set
+
+Answer: c
+
+
+328. What is the data type of a after the following statement?
+a = [1, 4, 3, 6]
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set
+
+Answer: a
+
+
+329. What is the data type used to store values in key values pair? '
+
+a. List 	b. Dictionary 	c. Tuple 	d. Set
+
+Answer: b
+
+
+330. In IDLE shell, which of the following statements gives SyntaxError?
+
+a. "Python\tis\tEasy\n" 	b. "Hello, it's very easy to learn Python"
+c. "Python", "easy" 		d. "Python is easy'
+
+Answer: d
+
+
+331. What will be the output after the following statements?
+a = 45 	b = 55 	c = (a + b) / 2 
+print(c)
+
+a. 45 	b. 50.0 	c. 45.0 	d. 55.0
+
+Answer: b
+
+
+332. Which of the following has the highest precedence in an expression?
+
+a. Parentheses(괄호) 	b. Exponential(지수)
+c. Division(나눗셈) 		d. Subtraction(뺄셈)
+
+Answer: a
+
+
+333. What will be the output after the following statements?
+a = 4*3**2 
+print(a)
+
+a. 32 b. 144 c. 36 d. 24
+
+Answer: c
+
+
+334. What is the name of Python's built-in module for regular expressions?
+
+a. regex 	b. regexes 	c. REG 	d. re
+
+Answer: a
+
+
+335. What is the name of Python's built-in module for delimited files?
+
+a. csv 	b. tsc 	c. delimited 	d. pipe
+
+Answer: a
+# CSV(Comma Separated Values, 쉼표로 구분된 값) 형식
+# 스프레드시트와 데이터베이스에 대한 가장 일반적인 가져오기 및 내보내기 형식 
+
+
+336. What is the name of Python's built-in module for basic date and time types?
+
+a. date 	b. time 	c. datetime 	d. dates
+
+Answer: c
+# datetime: 날짜와 시간 관련 모듈 
+
+
+337. What is the name of Python's built-in module for email related tasks?
+
+a. mailserver 	b. email 	c. message 	d. mail
+
+Answer: b
+# email: 메일 관련 모듈
+
+
+338. What is the name of Python's built-in module for reading passwords?
+
+a. getpass 	b. password 	c. login 	d. readpass
+
+Answer: a
+# getpass: 패스워드를 읽기 위한 모듈 
+
+
+339. What is the name of Python's built-in module for IPv4/IPv6 manipulation?
+
+a. getip 	b. ipman 		c. ip 	d. ipaddress
+
+Answer: d
+# ipaddress: IPv4/IPv6 주소와 네트워크를 만들고, 조작하고, 연산하는 기능 
+
+
+340. What is the name of Python's built-in module for encoding/decoding JSON format?
+
+a. json 	b. jcode 	c. jsonencode 	d. jsoncode
+
+Answer: a
+# json: JSON (JavaScript Object Notation) 형식 인코딩/디코딩 지원
+
+
+341. What is the name of Python's built-in module for Python keywords?
+
+a. string 	b. keyword 	c. stringtest 	d. keytest
+
+Answer: b
+# 키워드(Keyword): 파이썬에서 이미 예약되어있는 문자열로서 다른 용도로 사용이 불가능한 문자열
+
+
+342. What is the name of Python's built-in module for mathematical functions?
+
+a. maths 	b. mathematics 	c. math 	d. mathfunc
+
+Answer: c
+# math: 수학, 계산 관련 함수 모음 
+
+
+343. What is the name of Python's built-in module for operating system interfaces?
+
+a. windows 	b. liunx 	c. operatingsystem 	d. os
+
+Answer: d
+# os: 기타 운영 체제 인터페이스 
+
+
+344. What is the name of Python's built-in module for data pretty printer?
+
+a. pprint 	b. print 	c. prettyprint 	d. printp
+
+Answer: a
+# pprint: '예쁘게 인쇄'할 수 있는 기능을 제공
+# 가독성 좋게 출력해준다. 
+
+
+345. What is the name of Python's built-in module for generating pseudo-random numbers?
+
+a. psrandom 	b. random 	c. psuedo 	d. randomnum
+
+Answer: b
+# random: 난수 발생기 
+

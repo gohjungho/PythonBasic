@@ -1,0 +1,203 @@
+221. What will be the output after the following statements?
+x = 'Python %d Version' %(3) 
+print(x)
+
+a. Python 3 		b. 3 Version 
+c. Python 3 Version 	d. Python Version 3
+
+My Answer: c
+
+
+222. What will be the output after the following statements?
+x = 'Python %c or Python %c' %('2', '3’) 
+print(x)
+
+a. Python 3 or Python 2 	b. Python 2 or Python 3
+c. Python 2 or Python 2 	d. Python 23
+
+My Answer: b
+
+
+223. What will be the output after the following statements?
+x = 'Python %.1f or Python %.2f' %(2.7, 3.51) 
+print(x)
+
+a. Python 3.51 or Python 2.7 	b. Python 2 or Python 3
+c. Python 2.7 or Python 3.5 		d. Python 2.7 or Python 3.51
+
+My Answer: d
+
+
+224. What will be the output after the following statements?
+x = 'Python' 
+print(x.capitalize())
+
+a. Python 	b. Python.capitalize 
+c. PYTHON 	d. pYTHON
+
+My Answer: a
+# 맨 앞자리만 대문자로 변환 
+
+
+225. What will be the output after the following statements?
+x = 'python job interview' 
+print(x.title())
+
+a. python job interview 	b. Python job interview
+c. Python Job Interview 	d. Python job Interview
+
+My Answer: c
+# 공백을 기준으로 각 단어의 첫 자리를 대문자로 변환
+
+
+226. What will be the output after the following statements?
+x = 'python jobs' 
+print(x.upper())
+
+a. PYTHON JOBS 		b. Python jobs 
+c. Python Jobs 		d. python jobs
+
+My Answer: a
+
+
+227. What will be the output after the following statements?
+x = 'python jobs' 
+print(x.lower())
+
+a. PYTHON JOBS 		b. Python jobs 
+c. Python Jobs 		d. python jobs
+
+My Answer: d
+
+
+228. What will be the output after the following statements?
+x = 'Python Jobs' 
+print(x.swapcase())
+
+a. PYTHON JOBS 		b. pYTHON jOBS 
+c. Python Jobs 		d. python jobs
+
+My Answer: b
+# 소문자는 대문자로, 대문자는 소문자로 변환 
+
+
+229. What will be the output after the following statements?
+x = 'Python' 
+print(x.join('33'))
+
+a. Python33 		b. 3Python3 
+c. Python3 		d. Python 33
+
+My Answer: b
+# 구분자.join(리스트)
+# 즉 x를 구분자로 사용한 것 
+
+
+230. What will be the output after the following statements?
+x = 'Python Test' 
+print(x.join('33’))
+
+a. 3Python Test3 		b. 3Python3Test 
+c. Python3Test3 		d. Python Test33
+
+My Answer: a
+
+
+231. What will be the output after the following statements?
+x = ' Python ' 	y = '3' 
+print(x.lstrip()+y.lstrip())
+
+a. Python 3 		b. 3Python3 
+c. Python3 		d. Python+3
+
+My Answer: a
+
+
+232. What will be the output after the following statements?
+x = 'Python ' 	y = '3 ' 
+print(x.rstrip()+y.rstrip())
+
+a. Python 3 		b. 3Python3 
+c. Python3 		d. Python+3
+
+My Answer: c
+
+
+233. What will be the output after the following statements?
+x = 'Python ' 	y = '3 '  	z = ' Questions ' 
+print(x.strip()+y.strip()+z.strip())
+
+a. Python 3 Questions 	b. Python3Questions 
+c. Python3 Questions 	d. Python 3Questions
+
+My Answer: b
+
+
+234. What will be the output after the following statements?
+x = 'Interview' 
+print(x.replace('e',' '))
+
+a. Interview 		b. Intrviw 
+c. I n t e r v i e w 		d. Int rvi w
+
+My Answer: d
+
+
+235. What will be the output after the following statements?
+x = 'MCQs' 
+print(x.ljust(10,'*'))
+
+a. MCQs****** 		b. M C Q S 
+c. ******MCQs 		d. M C Q s
+
+My Answer: a
+# 변수명.정렬(ljust, rjust or center)(자리수, '표시할 문자')
+# 변수의 값을 왼쪽정렬하고 나머지 자리를 *로 채움 
+
+
+236. What will be the output after the following statements?
+x = 'MCQs' 
+print(x.rjust(10,'*’))
+
+a. MCQs****** 		b. M C Q S 
+c. ******MCQs 		d. M C Q s
+
+My Answer: c
+
+
+237. What will be the output after the following statements?
+x = 'MCQs' 
+print(x.center(10,'*’))
+
+a. MCQs****** 		b. ***MCQs*** 
+c. ******MCQs 		d. M C Q s
+
+My Answer: b
+
+
+238. What will be the output after the following statements?
+x = 'Python Pi Py Pip' 
+print(x.count('p'))
+
+a. 1 	b. 0 	c. 4 	d. 5
+
+My Answer: a
+
+
+239. What will be the output after the following statements?
+x = 'Python Pi Py' 
+print(x.find('p'))
+
+a. -1 	b. 0 	c. 1 	d. 3
+
+My Answer: a
+
+
+240. What will be the output after the following statements?
+x = 'Python Pi Py' 
+print(x.find('P'))
+
+a. -1 	b. 0 	c. 1 	d. 3
+
+My Answer: b
+

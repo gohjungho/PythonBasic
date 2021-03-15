@@ -1,0 +1,191 @@
+266. What will be the output after the following statements?
+x = open('python.csv', 'w’) 
+print(x.writable())
+
+a. readable 	b. writable 	c. True 	d. False
+
+My Answer: c
+
+
+267. What will be the output after the following statements?
+x = open('python.csv', 'a’) 
+print(x.writable())
+
+a. readable 	b. writable 	c. True 	d. False
+
+My Answer: c
+# 'a' 모드에서는 읽기, 쓰기 둘다 가능하다.
+
+
+268. In IDLE shell, the output will be the same for all the following statements except one. Which one?
+
+a. 4+4 	b. 4 + 4 		c. 4*2 	d. 4**2
+
+My Answer: d
+# **는 제곱 
+
+
+284. What will be the output after the following statements?
+a = False 	b = False 
+print(a and b)
+
+a. True 	b. False 	c. ab 	d. ba
+
+My Answer: b
+
+
+285. In the order of precedence, which of the operation will be completed first in the following statement?
+3 * 6 + 5 - 4 / 2
+
+a. Multiplication 	b. Division 	c. Addition 	d. Subtraction
+
+
+My Answer: a
+# 사칙연산
+
+
+291. What will be the output after the following statements?
+a = [1,3,5,7,9,11,13,15,17,19] 
+print(a[1:5],a[3:17])
+
+a. [3, 5, 7, 9] 	b. [1, 3, 5] [3, 5, 7, 9, 11, 13, 15, 17]
+c. [3, 5, 7, 9] [7, 9, 11, 13, 15, 17, 19] 	d. [3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+My Answer: c
+
+
+292. What will be the output after the following statements?
+a = [1,3,5] 
+print(a * 2)
+
+a. [1, 3, 5, 1, 3, 5] 	b. [1, 2, 3, 5] 	c. [3, 5] 	d. [11, 33, 55]
+
+My Answer: a
+
+
+293. Which of the following is not a valid variable name?
+
+a. abc 	b. abc123 	c. 123abc 	d. abc_123
+
+My Answer: c
+# 변수는 숫자로 시작할 수 없다.
+
+
+294. Which of the following is a valid variable name?
+
+a. a$1 	b. a1 	c. 1a 	d. abc 123
+
+My Answer: b
+# 변수는 숫자로 시작할 수 없고, 공백문자나 몇 가지를 제외한 특수문자를 쓸 수 없다.
+
+
+295. What will be the output after the following statements?
+a = 15 	b = a 	a = 25 
+print(a,b)
+
+a. 25 15 	b. 15 25 	c. a 15 	d. 25 a
+
+My Answer: a
+
+
+296. What will be the output after the following statements?
+x = 16 / 4 * 5 	y = 16 / 4 * 5.0 	z = 16 / 4.0 * 5 
+print(x, y, z)
+
+a. 25 15 20 	b. 20.0 20.0 20.0 
+c. 20.0 20 20.0 	d. 20 20.0 20
+
+My Answer: b
+
+
+297. What will be the data type of x after the following statement?
+x = 1/2
+
+a. Integer 	b. List 	c. String 		d. Float
+
+My Answer: d
+
+
+298. What will be the output after the following statements?
+def x(y,z): pass 
+x(1,4)
+
+a. 1,4 	b. y,z 	c. No output 	d. None
+
+My Answer: c
+
+
+299. What will be the output after the following statements?
+b = 1 
+for a in range(1, 10, 3): 
+    b += a + 1 
+print(b)
+
+a. 14 	b. 16 	c. 20 	d. 25
+
+My Answer: b
+# 1 + 2 + 5 + 8 = 16
+
+
+300. What will be the output after the following statements?
+b = 1 
+for a in range(1, 10): 
+    b += a - 1 
+print(b)
+
+a. 37 	b. 47 	c. 44 	d. 38
+
+My Answer: a
+# 0~8까지의 합 + 1(b의 기본값) = 37
+
+
+301. What will be the output after the following statements?
+b = 3 
+for a in range(10, 1): 
+    b -= a + 1 
+print(b)
+
+a. 7 	b. 4 	c. 3 	d. 8
+
+My Answer: c
+# for의 조건이 만족하지 않으므로 그대로 통과 
+
+
+302. What will be the output after the following statements?
+b = 1 
+for a in range(1, 5): 
+    b *= a + 1 
+print(b)
+
+a. 120 	b. 40 	c. 36 	d. 250
+
+My Answer: a
+# 1 * 2 * 3 * 4 * 5 = 120
+
+
+303. What will be the output after the following statements?
+a = True 
+print(a and not a)
+
+a. a 	b. False 	c. not a 	d. True
+
+My Answer: b
+
+
+304. What will be the output after the following statements?
+a = True 		b = False 
+print(a == b or not b)
+
+a. a == b 	b. False 		c. not b 		d. True
+
+My Answer: d
+
+
+305. What will be the output after the following statements?
+a = 'Hello' 	b = 'hello' 
+print(a is b)
+
+a. a is b 		b. False 		c. not b 		d. True
+
+My Answer: b
+

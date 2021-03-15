@@ -1,0 +1,178 @@
+306. What will be the output after the following statements?
+a = 'Python' 	b = 'Python' 
+print(a is b)
+
+a. a is b 	b. False 	c. not b 	d. True
+
+Answer: d
+
+
+307. What will be the output after the following statements?
+a = [4, 7, 9] 	b = [4, 7, 9] 
+print(a is b)
+
+a. a is b 	b. False 	c. not b 	d. True
+
+Answer: b
+# 문자열의 경우 비교가 가능하지만 list와 같은 형식에서는 불가 (확인 필요)
+## is와 ==의 차이 비교
+
+
+308. What will be the output after the following statements?
+a = [4, 7, 9] 	b = [7, 4, 9] 
+print(a is not b)
+
+a. a is b 	b. False 	c. not b 	d. True
+
+Answer: d
+
+
+309. What will be the output after the following statements?
+a = [3, 6, 9] 	b = [3, 6, 9] 
+print(a is b, a == b)
+
+a. True True 	b. False False 	c. False True 	d. True False
+
+Answer: c
+
+
+310. What will be the output after the following statements?
+a = 0 	b = 5 	c = 10 
+a = b 	b = c 	c = a 
+print(a, b, c)
+
+a. 0 5 10 		b. 5 10 10 	c. 5 10 5 		d. 5 5 10
+
+Answer: c
+
+
+311. What will be the output after the following statements?
+b = 15 	c = 20 
+a = b 	b = c 	c = a 
+print(b, c)
+
+a. 20 15 		b. 15 20 		c. a 20 		d. 15 a
+
+Answer: a
+
+
+312. In IDLE shell, the output will be the same for all the following statements except one. Which one?
+
+a. 4*3 		b. 60//5 		c. 17-5 		d. 12/1
+
+Answer: d
+# a, b, c: int / d: float
+
+
+313. In IDLE shell, the output will be an error for one of the following statements. Which one?
+
+a. P = 'python' * int('1’) 	b. P = 'python' + 1
+c. P = 'python' + str(1) 	d. P = 'python' * 1
+
+Answer: b
+# 문자열과 숫자를 바로 연결할 수 없다. (type error)
+
+
+314. What will be the output after the following statements?
+a = 4**3 		b = pow(4,3) 
+print(a, b)
+
+a. 4 4 		b. 4 3 		c. 12 12 		d. 64 64
+
+Answer: d
+# ** == pow(): 제곱 
+
+
+315. What will be the output after the following statements?
+a = min(10, 15, 6, 17, 24) 
+print(a)
+
+a. (10, 15, 6, 17, 24) 	b. 6 	c. 5 	d. 24
+
+Answer: b
+
+
+316. What will be the output after the following statements?
+a = [4, 25, 16, 9, 24] 
+print(max(a))
+
+a. [4, 25, 16, 9, 24] 		b. 9 	c. 25 	d. 24
+
+Answer: c
+
+
+317. What will be the output after the following statements? 
+a = round(5.3) 	b = round(5.6) 	c = round(5.5) 
+print(a, b, c)
+
+a. 5 5 5 		b. 6 5 6 		c. 5 6 6 		d. 5 6 5
+
+Answer: c
+
+
+318. How many times will "Python 3" be printed after the following statements?
+for i in range(1, 5): print('Python 3')
+
+a. 3 		b. 4 		c. 5 		d. 6
+
+Answer: b
+
+
+319. What will be the output after the following statements?
+a = round(4.49999) 
+print(a)
+
+a. 4 		b. 5 		c. 4.0 		d. 4.5
+
+Answer: a
+
+
+320. What will be the output for a function that does not return any value?
+
+a. None 		b. No value 	c. Zero 		d. Bool
+
+Answer: a
+# 함수의 리턴값으로 나올 수 없는 것 찾기 
+# 아무것도 찍히지 않는 것은 No value이다.
+
+
+321. What type of error will be shown after the following statement?
+a = b
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: d 
+# b를 정의하지 않았기 때문에 NameError가 발생한다. 
+
+
+322. What type of error will be shown after the following statement?
+a = int('hello’)
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: c
+
+
+323. What type of error will be shown after the following statement?
+a = {7)
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: a
+
+
+324. What type of error will be shown after the following statement?
+a = 'Python' + 3
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: b
+
+
+325. What is the data type of a after the following statement?
+a = {'A', 'B', 'C', 'D’}
+
+a. List 		b. Dictionary 	c. Tuple 		d. Set
+
+Answer: d
+
