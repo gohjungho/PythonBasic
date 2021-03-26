@@ -1,0 +1,245 @@
+496. What will be the output after the following statements?
+x = ['Today', 'Sunday', 'Monday'] y = [4, 6, 8] 
+print(y + x)
+
+a. ['Today', 'Sunday', 'Monday', 4, 6, 8] 
+b. [4, 6, 8, 'Today', 'Sunday', 'Monday’]
+c. ['Today', 'Sunday', 'Monday'] 
+d. [4, 6, 8]
+
+Answer: b
+
+
+497. What will be the output after the following statements?
+x = 'Monday' 
+print('Mon' in x)
+
+a. 'Mon' in x 	b. 'Monday' in x 	c. True 	d. False
+
+Answer: c
+
+
+498. What will be the output after the following statements?
+x = 'Monday' 
+print('Day' not in x)
+
+a. 'Day' not in x 	b. 'Monday' not in x 
+c. True 		d. False
+
+Answer: c
+
+
+499. What will be the output after the following statements?
+x = ['hot', '100', True] 
+weather = x[0] temperature = x[1] humid = x[2] 
+print(weather, temperature, humid)
+
+a. x 			b. ['hot', '100', True] 
+c. 'hot', '100', True 		d. hot 100 True
+
+Answer: d
+
+
+500. What will be the output after the following statements?
+x = ['hot', '100', True] 
+weather, temperature, humid = x 
+print(weather, temperature, humid)
+
+a. ValueError 		b. ['hot', '100', True] 
+c. 'hot', '100', True 		d. hot 100 True 
+
+Answer: d
+
+
+501. What will be the output after the following statements?
+x = ['hot', '100', True] 
+weather, humid = x 
+print(weather, humid)
+
+a. ValueError 	b. hot 100 
+c. hot True 	d. hot 100 True
+
+Answer: a
+
+
+502. What will be the output after the following statements?
+x = ['hot', '100', True] 
+x.remove('100') 
+weather, humid = x 
+print(weather, humid)
+
+a. ValueError 	b. hot 100 
+c. hot True 	d. hot 100 True
+
+Answer: c
+
+
+503. What will be the output after the following statements?
+x = ['a', 'b', 'c', 'A', 'B', 'C'] 
+x.sort() 
+print(x)
+
+a. SortError 		b. ['a', 'b', 'c', 'A', 'B', 'C'] 
+c. ['a', 'A', 'b', 'B', 'c', 'C'] 	d. ['A', 'B', 'C', 'a', 'b', 'c’]
+
+Answer: d
+
+
+504. What will be the output after the following statements?
+x = ['a', 'b', 'c', 'A', 'B', 'C'] 
+x.sort(key=str.lower) 
+print(x)
+
+a. SortError 		b. ['a', 'b', 'c', 'A', 'B', 'C'] 
+c. ['a', 'A', 'b', 'B', 'c', 'C'] 	d. ['A', 'B', 'C', 'a', 'b', 'c’]
+
+Answer: c
+# 알파벳 순서, 소문자가 먼저 나오게 나열
+
+
+505. What will be the output after the following statements?
+x = ['a', 'b', 'c', 'A', 'B', 'C'] 
+x.sort(key=str.swapcase) 
+print(x)
+
+a. TypeError 		b. ['a', 'b', 'c', 'A', 'B', 'C'] 
+c. ['a', 'A', 'b', 'B', 'c', 'C'] 	d. ['A', 'B', 'C', 'a', 'b', 'c']
+
+Answer: b
+# sort한 뒤 대소문자 변경 
+
+
+506. What will be the output after the following statements?
+x = ['a', 'b', 1, 2, 'A', 'B'] 
+x.sort() 
+print(x)
+
+a. TypeError 		b. ['a', 'b', 'c', 'A', 'B', 'C'] 
+c. ['a', 'A', 'b', 'B', 'c', 'C'] 	d. ['A', 'B', 'C', 'a', 'b', 'c’]
+
+Answer: a
+# 1, 2가 문자라면 정렬이 되지만 숫자형이라 정렬 불가 
+
+
+507. What will be the output after the following statements?
+import random 
+x = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday’]
+print(x[random.randint(0, len(x) - 1)])
+
+a. IndexError 
+b. A random day from all the seven days
+c. A random day from all the days except Sunday 
+d. A random day from all the days except Monday
+
+Answer: b
+
+
+508. What will be the output after the following statements?
+x = 'Today is a nice day' + \ ' I will go for a walk today' 
+print(x)
+
+a. SyntaxError 
+b. Today is a nice day 
+c. I will go for a walk today 
+d. Today is a nice day I will go for a walk today
+
+Answer: a
+
+
+509. What will be the output after the following statements?
+x = 'Today is a nice day' 
+x[9] = 'not ' 
+print(x)
+
+a. TypeError 	b. Today is a nice day 
+c. SyntaxError 	d. Today is not a nice day
+
+Answer: a
+# 수정은 인덱싱으로 하지 못함 
+
+
+510. What will be the output after the following statements?
+x = 'Today is a nice day' 
+y = x[:9] + 'not ' + x[9:] 
+print(y)
+
+a. TypeError 	b. Today is a nice day 
+c. SyntaxError 	d. Today is not a nice day
+
+Answer: d
+
+
+511. What will be the output after the following statements?
+x = 'Today is a nice day' 
+y = x[:9] + 'not ' + x[9:] 
+print(x)
+
+a. TypeError 	b. Today is a nice day 
+c. SyntaxError 	d. Today is not a nice day
+
+Answer: b
+
+
+512. What will be the output after the following statements?
+x = 'Today is not a nice day' 
+x = 'Today is a nice day' 
+print(x)
+
+a. TypeError 	b. Today is a nice day 
+c. SyntaxError 	d. Today is not a nice day
+
+Answer: b
+
+
+513. What will be the output after the following statements?
+x = ('Today', 'nice', 'day') 
+x[1] = 'not' 
+print(x)
+
+a. TypeError 	b. ('Today', 'nice', 'day') 
+c. SyntaxError 	d. ('Today', 'not', 'nice', 'day’)
+
+Answer: a
+# x는 튜플이므로 인덱싱으로 수정이 불가
+
+
+514. What will be the data type of the output after the following statements?
+x = ('Today') 
+print(x)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: b 
+# ( ) 안에 있다할지라도 1개의 값이 튜플이라면 뒤에 ,가 있어야 함
+
+
+515. What will be the data type of the output after the following statements?
+x = ('Today',) 
+print(x)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: c
+
+
+ALGORITHM HOMEWORK(#11)
+n개의 각으로 삼각형의 예각 직각 둔각을 구별하는
+프로그램을 만드세요
+[60, 60, 60] = 예각삼각형 [30, 60, 90] = 직각삼각형 [20, 40, 120] = 둔각삼각형
+[0, 90, 90] = 삼각형이 아니다 [60, 70, 80] = 삼각형이 아니다 
+[40, 40, 50, 50] = 삼각형이 아니다
+예각삼각형 : 3개의 각이 모두 예각인 삼각형
+직각삼각형 : 1개의 각이 직각인 삼각형
+둔각삼각형 : 1개의 각이 둔각인 삼각형
+① 각이 3개가 아닐 경우 삼각형이 아니다.
+② 3개의 각의 합이 180°가 아닐 경우 삼각형이 아니다.
+
+def search (x,y,z):
+    if: 
+    else:
+    return ''
+x=int(input('제1각을 입력하세요'))
+y=int(input('제2각을 입력하세요'))
+z=int(input('제3각을 입력하세요'))
+
+print(search(x,y,z))

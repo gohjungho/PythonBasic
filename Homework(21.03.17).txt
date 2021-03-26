@@ -1,0 +1,217 @@
+396. What will be the output after the following statements?
+a = [0, 1, 2, 3] 
+del a 
+print(a)
+
+a. None 	b. Null 	c. [0, 1, 2, 3] 	d. NameError
+
+Answer: d
+# a가 전부 삭제되었으므로 print(a)를 실행할 수 없음 
+
+
+397. What will be the output after the following statements?
+a = [0, 1, 2, 3] 
+del a[:] 
+print(a)
+
+a. None 	b. [] 	c. [0, 1, 2, 3] 	d. NameError
+
+Answer: b
+# list a 안에 있는 값들을 전부 지웠으므로 print(a)를 하면 빈 list가 반환됨
+
+
+398. What will be the output after the following statements?
+x = [i*2-4 for i in range(5)] 
+print(x)
+
+a. [0, 1, 2, 3, 4, 5] 	b. [0, 1, 2, 3, 4] 
+c. [-4, -2, 0, 2, 4] 	d. [0, 1, 4, 9, 16]
+
+Answer: c
+
+
+399. What will be the output after the following statements?
+x = [i**2-3 for i in range(0,7,3)] 
+print(x)
+
+a. [-3, 6, 33] 	b. [0, 1, 2, 3, 4] 
+c. [-3, -2, 0, 2, 3] 	d. [-3, 9, 18, 36]
+
+Answer: a
+
+
+400. What will be the output after the following statements?
+x = [i**4//7 for i in range(0,6,2)] 
+print(x)
+
+a. [0, 2, 36] 	b. [0, 1, 2, 3, 4] 	c. [0, 6, 2] 	d. [0, 2, 14]
+
+Answer: a
+
+
+401. What will be the output after the following statements?
+x = [int(i**3/3) for i in range(0,5,2)] 
+print(x)
+
+a. [0, 2, 36] 	b. [0, 2, 21] 	c. [0, 6, 2] 	d. [0, 2, 14]
+
+Answer: b
+
+
+402. What will be the output after the following statements?
+x = [int(i/2-5) for i in range(3,8,2)] 
+print(x)
+
+a. [-3, -2, -1] 	b. [0, 2, 6] 	c. [0, 1, 2] 	d. [-3, -1, 3]
+
+Answer: a
+
+
+403. What is the famous one-line Hello World program of Python?
+
+a. print("Hello World!") 	b. print "Hello World!"
+c. print("Hello World!")! 	d. print("Hello World!"):
+
+Answer: a
+
+
+404. What is used for multi-line strings in Python?
+
+a. Three braces {{{ }}} 	b. Three Colons ::: :::
+c. Three hashes ### ### 	d. Three Quotes ''' '’’
+
+Answer: d
+
+
+405. What will be the output after the following statements?
+x = 90 	y = 'I ran for %s minutes’ 
+print(y % x)
+
+a. y ran for x minutes 	b. y ran for 90 minutes
+c. I ran for 90 minutes 	d. I ran for x minutes
+
+Answer: c
+# print(y % x)와 같이 대입하는 방법도 있다! 
+
+
+406. What will be the output after the following statements?
+x = 'She’ 	y = 60 
+z = 'ran for %s minutes’ 
+print(x, z % y)
+
+a. ran for 60 minutes 	b. she ran for 60 minutes 
+c. She ran for 60 minutes 	d. x ran for 60 minutes
+
+Answer: c
+
+
+407. What will be the output after the following statements?
+x = 75 	y = 60 
+z = 'ran for %s minutes' 
+print(z % y)
+
+a. ran for 75 minutes 	b. ran for 60 minutes 
+c. ran for 135 minutes 	d. y ran for 60 minutes
+
+Answer: b
+
+
+408. What will be the output after the following statements?
+x = 7 	y = 6 
+z = 'He ran for %s minutes for %s days' 
+print(z % (x, y))
+
+a. He ran for 7 minutes for 7 days 	b. He ran for 6 minutes for 6 days
+c. He ran for 6 minutes for 7 days 	d. He ran for 7 minutes for 6 days
+
+Answer: d
+
+
+409. What will be the output after the following statements?
+x = 'Python 2’ 	y = 'Python 3' 
+z = 'We can convert %s program to %s program' 
+print(z % (x, y))
+
+a. We can not convert Python 2 program to Python 3 program
+b. We can not convert Python 3 program to Python 2 program
+c. We can convert Python 2 program to Python 3 program
+d. We can convert Python 3 program to Python 2 program
+
+Answer: c
+
+
+410. What will be the output after the following statements?
+x = ' ' 
+print(x*5)
+
+a. Displays a tab 		b. Displays 5 spaces 
+c. Displays a newline 	d. Displays 10 quotes
+
+Answer: b
+
+
+411. What will be the output after the following statements?
+x = 'no’ 
+y = 'yes’ 
+z = 'may be’ 
+a = [y, z, x] 
+print(a)
+
+a. 'yes', 'may be', 'no’ 	b. 'no', 'may be', 'yes’ 
+c. ['no', 'may be', 'yes’] 	d. ['yes', 'may be', 'no’]
+
+Answer: d
+
+
+412. Which of the following operations is not possible while manipulating lists?
+
+a. Addition 	b. Multiplication 	c. Division 	d. Deletion
+
+Answer: c
+# a 더하기, b 곱하기, c 나누기, d 삭제
+# list의 활용 문제!
+ex) 
++: [1,2,3] + [4,5,6] = [1,2,3,4,5,6]
+*: [1,2] * 2 = [1,2,1,2] 
+del[:] = []
+
+# list를 산수처럼 나누는 건 불가하다. 
+
+
+413. Which of the following is used by interpreter to identify code blocks?
+
+a. Braces 		b. Indentation 	c. Commas 	d. Expressions
+
+Answer: b
+# 블록을 식별하는 건 들여쓰기로 구분한다. 
+
+
+414. What will be the output after the following statements?
+x = ["Yesterday's", "Today's", "Tomorrow's"] 
+y = ['weather', 'temperature', 'humidity’]
+for i in x: print(i, end=' ‘) 
+for j in y: print(j, end=' ‘)
+
+a. Yesterday's Today's Tomorrow's weather temperature humidity 
+b. Yesterday's weather temperature humidity
+c. Yesterday's weather temperature humidity Today's Tomorrow’s
+d. Yesterday's weather Today's temperature Tomorrow's humidity
+
+Answer: a
+
+
+415. What will be the output after the following statements?
+x = ["Yesterday's", "Today's", "Tomorrow's"] 
+y = ['temperature'] 
+for i in x: 
+    print(i, end=' ') 
+    for j in y: 
+        print(j, end=' ‘) 
+
+a. Yesterday's Today's Tomorrow's temperature 
+b. Yesterday's temperature
+c. Yesterday's temperature Today's Tomorrow’s
+d. Yesterday's temperature Today's temperature Tomorrow's temperature
+
+Answer: d
+

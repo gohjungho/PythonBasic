@@ -1,0 +1,266 @@
+456. What will be the output after the following statements?
+import keyword 
+print(keyword.iskeyword('Python'))
+
+a. True 	b. keyword 	c. for 	d. False
+
+Answer: d
+# 키워드(예약어)인지 확인 - T/F로 반환 
+
+
+457. What will be the output after the following statements?
+import random 
+x = [3, 8, 6, 5, 0] 
+print(random.choice(x))
+
+a. A random element from the list x 
+b. The list x
+c. A random element from the list x, excluding 3 and 0 
+d. A random element from the list elements 3 and 0
+
+Answer: a
+# list x안에 있는 숫자들 중 하나를 무작위로 뽑아낸다 
+
+
+458. What will be the output after the following statements?
+import random 
+x = [3, 8, 6, 5, 0] 
+random.shuffle(x) 
+print(x)
+
+a. A random element from the list x 
+b. The shuffled list x with the elements mixed up
+c. A random element from the list x, excluding 3 and 0 
+d. A random element from the list elements 3 and 0
+
+Answer: b
+# list x를 무작위 순서로 섞는다 
+
+
+*459. What will be the output after the following statements?
+import random 
+x = [3, 8, 6, 5, 0] 
+y = random.shuffle(x) 
+print(y)
+
+a. A random element from the list x 
+b. The shuffled list x with the elements mixed up
+c. None 
+d. A random element from the list x, excluding 3 and 0
+
+Answer: c
+# 이건 왜 안되는지 모르겠네.....
+
+460. What will be the output after the following statements?
+import sys 
+x = sys.stdout.write('Python Jobs')
+
+a. A random character from the string 'Python Jobs' 
+b. Python Jobs 
+c. None 
+d. PJ 9
+
+Answer: b
+# () 안에 있는 문자열 출력 
+
+
+461. What will be the output after the following statements?
+import time 
+print(time.time())
+
+a. Current time in seconds since the Epoch at 00:00:00 GMT on January 1, 1970
+b. Today's time in hours 
+c. None 
+d. Today's time in minutes
+
+Answer: a
+# 70년 1월 1일을 기준으로 현재 시간까지를 초 단위로 환산해서 출력
+# 사실상 쓰레기값.... 
+
+
+462. What will be the data type of the output after the following statements?
+import time 
+print(time.time())
+
+a. String 		b. Integer 	c. List 	d. Float
+
+Answer: d
+
+
+463. What will be the data type of the output after the following statements?
+import time 
+print(time.asctime())
+
+a. String 		b. Integer 	c. List 	d. Float
+
+Answer: a
+# 요일 월 일 시:분:초 년도 순서로 출력 
+
+
+464. What will be the output after the following statements?
+import time 
+print(time.asctime())
+
+a. Current time in seconds since the Epoch at 00:00:00 GMT on January 1, 1970
+b. Current date and time 
+c. None 
+d. Today's time in minutes
+
+Answer: b
+
+
+465. What will be the output after the following statements?
+import time 
+y = (2016, 2, 10, 12, 45, 32, 5, 0, 0) 
+print(time.asctime(y))
+
+a. Current time in seconds since the Epoch at 00:00:00 GMT on January 1, 1970
+b. Current date and time 
+c. Sat Feb 10 12:45:32 2016 
+d. No output
+
+Answer: c
+# y = (연도, 월, 일, 시, 분, 초, 요일, ?, ?)
+
+
+466. What is likely to be the output after the following statements?
+import time 
+y = time.asctime() 
+print(y[:3])
+
+a. 2016 	b. 3:40 	c. Mon 	d. 04
+
+Answer: c
+# 문자열 슬라이싱. 0-2번째 자리 출력 
+
+
+467. What will be the output after the following statements?
+import random 
+print(int(random.random()*10))
+
+a. 10 	b. A random integer number within the range of 0 to 9
+c. None 	d. A random floating point number within the range of 0 to 9
+
+Answer: b
+# 10미만의 임의의 수를 출력 
+
+
+468. What will be the output after the following statements?
+import random 
+print(int(random.random()*10) + 1)
+
+a. 11 	b. A random integer number within the range of 0 to 11
+c. None 	d. A random whole number within the range of 1 to 10
+
+Answer: d
+# 1~10까지 임의의 수 출력 
+
+
+469. What will be the output after the following statements?
+import random 
+print(random.sample(range(20), 5))
+
+a. A list of 5 unique numbers within the range of 0 to 19 
+b. A list of 5 unique numbers within the range of 0 to 20
+c. A list of 4 unique numbers within the range of 0 to 19 
+d. A tuple of 5 unique numbers within the range of 0 to 19
+
+Answer: a
+# 20미만의 수를 임의로 5개 출력. 중복 없음. list로 반환
+
+
+470. What will be the output after the following statements?
+import random 
+print(random.sample(range(5, 20), 4))
+
+a. A list of 5 unique numbers within the range of 4 to 19 
+b. A list of 5 unique numbers within the range of 5 to 20
+c. A list of 4 unique numbers within the range of 5 to 19 
+d. A tuple of 4 unique numbers within the range of 5 to 19
+
+Answer: c
+# 5~20미만의 수를 임의로 4개 출력. 중복 없음. list로 반환 
+
+
+471. What will be the output after the following statement?
+print(a)
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: d
+# 선언된 변수 a가 없음 
+
+
+472. What will be the output after the following statement?
+a = "Python Practice’
+
+a. SyntaxError 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: a
+# 따옴표 혼용. 구문 오류 
+
+
+473. What will be the output after the following statement?
+a = true 
+
+a. No Error 	b. TypeError 	c. ValueError 	d. NameError
+
+Answer: d
+# 변수 true를 정의하지 않음. 여기서의 true는 bool이 아님 
+
+
+474. What is the value of the NoneType data type?
+
+a. undefined 	b. Null 	c. Nan 	d. None
+
+Answer: d
+# type(None)을 출력하면 NoneType이 나온다 
+
+
+475. What will be the output after the following statements?
+def xyz(): a = 56 
+xyz() 
+print(a)
+
+a. NameError 	b. 56 	c. a = 56 		d. xyz
+
+Answer: a
+# a는 지역변수로 return값 없이는 가지고 나오지 못한다 
+
+
+ALGORITHM HOMEWORK
+• 피보나치 수열이란, 첫 번째 항의 값이 0이고 두 번째 항의
+값이 1일 때, 이후의 항들은 이전의 두 항을 더한 값으로
+이루어지는 수열을 말한다.
+
+• 인풋을 정수 n으로 받았을때, n 이하까지의 피보나치 수열을
+출력하는 프로그램을 작성하세요
+• n = int(input("num? : "))
+  num? : 13 
+  0, 1, 1, 2, 3, 5, 8, 13
+
+1. 파이썬 코드와 결과 포함한 사진 제출 
+2. 순서도나 수도코드까지 작성하면 extra credit 
+3. 각 행마다 주석 달기 필수, 미 기재 시 감점 
+
+i = 0 # index. 
+p = 0 # previous. 이전값
+s = 1 # sum. 현재값
+t = 0 # temp. 임시값  
+
+args = int(input("num? : ")) # 숫자 입력 
+
+while s <= args: # 입력받은 수보다 작거나 같으면 실행 
+    if i == 0: # i가 0이면 
+        print(0, end=' ') # 0 출력
+    if i == 1: # i가 1이면 
+        print(1, end=' ') # 1 출력 
+    t = p # 임시변수에 이전값 저장
+    p = s # 이전값에 현재값 저장 
+    s = s + t # 현재값에 직전에 이전값을 저장한 임시값을 더한 값을 저장 
+    
+    if s > args: # 만약 현재값이 입력받은 수보다 크다면? 
+        break # 반복문 탈출
+        
+    print(s, end=' ') # 현재값 출력 
+    i += 1 # 인덱스 1 상승

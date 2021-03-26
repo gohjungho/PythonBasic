@@ -1,0 +1,218 @@
+436. What will be the output after the following statements? 
+x = '' 
+if bool(x): print('Yes') else: print('No’) 
+
+a. None 	b. Yes 	c. No 	d. 0 
+
+Answer: c
+# 빈칸은 False
+
+
+437. What will be the output after the following statements? 
+x = ' ' 
+if bool(x): print('Yes') else: print('No’) 
+
+a. None 	b. Yes 	c. No 	d. 0 
+
+Answer: b
+# 공백도 문자로 인정되므로 True 
+
+
+438. What will be the output after the following statements? 
+x = [] 
+if bool(x): print('Yes') else: print('No’) 
+
+a. No 	b. Yes 	c. None 	d. 0 
+
+Answer: a
+
+
+439. What will be the output after the following statements? 
+x = [1, 2, 3] 
+if bool(x): print('Yes') else: print('No’) 
+
+a. No 	b. Yes 	c. None 	d. 0 
+
+Answer: b
+
+
+440. What will be the output after the following statements? 
+x = '' 
+if not bool(x): print('Yes') else: print('No’) 
+
+a. Yes 	b. No 	c. None 	d. 0
+
+Answer: a
+
+
+441. What will be the output after the following statements? 
+x = 'print("Python")' 
+eval(x) 
+
+a. x 	b. print("Python") 	c. Python 	d. 0 
+
+Answer: c
+# eval(): 매개변수로 받은 식을 문자열로 받아서 실행하는 함수
+# 즉, 문자열(맨 바깥쪽 "" or '')로 둘러싸여진 식을 실행해주는 함수 
+
+
+442. What will be the output after the following statements if input entered is 45*2? 
+x = input("Enter an expression: ") 
+print(eval(x)) 
+
+a. 45*2 	b. eval("90") 	c. 90 	d. 0 
+
+Answer: c
+
+
+443. What will be the output after the following statements? 
+x = '''print("Python 3", end='') print(" is Good")''' 
+exec(x) 
+
+a. Python 3is Good 	b. Python 3 is Good 
+c. Python 3 		d. is Good 
+
+Answer: b
+# exec(): 문자열로 표현된 문을 인수로 받아 파이썬 컴파일 코드로 변환. 파이썬 인터프리터가 번역하여 실행 
+# 여러줄의 문자열(''' ''')로 묶여진 경우에도 사용 가능하다 
+
+444. What will be the output after the following statements? 
+a = ['a', 'b', 'c', 'A', 'B'] 
+print(max(a)) 
+
+a. a 	b. A 	c. b 	d. c 
+
+Answer: d
+# 소문자 c가 아스키코드 값이 가장 높다. 
+# ord('A') = 65, ord('a') = 97 
+
+
+445. What will be the output after the following statements? 
+a = ['a', 'b', 'c', 'A', 'B'] 
+print(min(a)) 
+
+a. a 	b. A 	c. b 	d. c
+
+Answer: b
+
+
+446. What will be the output after the following statements? 
+a = ['a', 'b', 'c', '1', '2', 'A', 'B'] 
+print(max(a)) 
+
+a. a 	b. A 	c. 1 	d. c 
+
+Answer: d
+
+
+447. What will be the output after the following statements? 
+a = ['a', 'b', 'c', '1', '2', 'A', 'B’] 
+print(min(a)) 
+
+a. a 	b. A 	c. 1 	d. c 
+
+Answer: c
+# ord("0") = 33
+
+
+448. What will be the output after the following statements? 
+a = [1, 2, 3] 
+print(sum(a)) 
+
+a. 3 	b. 2 	c. 1 	d. 6 
+
+Answer: d
+
+
+449. What will be the output after the following statements? 
+a = list(range(0,10,3)) 
+print(sum(a)) 
+
+a. 10 	b. 100 	c. 18 	d. 30 
+
+Answer: c
+
+
+450. What will be the output after the following statements? 
+a = list(range(10,-10,3)) 
+print(sum(a)) 
+
+a. 10 	b. 0 	c. 18 	d. 90
+
+Answer: b
+# range 안의 값을 계산할 수 없으므로 결과값은 0 
+
+
+451. What will be the output after the following statements? 
+a = list(range(-10,5,2)) 
+print(sum(a)) 
+
+a. -24 	b. 0 	c. 24 	d. 20 
+
+Answer: a
+# -10 -8 -6 -4 -2 +0 +2 +4 = -24
+
+
+452. What will be the output after the following statements? 
+x = [5, 4, 3, 2, 1] 	y = x.copy() 	x[0] = 6 
+print(y) 
+
+a. [6, 4, 3, 2, 1] 	b. 6 	c. [5, 4, 3, 2, 1] 	d. 5 
+
+Answer: c
+# y는 기존의 x값을 복사한 것이므로 x와 독립된 것 
+
+
+453. What will be the output after the following statements? 
+import copy 
+x = [5, 4, 3, 2, 1] y = copy.copy(x) 
+x.append(6) 
+print(y[0]) 
+
+a. [6, 4, 3, 2, 1] 	b. 6 	c. [5, 4, 3, 2, 1] 	d. 5 
+
+Answer: d
+# .append()는 맨 뒤에 추가한다.
+
+
+454. What will be the output after the following statements? 
+import keyword 
+print(keyword.iskeyword('IS’)) 
+
+a. True 	b. keyword 	c. for 	d. False 
+
+Answer: d
+# iskeyword(): 키워드인지 여부 확인하기. 키워드라면 true, 아니라면 false 반환 
+# 키워드 = 예약어 . 즉 다른 용도로 사용이 불가능한 문자열 
+
+# 파이썬 키워드 확인하기 
+# import keyword 
+# print(keyword.kwlist)
+
+# 보기 좋게 나열한 키워드 확인하기 
+# import keyword 
+kwlist = keyword.kwlist
+for i in range(0,len(kwlist)):
+    print("[{:10}]".format(kwlist[i]), end=" ")
+    if (i+1)%5==0: print()
+
+
+455. What will be the output after the following statements? 
+import keyword 
+print(keyword.iskeyword('for')) 
+
+a. True 	b. keyword 	c. for 	d. False
+
+Answer: a
+
+
+ALGORITHM HOMEWORK
+• 1부터 10,000까지 8이라는 숫자가 총 몇 번 나오는가?
+• 8이 포함되어 있는 숫자의 갯수를 카운팅 하는 것이 아니라
+8이라는 숫자를 모두 카운팅 해야 한다.
+(※ 예를들어 8808은 3, 8888은 4로 카운팅 해야 함, 구글
+입사문제)
+####참고####
+1. 파이썬 코드와 결과 포함한 사진 제출 
+2. 순서도나 수도코드까지 작성하면 extra credit
+3. 각 행마다 주석 필수, 미 기재 시 감점

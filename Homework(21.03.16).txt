@@ -1,0 +1,230 @@
+376. What will be the output after the following statements?
+x = [5, 4, 3, 2, 1] 
+y = x.copy() 
+print(y)
+
+a. [0, 1, 2, 3, 4, 5] 	b. [5, 4, 3, 2, 1] 	c. [] 	d. [1, 2, 3, 4, 5]
+
+Answer: b
+
+
+377. What will be the output after the following statements?
+x = [] 
+for i in range(10): x.append(i**2) 
+print(x)
+
+a. [0, 1, 2, 3, 4, 5] 
+b. [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+c. [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100] 
+d. [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+Answer: b
+# 0~9까지 전부 제곱한 값. 총 10개 
+
+
+378. What will be the output after the following statements?
+x = list(map(lambda x:x**2, range(5))) 
+print(x)
+
+a. [0, 1, 2, 3, 4, 5] 		b. [1, 4, 9, 16, 25] 
+c. [0, 1, 4, 9, 16, 25] 	d. [0, 1, 4, 9, 16]
+
+Answer: d
+
+
+379. What will be the output after the following statements?
+x = [i**2 for i in range(4)] 
+print(x)
+
+a. [0, 1, 2, 3, 4, 5] 	b. [1, 4, 9] 
+c. [0, 1, 4, 9] 	d. [0, 1, 4, 9, 16]
+
+Answer: c
+
+
+380. What will be the output after the following statements?
+a = [(x, y) for x in [0, 1, 2] for y in [3, 4, 5] if x!=y] 
+print(a)
+
+a. [0, 1, 2, 3, 4, 5] 
+b. [(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+c. [(0, 1, 2), (3, 4, 5)] 
+d. [(0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+
+Answer: d
+
+
+381. What will be the output after the following statements?
+a = [(x, y) for x in [0, 3, 5] for y in [5, 4, 0] if x!=y] 
+print(a)
+
+a. [(0, 5), (0, 4), (3, 5), (3, 4), (3, 0), (5, 4), (5, 0)] 
+b. [(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+c. [(0, 3, 5), (0, 4, 5)] 
+d. [(0, 5), (0, 4), (0, 0), (3, 5), (3, 4), (3, 0), (5, 5), (5, 4), (5, 0)]
+
+Answer: a
+
+
+382. What will be the output after the following statements?
+a = [(x, y) for x in [0, 2] for y in [2, 4, 0] if x==y] 
+print(a)
+
+a. [(0, 2)] 
+b. [(0, 0), (2, 2)]
+c. [(0, 2), (2, 4, 0)] 
+d. [(0, 2), (0, 4), (0, 0), (2, 2), (2, 4), (2, 0)]
+
+Answer: b
+
+
+383. What will be the output after the following statements?
+a = [(x, y) for x in [0, 2] for y in [2, 4, 0] if x!=y] 
+print(a)
+
+a. [(0, 2)] 
+b. [(0, 0), (2, 2)]
+c. [(0, 2), (0, 4), (2, 4), (2, 0)] 
+d. [(0, 2), (0, 4), (0, 0), (2, 2), (2, 4), (2, 0)]
+
+Answer: c
+
+
+384. What will be the output after the following statements?
+a = [] 
+for x in [0, 1, 2]: for y in [3, 4, 5]: if x!=y: a.append((x,y)) 
+print(a)
+
+a. [0, 1, 2, 3, 4, 5] 
+b. [(1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+c. [(0, 1, 2), (3, 4, 5)] 
+d. [(0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+
+Answer: d
+
+
+385. What will be the output after the following statements?
+a = [-2, -1, 0, 1, 2] 
+print([i**3 for i in a])
+
+a. [(0, 2)] 		b. [-2, -1, 0, 1, 2]
+c. [8, 1, 0, 1, 8] 	d. [-8, -1, 0, 1, 8]
+
+Answer: d
+
+
+386. What will be the output after the following statements?
+a = [-3, -1, 0, 1, 3] 
+print([i**4 for i in a])
+
+a. [81, 1, 0, 1, 81] 	b. [-81, -1, 0, 1, 81] 
+c. [16, 1, 0, 1, 16] 	d. [-16, -1, 0, 1, 16]
+
+Answer: a
+
+
+387. What will be the output after the following statements?
+a = [-3, -1, 0, 1, 3] 
+print([x for x in a if x>=0])
+
+a. [-3, -1, 0, 1, 3] 	b. [0, 1, 3] 	c. [1, 3] 	d. [-1, 0, 1]
+
+Answer: b
+
+
+388. What will be the output after the following statements?
+a = [-3, -1, 0, 1, 3] 
+print([abs(x) for x in a])
+
+a. [-3, -1, 0, 1, 3] 	b. [0, 1, 3] 	c. [3, 1, 0, 1, 3] 	d. [-1, 0, 1]
+
+Answer: c
+# abs()는 절대값 
+
+
+389. What will be the output after the following statements?
+a = [' today', ' tomorrow ', 'not now’] 
+print([x.strip() for x in a])
+
+a. ['today', 'tomorrow ', 'not now’] 	b. [' today', ' tomorrow', 'not now’]
+c. ['today', 'tomorrow', 'notnow’] 	d. ['today', 'tomorrow', 'not now’]
+
+Answer: d
+# strip()은 앞뒤 공백 제거
+
+
+390. What will be the output after the following statements?
+print([(x, x*2) for x in range(4)])
+
+a. [(0, 0), (1, 2), (2, 4), (3, 6)] 	b. [(0, 0), (1, 2), (2, 4), (3, 6), (4, 8)]
+c. [(1, 2), (2, 4), (3, 6), (4, 8)] 	d. [(1, 2), (2, 4), (3, 6)]
+
+Answer: a
+
+
+391. What will be the output after the following statements?
+a = [[0, 1, 2], [7, 8, 9], [4, 5, 6]] 
+print([x for y in a for x in y])
+
+a. [0, 1, 2, 4, 5, 6, 7, 8, 9] 		b. [0, 1, 2, 7, 8, 9, 4, 5, 6]
+c. [(0, 1, 2), (7, 8, 9), (4, 5, 6)] 		d. [(0, 7, 4), (1, 8, 5), (2, 9, 6)]
+
+Answer: b
+# print([x for y in a for x in y])는 
+for y in a: 
+    for x in y:
+        print(x, end=" ") 와 같다. end는 없어도 무방하나 옆이 아닌 아래로 찍힌다.
+
+
+392. What will be the output after the following statements?
+from math import pi 
+a = [str(round(pi, i)) for i in range(0,5)] 
+print(a)
+
+a. [3.0, 3.1, 3.14, 3.142, 3.1416] 	b. ['3.0', '3.1', '3.14', '3.142’]
+c. ['3.0', '3.1', '3.14', '3.142', '3.1416’] 	d. ['3.1', '3.14', '3.142', '3.1416’]
+
+Answer: c
+
+
+393. What will be the output after the following statements?
+a = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]] 
+b = [[x[i] for x in a] for i in range(4)] 
+print(b)
+
+a. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] 
+b. [[0, 4, 8], [1, 5, 9], [2, 6, 10], [3, 7, 11]]
+c. [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]] 
+d. [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]
+
+Answer: b
+# 인덱스값 별로 묶어서 출력한 것 
+
+
+394. What will be the output after the following statements?
+a = [] 
+b = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]] 
+for i in range(4): a.append([row[i] for row in b]) 
+print(a)
+
+a. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] 
+b. [[0, 4, 8], [1, 5, 9], [2, 6, 10], [3, 7, 11]]
+c. [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]] 
+d. [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]
+
+Answer: b
+
+
+395. What will be the output after the following statements?
+a = [[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]] 
+print(list(zip(*a)))
+
+a. [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] 
+b. [[0, 4, 8], [1, 5, 9], [2, 6, 10], [3, 7, 11]]
+c. [[0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11]] 
+d. [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11]
+
+Answer: b
+# zip(): 동일한 개수로 이루어진 자료형을 묶어 주는 역할을 하는 함수
+# zip( * )으로 이중 리스트를 풀어서 우리가 원하는 값이 모여있는 튜플로 변환 후 값들의 합을 구함
+
