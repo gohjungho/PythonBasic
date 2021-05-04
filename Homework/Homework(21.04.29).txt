@@ -1,0 +1,98 @@
+91. Why do we mark a data member transient?
+직렬화를 하는 과정에 제외하고 싶은 경우 선언하는 키워드이다. 
+
+
+92. Is it allowed to mark a method as transient? 
+transient는 메소드 내의 객체에만 사용할 수 있다. 
+
+
+93. How does marking a field as transient makes it possible to 
+serialize an object? 
+transien 키워드를 붙인 변수는 직렬화 대상에서 제외된다. 
+데이터를 디스크에 저장하거나 DB에 저장하거나 http request를 통해 보내거나 할때 
+민감한 데이터(개인정보 등)는 제외하고 싶으면 transient를 붙이면 된다. 
+
+
+94. What is Externalizable interface in Java? 
+외부화는 직렬화를 사용자 정의할 때마다 사용된다. 클래스가 외부화 인터페이스를 구현하는 경우 
+객체 직렬화를 사용하여 수행된다. 
+
+
+95. What is the difference between Serializable and Externalizable interface? 
+직렬화는 다른 어떤 로직을 구현할 필요가 없다. 자바의 예전 버전에서는 속도와 같은 문제로 직렬화 성능에 문제가 있었다. 
+그래서 외부 인터페이스와 각종 매커니즘을 제공함으로써 성능 문제를 해결해왔다. 
+하지만 자바 최근버전(1.3 이상)에서는 성능이 이전보다 훨씬 좋아졌기에 외부 인터페이스를 사용하는 이점이 없어졌다. 
+외부화의 큰 문제는 사용자가 직접 로직을 짜고 유지해야 한다는 것이다. 만약 클래스에 필드를 추가, 제거, 변경한다면, 
+외부화 또한 수정해주어야 한다는 것이다. 
+
+
+96. What is Reflection in Java? 
+리플렉션이란 객체를 통해 클래스의 정보를 분석해 내는 프로그램 기법을 말한다. 
+
+
+97. What are the uses of Reflection in Java? 
+만약 객체의 메모리만을 알고 있고, 객체의 형에 대해서는 모른다고 가정하면, 
+리플렉션으로 형은 알고 있지만 형변환을 할 수 없는 상태에서 객체의 메서드를 호출할 수 있다. 
+
+
+98. How can we access private method of a class from outside the class?
+A와 B클래스가 있을 때 A클래스에서 B클래스에 선언된 변수를 가져오고 싶다면 
+get(), set() 메서드로 데이터를 가져오고 변경할 수 있다. 
+또한 B클래스의 데이터를 가져오기 위해서 먼저 B클래스 객체를 생성해 주어야 접근이 가능하다. 
+
+
+99. How can we create an Object dynamically at Runtime in Java? 
+객체는 일부 상태와 동작을 가진 클래스의 인스턴스이다. 자바에서 객체는 동적으로 작성된다. 
+즉, 실행 중에 프로그램을 성공적으로 컴파일한 후 런타임이 실행된다. 
+
+
+100. What is Garbage Collection in Java? 
+가비지(garbage)란 무효영역이라고도 하며, 더 이상 사용되지 않는 메모리를 뜻한다. 
+자바의 new 연산자를 이용하여 시스템으로부터 힙 영역 메모리를 할당받아 사용되어지다가 
+더 이상 사용되지 않는 객체나 배열 메모리가 가비지에 해당된다. 
+여기서, '더 이상 사용되지 않는다.'라는 뜻은 객체나 배열을 가리키는 레퍼런스가 하나도 없음을 의미한다. 
+
+
+ALGORITHM (#32) 
+
+소정이는 어떤 숫자에서 k개의 수를 뽑았을 때 가장 큰 수를 찾는 놀이를 하고 있습니다. 
+예를 들어, 숫자 1723에서 두 개의 수를 뽑으면 [17, 12, 13, 72, 73, 23]을 만들 수 있습니다. 
+이 중 가장 큰 수는 73입니다. 
+위 예시처럼 어떤 수 n개에서 k개의 수를 선택하여 만들 수 있는 수 중에서 
+가장 큰 수를 찾아 주세요. 
+
+import itertools # 조합 사용을 위함 
+
+class Combination:
+    def __init__(self, num, cnt):
+        self.num = num
+        self.cnt = cnt
+
+    def count(self, args, n): # 리스트, 개수 
+        result = list(itertools.combinations(args, n)) # 조합. 튜플로 반환되므로 리스트화 
+        return result # 조합 결과 반환 
+
+    def select(self, num, cnt):
+        list_num = [] # 입력받은 수 리스트 
+        select_num = [] # 경우의 수 리스트 
+        tmp = 0 # 최대값을 담을 임시변수 
+
+        for i in range(len(num)): 
+            list_num.append(num[i]) # 입력받은 수를 하나씩 뽑아 리스트에 올리기 
+
+        select_num = self.count(list_num, cnt) # 경우의 수 찾기. count 함수로 던져줌 
+        # print(select_num) # 조합 결과 확인 
+
+        for j in range(len(select_num)):
+            string_sum = '' # 숫자를 연결할 임시 변수 
+            for k in range(len(select_num[j])):
+                string_sum += select_num[j][k] # 각 자리 숫자를 서로 연결해 임시 변수에 대입 
+            if tmp < int(string_sum): # 만약 tmp이 임시 변수의 값보다 작으면 
+                tmp = int(string_sum) # tmp 자리에 해당값 저장 
+
+        return print(tmp) # 가장 큰 수 출력 
+
+num = input("숫자 입력: ")
+cnt = int(input("개수: "))
+result = Combination(num, cnt)
+result.select(num, cnt)

@@ -1,0 +1,217 @@
+536. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+for i in x.keys(): print(i, end=' ‘)
+
+a. Sunday 10 	b. day week 	c. Sunday 	d. 10
+
+Answer: b
+
+
+537. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+for i in x.items(): print(i, end=' ')
+
+a. ('day', 'Sunday') ('week', 10) 	b. day week 
+c. ('week', 10) 			d. ('day', 'Sunday’)
+
+Answer: a
+
+
+538. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(list(x.keys()))
+
+a. Sunday 10 		b. day week 
+c. ['day', 'week'] 		d. (day, week)
+
+Answer: c
+
+
+539. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(tuple(x.items()))
+
+a. (('week', 10), ('day', 'Sunday')) 	b. ('day', 'Sunday') ('week', 10) 
+c. ['day', 'week'] 			d. (day, week)
+
+Answer: b
+
+
+540. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(tuple(x.values()))
+
+a. Sunday 10 		b. ('Sunday', 10) 
+c. ['Sunday', 10] 		d. 10
+
+Answer: b
+
+
+541. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+for i, j in x.items(): print(i, j, end=' ‘)
+
+a. ('day', 'Sunday') ('week', 10) 	b. {'day':'Sunday', 'week':10} 
+c. 'day':'Sunday', 'week':10 		d. day Sunday week 10
+
+Answer: d
+# end=' '가 없었으면 item끼리 묶여서 두 줄 출력된다.
+
+
+542. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print('day' in x.values())
+
+a. Sunday 	b. True 		c. False 		d. day
+
+Answer: c
+
+
+543. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print('day' in x.keys())
+
+a. Sunday 	b. True 		c. False 		d. day
+
+Answer: b
+
+
+544. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x.get('day', 'Friday’))
+
+a. Friday 		b. True 		c. Sunday 	d. day
+
+Answer: c
+# key값에 day가 있는 경우 대응되는 value값 반환
+
+
+545. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x.get('days', 'Friday'))
+
+a. Friday 		b. True 		c. Sunday 	d. day
+
+Answer: a
+# key값에 days가 없는 경우 새로운 한 쌍으로써 뒤에 있는 문자열을 value으로 가져옴
+
+
+546. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x.get('weak', 5))
+
+a. 10 	b. 5 	c. Sunday 	d. day
+
+Answer: b
+
+
+547. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x.get('week', 5))
+
+a. 10 	b. 5 	c. Sunday 	d. day
+
+Answer: a
+
+
+548. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x.get('year', 2016))
+
+a. year 	b. 2016 	c. Sunday 	d. 10
+
+Answer: b
+
+
+549. What will be the output after the following statements?
+x = {'year': 2016, 'month': 'March'} 
+if 'day' not in x: x['day'] = 'Tuesday' 
+print(x)
+
+a. ('day', 'Tuesday') 
+b. {'day': 'Tuesday', 'month': 'March'} 
+c. 'day': 'Tuesday', 'month': 'March', 'year': 2016 
+d. {'day': 'Tuesday', 'month': 'March', 'year': 2016}
+
+Answer: d
+# x에 day가 없으면 if 아래에 있는 키와 벨류를 추가 
+
+
+550. What will be the output after the following statements?
+x = {'year': 2016, 'month': 'March'} 
+x.setdefault('day', 'Tuesday') 
+print(x)
+
+a. ('day', 'Tuesday') 
+b. {'day': 'Tuesday', 'month': 'March'} 
+c. 'day': 'Tuesday', 'month': 'March', 'year': 2016 
+d. {'day': 'Tuesday', 'month': 'March', 'year': 2016}
+
+Answer: d
+# setdefault()는 key값과 value 하나를 인자로 받는 dict의 메소드. 
+setdefault()는 key값이 있다면 key값을 반환하고 없다면 두 번째 인자를 반환. 
+즉, 추가 되는 셈....
+
+
+551. What will be the output after the following statements?
+x = {'year': 2016, 'month': 'March'} 
+x.setdefault('day', 'Tuesday') 
+x.setdefault('day', 'Monday') 
+print(x)
+
+a. ('day', 'Monday') 
+b. {'day': 'Monday', 'month': 'March’}
+c. {'day': 'Tuesday', 'month': 'March', 'year': 2016} 
+d. {'day': 'Monday', 'month': 'March', 'year': 2016}
+
+Answer: c
+
+
+552. What will be the data type of x after the following statement?
+x = {}
+
+a. Tuple 	b. Set 	c. List 	d. Dictionary
+
+Answer: b
+
+
+553. What will be the output after the following statement?
+print('Today is a \n nice day’)
+
+a. Today is a \n nice day 	b. Today is a \nnice day 
+c. Today is a nice day 	d. 'Today is a \n nice day’
+
+Answer: a
+
+
+554. What will be the output after the following statements?
+x = 'python jobs' 
+x.upper() 
+print(x)
+
+a. PYTHON JOBS 	b. Python jobs 
+c. Python Jobs 	d. python jobs
+
+Answer: a
+
+
+555. What will be the output after the following statements?
+x = 'Python Jobs' 
+x.lower() 
+print(x)
+
+a. PYTHON JOBS 	b. Python jobs 
+c. Python Jobs 	d. python jobs
+
+Answer: d
+
+
+
+ALGORITHM HOMEWORK(#13)
+
+문자와 숫자가 섞인 문자열을 입력 받을 때 구별하여 출력하세요.
+input:
+"c910m6ia 1ho"
+output:
+str : cma ho
+int : 91061

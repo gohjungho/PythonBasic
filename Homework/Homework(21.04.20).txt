@@ -1,0 +1,85 @@
+37. Is it possible to execute a program without defining a main() method?
+A:
+No, with Java 7 onwards, you need a main() method to execute a program. In earlier versions of Java, there was a workaround available to use static blocks for execution. But now this gap has been closed. 
+
+아니요, Java 7 이상에서는 프로그램을 실행하려면 main() 메서드가 필요합니다. 이전 버전의 Java에서는 정적 블록을 실행하는 데 사용할 수 있는 해결 방법이 있었습니다. 하지만 이제 이 격차는 사라졌습니다.
+
+
+38. What happens when static modifier is not mentioned in the signature of main method? 
+A: 
+As per Java specification, main method has to be marked as static. 
+
+It needs only one argument that is an array of String. 
+
+A program can compile with a non-static method. But on execution it will give NoSuchMethodError.
+
+Java 사양에 따라 주 메서드는 정적 방법으로 표시되어야 합니다.
+
+문자열 배열인 인수는 하나만 필요합니다.
+
+프로그램은 정적이 아닌 방법으로 컴파일할 수 있다. 그러나 실행 시 NoSuchMethodError가 발생합니다.
+
+
+39. What is the difference between static method and instance method in Java?
+A:
+Often, there is a need to define a behavior for a class that is not dependent on member variables of an object. Such behavior is captured in a static method. If there is a behavior dependent upon the member variables of an object, then we do not mark it static, it remains as instance method. 
+
+To call as static method, we do not need to create an object. We just call it with class name. But to call an instance method, we need to create/get an object first. 
+
+Instance member variables cannot be accessed by a static method. 
+
+But an instance method can call both instance variables and static variables. 
+
+개체의 멤버 변수에 종속되지 않는 클래스에 대한 동작을 정의해야 하는 경우가 많습니다. 이러한 동작은 정적 방법으로 캡처됩니다. 개체의 멤버 변수에 종속된 동작이 있으면 정적 상태로 표시하지 않고 인스턴스 메서드로 남아 있습니다.
+
+정적 메서드로 호출하려면 개체를 만들 필요가 없습니다. 그냥 반 이름으로 불러요. 그러나 인스턴스 메소드를 호출하려면 먼저 객체를 만들거나 가져와야 합니다.
+
+정적 메서드로 인스턴스 멤버 변수에 액세스할 수 없습니다.
+
+그러나 인스턴스 메소드는 인스턴스 변수와 정적 변수를 모두 호출할 수 있습니다.
+
+
+40. What is the other name of Method Overloading? 
+A:
+Method Overloading is also known as Static Polymorphism.
+
+메서드 오버로딩은 정적 다형성이라고도 합니다.
+
+
+ALGORITHM QUIZ (#28) 
+
+괄호 문자열 '(', ')'이 바르게 구성된 문자열을 바른 문자열, 
+그렇지 않은 문자열을 바르지 않은 문자열이라 부르도록 하자. 
+(())와 같은 문자열은 바른 문자열이지만, ()())와 같은 문자열은 바르지 않은 것이다. 
+입력으로 주어진 괄호 문자열이 바른 문자열인지 바르지 않은 문자열인지 
+"Yes"와 "NO"로 구분된 문자열을 출력해보자. 
+
+
+def round_bracket(args):
+    tmp = '' # 괄호만 뽑아놓을 임시변수  
+    a = 0 # 괄호 순서를 판별할 변수
+
+    # 1 단계 - 괄호 추출하기
+    i = 0  
+    while i < len(args): # 입력받은 문자열만큼 반복 
+        if args[i] == chr(40) or args[i] == chr(41): # 소괄호를 찾아서 
+            tmp += args[i] # tmp에 담는다
+        i += 1
+
+    # 2 단계 - 괄호의 개수, 순서 판별하기
+    i = 0  
+    while i < len(tmp): # tmp의 길이 만큼 반복 
+        if tmp[i] == chr(40): # ( 라면
+            a += 1 # a의 값 1 증가 
+        else: # ) 라면 
+            a -= 1 # a의 값 1 감소 
+            if a < 0: # a의 값이 음수이면 괄호 순서가 잘못된 것이므로
+                return "No" # No 반환 
+        i += 1
+
+    if a == 0: # a의 값이 0이면 
+        return "Yes" # Yes 반환 
+    else: 
+        return "No" # '('의 수가 더 많은 경우. No 반환. 
+    
+round_bracket(input())

@@ -1,0 +1,65 @@
+9. Can we write main method as public void static instead of public static void? 
+쓰는 순서는 문법과 같기 때문에 자리를 바꿀 수 없다. 
+VSCode에서 void가 static 앞에 쓰일 시 
+'클래스에서 기본 메소드를 찾을 수 없습니다. 다음 형식으로 기본 메소드를 정의하십시오. public static void main(String[] args)'
+를 볼 수 있다. 
+
+Answer: 
+No, you cannot write it like this. 
+Any method has to first specify the modifiers and then the return value. 
+The order of modifiers can change. 
+
+We can write static public void main() instead of public static void main() 
+
+10. In Java, if we do not specify any value for local variables, then what will be the default value of the local variables? 
+모든 변수는 초기값이 지정되어야만 한다. 이를 지정해 주지 않으면 변수의 값이 초기화되지 않아 오류가 발생한다. 
+(Error: variable 변수이름 might not have been initialized)
+
+Answer: 
+Java does not initialize local variables with any default value. 
+So these variables will be just null by default. 
+
+11. Let say, we run a java class without passing any arguments. 
+What will be the value of String array of arguments in Main method? 
+자바는 명령행에 주어진 모든 인자를 문자열을 처리하여 main메소드에 전달한다. 
+
+Answer: 
+By default, the value of String array of arguments is empty in Java. 
+It is not null. 
+
+12. What is the difference between byte and char data types in Java? 
+byte형은 정수형으로 분류되며 short보다 훨씬 적은 2의 8제곱 개의 숫자만을 다룰 수 있다. 비트 수가 1비트로 매우 작다.
+char형은 문자형으로 유니코드를 다루며 2의 16제곱의 범위를 가진다. 
+
+Answer: 
+Both byte and char are numeric data types in Java. 
+They are used to represent numbers in a specific range. 
+
+Major difference between them is that a byte can store raw binary data 
+where as a char stores characters or text data. 
+
+Usage of char is E.g. char ch = 'x'; 
+
+Byte values range from -128 to 127. 
+
+A byte is made of 8 bits. But a char is made of 16 bits. So it is equivalent to 2 bytes.
+
+
+ALGORITHM HOMEWORK
+모든 짝수 번째 숫자를 * 로 치환하시오.
+(홀수 번째 숫자,또는 짝수 번째 문자를 치환하면 안됩니다.)
+print(cnvt("57uyft43yut89574389"))
+5*uyft4*yut*9*7*3*9
+# 모든 코드 라인마다 주석 첨부
+
+Answer: 
+
+def cnvt(s): # 매개변수 하나를 받는 함수
+    for i in range(1, len(s), 2): # 인덱스 1 = 두번째 칸, 2씩 증가하며 반복 
+        if s[i].isdigit(): # 짝수 번째가 숫자이면 
+            s[i] = '*' # *로 변경 
+    return ''.join(s) # list를 문자열 형태로 변경(빈칸과 결합)
+
+# 57uyft43yut89574389
+a = list(input("문자열 입력: ")) # 문자열 입력 후 리스트로 변환 
+print("output: {}".format(cnvt(a))) # 결과

@@ -1,0 +1,151 @@
+41. How will you implement method overloading in Java? 
+A: 
+In Java, a class can have multiple methods with same name but different arguments. It is called Method Overloading. To implement method overloading we have to create two methods with same name in a class and do one/more of the following: 
+
+1. Different number of parameters 
+
+2. Different data type of parameters
+
+3. Different sequence of data type of parameters
+
+Java에서 클래스는 이름은 같지만 인수는 다른 여러 메소드를 가질 수 있습니다. 메서드 오버로드라고 합니다. 메서드 오버로드를 구현하려면 클래스에 이름이 같은 두 개의 메서드를 생성하고 다음 중 하나 이상을 수행해야 합니다.
+
+1. 파라미터의 개수가 다릅니다.
+
+2. 매개 변수의 데이터 유형 다양
+
+3. 매개 변수의 데이터 유형 순서 다양
+
+
+42. What kinds of argument variations are allowed in Method Overloading?
+A: 
+Method Overloading allows two methods with same name to differ in: 
+
+1. Number of parameters
+
+2. Data type of parameters
+
+3. Sequence of data type of parameters
+
+메서드 오버로딩을 사용하면 이름이 같은 두 메서드가 다음과 같이 다릅니다.
+
+1. 파라미터 수
+
+2. 매개 변수의 데이터 유형
+
+3. 파라미터의 데이터 유형 순서
+
+
+43. Why it is not possible to do method overloading by changing return 
+type of method in Java? 
+A: 
+If we change the return type of overloaded methods then it will lead to ambiguous behavior. How will clients know which method will return what type. Due to this different return type are not allowed in overloaded methods. 
+
+오버로드된 메서드의 반환 형식을 변경하면 모호한 동작이 발생합니다. 고객이 어떤 방법이 어떤 유형을 반환하는지 어떻게 알 수 있습니까? 이 때문에 오버로드된 메서드에서는 반환 유형이 허용되지 않습니다.
+
+
+44. Is it allowed to overload main() method in Java? 
+A: 
+Yes, Java allows users to create many methods with same name 'main'. But only public static void main(String[] args) method is used for execution. 
+
+예, Java를 사용하면 동일한 이름의 'main' 메서드를 여러 개 만들 수 있습니다. 그러나 실행에는 공개 정적 void main(String[] args) 메서드만 사용됩니다.
+
+
+45. How do we implement method overriding in Java? 
+A:
+To override a method, we just provide a new implementation of a method with same name in subclass. So there will be at least two implementations of the method with same name. One implementation is in parent class. And another implementation is in child class. 
+
+메서드를 재정의하려면 하위 클래스에 같은 이름의 메서드를 새로 구현하기만 하면 됩니다. 그래서 적어도 두 개의 동일한 이름의 구현 방법이 있을 것이다. 하나의 구현은 상위 클래스에 있습니다. 그리고 또 다른 구현은 어린이 클래스에 있습니다.
+
+
+46. Are we allowed to override a static method in Java? 
+A: 
+No. Java does not allow overriding a static method. If you create a static method with same name in subclass, then it is a new method, not an overridden method. 
+
+아니요. Java는 정적 메서드의 재정의를 허용하지 않습니다. 하위 클래스에 같은 이름의 정적 메서드를 만들면 재정의된 메서드가 아니라 새 메서드입니다.
+
+
+47. Why Java does not allow overriding a static method? 
+A: 
+To override a method, you need an instance of a class. Static method is not associated with any instance of the class. So the concept of overriding does not apply here. 
+
+Therefore, Java does not allow overriding a static method.
+
+메서드를 재정의하려면 클래스의 인스턴스가 필요합니다. 정적 메서드가 클래스의 인스턴스와 연결되어 있지 않습니다. 따라서 재정의 개념은 여기에 적용되지 않습니다.
+
+따라서 Java는 정적 메서드의 재정의를 허용하지 않습니다.
+
+
+48. Is it allowed to override an overloaded method? 
+A: 
+Yes. You can override an overloaded method in Java.
+
+예. Java에서 오버로드된 메서드를 재정의할 수 있습니다.
+
+
+49. What is the difference between method overloading and method 
+overriding in Java? 
+A: 
+Differences between method overloading and overriding are: 
+
+1. Method overloading is static polymorphism. Method overriding is runtime polymorphism. 
+
+2. Method overloading occurs within the same class. Method overriding happens in two classes with hierarchy relationship. 
+
+3. Parameters must be different in method overloading. Parameters must be same in method overriding. 
+
+4. Method overloading is a compile time concept. Method overriding is a runtime concept. 
+
+메서드 오버로드와 오버라이드 간의 차이는 다음과 같습니다.
+
+1. 메서드 과부하는 정적 다형성입니다. 메서드를 재정의하는 것은 런타임 다형성입니다.
+
+2. 메서드 오버로드는 동일한 클래스 내에서 발생합니다. 메서드 재정의는 계층 관계가 있는 두 클래스에서 발생합니다.
+
+3. 매개 변수는 메서드 과부하에서 서로 달라야 합니다. 메서드 재정의에서 매개 변수는 동일해야 합니다.
+
+4. 메서드 오버로딩은 컴파일 시간 개념입니다. 메서드 재정의는 런타임 개념입니다.
+
+
+50. Does Java allow virtual functions? 
+A: 
+Yes. All instance methods in Java are virtual functions by default. 
+Only class methods and private instance methods are not virtual methods in Java. 
+
+예. Java의 모든 인스턴스 메서드는 기본적으로 가상 함수입니다.
+Java에서는 클래스 메서드와 개인 인스턴스 메서드만 가상 메서드가 아닙니다.
+
+
+
+ALGORITHM QUIZ (#28)
+은주는 놀이공원 아르바이트를 하고 있습니다. 
+은주가 일하는 놀이공원에서는 현재 놀이공원 곳곳에 숨겨진 숫자 스탬프를 모아 오면 선물을 주는 이벤트를 하고 있습니다. 
+숫자 스탬프는 매일 그 수와 스탬프에 적힌 숫자가 바뀌지만 그 숫자는 항상 연속됩니다. 
+그런데 요즘 다른 날에 찍은 스탬프를 가지고 와 선물을 달라고 하는 손님이 늘었습니다. 
+
+스탬프에 적힌 숫자가 공백으로 구분되어 주어지면 
+이 숫자가 연속수인지 아닌지 "YES"와 "NO"로 판별하는 프로그램을 작성하시오. 
+
+입력1 
+1 2 3 4 5
+출력 
+YES
+
+입력2 
+1 4 2 6 3
+출력 
+NO
+
+
+def stemp(arr): 
+    arr = sorted(arr) # 입력받은 리스트 정렬 
+    i = 0
+    for i in range(i + 1, len(arr)):  # 인덱스 1부터 리스트 길이만큼 반복
+        if int(arr[i]) - int(arr[i - 1]) != 1: # 붙어있는 두 수를 비교. 차가 1이 아니면
+            return "NO" # 연속된 수가 아님
+    return "YES" # 위 사항을 전부 통과하면 연속된 수 
+            
+a = input().split(' ')
+stemp(a)
+
+# 음수의 경우 No로만 출력됨.... 

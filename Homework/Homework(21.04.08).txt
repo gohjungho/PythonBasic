@@ -1,0 +1,77 @@
+13. What are the main principles of Object Oriented Programming? 
+캡슐화, 상속, 다형성의 3요소와 
+단일 책임의 원칙(SRP), 개방폐쇄의 원칙(OCP), 리스코브 치환의 원칙(LSP), 
+인터페이스 분리의 원칙(ISP), 의존성역전의 원칙(DIP)의 5원칙으로 구분할 수 있다. 
+
+
+14. What is the difference between Object Oriented Programming language 
+and Object Based Programming language? 
+객체 지향 프로그래밍(Object Oriented Programming)은 프로그램을 유연하고 
+변경이 용이하게 만들기 때문에 대규모 소프트웨어 개발에 많이 사용된다. 
+그러나 지나친 프로그램의 객체화 경향은 실제 세계의 모습을 그대로 반영하지 못한다는 비판을 받는다. 
+
+객체 기반 프로그래밍은 첫 번째 줄에서부터 순차적으로 실행하는 프로그램을 말한다. 
+암시적 상속(객체지향)이 일어나지 않고 다형성을 지원하지 않는다. 
+
+
+15. In Java what is the default value of an object reference defined 
+as an instance variable in an Object? 
+변수에는 기본값이 존재한다. 숫자의 경우 0이고, 불의 경우 false, 
+객체 참조(?)(object references)의 경우 null이다. 
+
+
+16. Why do we need constructor in Java? 
+생성자란 객체를 생성하기 위한 특별한 메소드이다. 
+생성자를 선언하지 않으면 디폴트 생성자가 있는 것으로 인식하며,
+생성자는 인스턴스를 만들 때 자동으로 호출된다. 
+
+생성자를 만들어 주는 주된 이유로는 
+1. 인스턴스 생성 시 필드에 초기값을 부여하기 위해 
+2. 인스턴스 생성에 필요한 초기화 명령을 실행하기 위해서라고 할 수 있다. 
+
+
+ALGORITHM HOMEWORK
+문자열을 입력 받아서, 같은 문자가 연속적으로 반복되는
+경우에 그 반복 횟수를 표시하여 문자열을 압축하기.
+입력 예시: aaabbcccccca
+출력 예시: a3b2c6a1
+# 모든 코드 라인마다 주석 첨부
+
+def chr_cnt(string):
+    i = 0 # index값
+    tmp = '' # 문자를 넣을 임시변수
+    cnt = 0 # 개수를 넣을 임시변수
+
+    while i < len(string): # 문자열의 길이 만큼 반복
+        if tmp == '': # 문자 임시변수가 비어있으면 
+            tmp += string[i] # 문자열의 i번째 자리를 임시변수에 추가 
+            print(string[i], end='') # 임시변수에 추가된 i번째 문자 출력 
+        if string[i] == tmp: # i번째 문자와 임시변수가 같다면
+            cnt += 1 # 개수 + 1
+            i += 1 # 인덱스 + 1
+        elif string[i] != tmp: # 임시변수의 문자와 i번째 문자가 다르면 
+            print("{}".format (cnt), end='') # 개수 출력 
+            tmp = '' # 문자 임시변수 초기화 
+            cnt = 0 # 개수 초기화 
+            continue # 처음으로 돌아가기 
+    print(cnt, end='') # 인덱스 범위 초과로 마지막문자의 누락된 cnt값을 채워줌 
+
+s = list(map(str, "aaaabbbcczzzza")) # 문자열 입력 
+chr_cnt(s) # 결과 출력 
+
+
+<Answer>
+
+s = "aaaabbbcczzzza"
+
+result = s[0] #반복문 실행되는 동안 문자열 형태로 반환되는 결과들을 담을 변수
+count = 0 #반복되서 나오는 문자 수만큼 카운팅되는 값을 담을 변수
+for i in s:
+    if i == result[-1]: 
+# result변수 마지막 문자와 비교합니다. else에서 result변수에 값이 추가되기 때문에 마지막 문자[-1]와 비교.
+        count += 1
+    else:
+        result += str(count) + i #마지막 글자와 i가 다를 경우 카운팅된 값을 문자열 형태로 result 변수 마지막에 추가 해주고 i를 마지막 문자로 추가합니다.
+        count = 1
+result += str(count) #결과들이 담긴 변수에 마지막으로 카운팅된 값을 문자열 형태로 추가합니다.
+print(result)

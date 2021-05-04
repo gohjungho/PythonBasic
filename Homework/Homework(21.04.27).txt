@@ -1,0 +1,81 @@
+71. Can a class be marked final in Java? 
+사용할 수 있다. 다만 final이 붙음으로써 상속이 불가하다. 
+
+
+72. How can we create a final method in Java? 
+final 메소드는 오버라이딩을 금지시키므로 이 메소드를 오버라이딩 하려하면 
+에러가 나는 것을 볼 수 있다. 
+
+
+73. How can we prohibit inheritance in Java? 
+final 클래스를 사용하거나 접근제한자 private을 사용하는 방법이 있다.
+
+
+74. Why Integer class in final in Java? (포장 클래스(Wrapper Class)에서 final을 사용하는 이유가 무엇인가)
+Wrapper의 타입은 모든 인스턴스에서 동일한 기능을 보장하기 위해 불변성이 필요하며, 이는 매우 중요하다. 
+그래서 불변성을 보장하기 위해 final을 사용한다. 
+
+
+75. What is a blank final variable in Java? 
+final 변수를 선언과 동시에 초기화를 해주는 것이 아닌, 생성자에서 초기화를 해주는 방법 
+
+
+76. How can we initialize a blank final variable? 
+먼저 선언해놓고 각 인스턴스에서 다른 값을 갖도록 초기화하는 것. 
+단, 이렇게 한 번 값을 할당하면 다음부터는 수정할 수 없다.
+
+
+77. Is it allowed to declare main method as final? 
+main에 final을 넣어도 컴파일러에서 오류를 발생시키지 않는다. 
+자바에서 final 메서드는 오버라이딩되지 않는다. 고로 하위 클래스에서는 final메소드를 오버라이딩 할 수 없다. 
+상속을 사용하고 하위 클래스에서 오버라이딩되지 않는 몇 가지 메서드가 필요한 경우 하위 클래스에서 해당 메서드가 오버라이딩되지 않도록 final 메소드를 만들어야 한다. 
+하위 클래스에서 최종 메서드에 액세스할 수 있지만 최종 메서드를 오버라이딩할 수는 없다. 
+
+
+78. What is the purpose of package in Java? 
+클래스들을 분류하고 사용의 편리성을 제공하기 위해서 관련 클래스와 인터페이스들을 하나로 묶을 수가 있는데 이를 패키지라고 한다. 
+즉, 패키지는 비슷한 종류의 클래스나 인터페이스들을 하나의 집단으로 묶어 놓은 것을 말한다. 
+
+
+79. What is java.lang package?
+lang패키지는 Java 프로그래밍에 필요한 가장 기본적인 클래스들이 모여있는 패키지이다. 
+import구문으로 호출해야 사용할 수 있는 다른 패키지들과는 달리 lang패키지는 
+import구문 없이도 자동으로 프로그램에 포함된다. lang패키지에 포함되는 클래스는 따로 명시하지 않아도 최상위 클래스가 된다. 
+
+
+80. Which is the most important class in Java? 
+Object Class. 
+java.lang.Object 클래스는 자바에서 제공하는 모든 클래스들의 최상위 클래스이므로 
+자바에서 제공하는 클래스뿐만 아니라 사용자가 정의한 클래스도 Object클래스가 제공하는 매서드를 상속 받아서 사용할 수 있다.
+
+
+ALGORITHM QUIZ (#29) 
+총 문자열의 길이는 50으로 제한하고 사용자가 문자열을 입력하면 
+그 문자열을 가운데 정렬을 해주고, 나머지 빈 부분에는 '='을 채워넣어주세요. 
+
+입력 
+hi 
+출력 
+===================hi===================
+
+
+class Sort:
+    def center(args, n = 50): # args: 출력할 문자열 / n: 총 길이   
+        result = ''
+        for i in range(n): # 길이만큼 반복
+            try:
+                if i == (n - len(args)) / 2:
+                    # 인덱스 i가 (총 길이 - 문자열 길이) / 2 이면
+                    for j in range(len(args)):
+                        result += args[j]
+                else: result += "="
+                
+                if len(result) == 50: # 좌우 비대칭을 막기 위함 
+                    return result
+            except: ''
+
+comment = " " # 초기값 공백 한 칸
+while len(comment) % 2 != 0: # 짝수를 입력받을 때까지 반복 
+    comment = input("짝수 개의 문자열 입력: ")
+
+Sort.center(comment)

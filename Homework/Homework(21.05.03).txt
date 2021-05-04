@@ -1,0 +1,69 @@
+101. Why Java provides Garbage Collector? 
+프로그램을 개발하다보면 유효하지 않은 메모리를 발생하게 된다. 
+C언어에서는 free()함수로 직접 정리를 해주지만 java나 kotlin에서는 
+가비지 컬렉션이 이를 대신해준다. 
+
+
+102. What is the purpose of gc() in Java? 
+불필요한 메모리로 인해 메모리 누수를 자동으로 방지하는 역할 
+
+
+103. How does Garbage Collection work in Java? 
+백그라운드에서 데몬 스레드로 돌며 더이상 사용되지 않는 객체들을 메모리에서 
+제거하며 효율적인 메모리 사용을 돕는다. 객체는 힙 영역에 저장되고 스택 영역에 
+이를 가리키는 주소값이 저장되는데 참조되지 않는 객체를 메모리에서 제거한다. 
+
+
+104. When does an object become eligible for Garbage Collection in Java? 
+객체가 더 이상 사용되지 않을 때 
+
+
+105. Why do we use finalize() method in Java? 
+객체 소멸자. 리소스 누수를 방지하기 위해 사용. JVM이 실행하는 GC가 수행될 때 
+더 이상 사용하지 않는 자원에 대한 정리 작업을 진행하기 위해 호출되는 종료자 메서드
+
+
+106. What are the different types of References in Java? 
+(In Java, there are four types of references: )
+1. Strong References(강한 참조) - 자바의 기본 참조 유형. 
+2. Soft References(소프트 참조) - 대상 객체를 참조하는 경우가 소프트 참조 객체만 존재하는 경우 GC의 대상이 된다. 단, JVM의 메모리가 부족한 경우에만 힙 영역에서 제거되고 메모리가 부족하지 않다면 굳이 제거하지 않는다. 
+3. Weak References(약한 참조) - 대상 객체를 참조하는 경우가 약한 참조 객체만 존재하는 경우 GC의 대상이 된다. 톰켓 컨테이너의 ConcurrentCache class에서 WeakHashMap을 사용 중일 때에는 무조건 힙 메모리에서 제거된다. 
+4. Phantom References(팬텀 참조) - 생성자에서 무조건 참조 큐?(ReferenceQueue)를 받는다. GC가 실행되기 전에 ( finalize() 호출 후) 팬텀 참조는 객체 내부의 참조를 null로 설정하지 않고 참조된 객체를 phantomly reachable 객체로 만든 이후에 ReferenceQueue에 enqueue 된다.
+
+
+107. How can we reference an unreferenced object again? 
+참조 그래프를 순회하고 참조로 가리키는 노드를 확인하면 된다. 
+참조하지 않은 다른 객체는 가비지로 간주되므로 가비지 수집 대상이 된다. 
+
+
+108. What kind of process is the Garbage collector thread? 
+힙 메모리 영역과 스택 메모리 영역으로 구분된다. 
+
+
+109. What is the purpose of the Runtime class? 
+JVM이 작동하는 시스템과의 인터페이스를 제공하는 객체. 
+자바 클래스가 아닌 운영체제 기반의 프로그램을 실행시키거나 운영체제에 대한 정보를 제공 
+
+
+110. How can we invoke an external process in Java? 
+자바에서는 외부 프로그램 실행 시 출력 내용을 바로 확인할 수 없고 버퍼에 저장 후 출력하는 방식이다. 
+JDK1.4 이하에서는 exec()로, JDK1.5 이상에서는 ProcessBuilder 객체를 이용해 외부 프로그램을 실행 시킬 수 있다. 
+
+
+ALGORITHM HOMEWORK(#33) 
+
+일정한 규칙을 가지고 있는 숫자를 나열하는 놀이를 하는 중입니다. 
+이전 숫자에서 각 숫자의 개수를 나타내어 숫자로 만들고 다시 그 숫자를 
+같은 규칙으로 만들며 나열합니다. 이 놀이는 1부터 시작합니다. 
+다음 수는 1이 1개이기 때문에 '11'이 되고 '11'에서 1이 2개이기 때문에 
+그 다음은 '12'가 됩니다. 즉, 
+
+1. 1 -> (1) 
+2. 11 -> (1이 1개) 
+3. 12 -> (1이 2개) 
+4. 1121 -> (1이 1개 2가 1개) 
+5. 1321 -> (1이 3개 2가 1개)
+6. 122131 -> (1이 2개 2가 1개 3이 1개) 
+7. 132231 -> (1이 3개 2가 2개 3이 1개) 
+
+위와 같이 진행되는 규칙을 통해 진행횟수 N을 입력받으면 해당되는 수를 출력하세요. 

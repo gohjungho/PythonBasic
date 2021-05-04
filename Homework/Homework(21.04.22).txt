@@ -1,0 +1,98 @@
+51. What is meant by covariant return type in Java? 
+자식 클래스에서 오버라이딩된 메소드에 대해 다른 반환 유형을 가질 수 있지만 
+자식 클래스의 반환 유형은 부모 클래스의 반환 유형의 서브 타입이어야 한다. 
+오버라이딩 메소드는 반환 유형에 따라 변한다. 
+
+
+52. What is Runtime Polymorphism?
+런타임 다형성 또는 동적 메소드 디스패치는 오버라이딩된 메소드에 대한 호출이 
+컴파일 시간이 아닌 런타임에 걸리는 프로세스이다. 
+이 프로세스에서 오버라이딩 메소드는 슈퍼 클래스의 참조 변수를 통해 호출된다. 
+호출할 메소드의 결정은 참조 변수에 의해 참조되는 개체를 기반으로 한다. 
+
+
+53. Is it possible to achieve Runtime Polymorphism by data members in Java?
+가능하다. 상위 클래스에 데이터 멤버를 선언할 때 하위 클래스 데이터 멤버의 값을 오버라이딩할 필요가 없다. 
+요구 사항에 따라 실제 개체 유형의 오버라이딩 값으로 변경된다. 
+
+
+54. Explain the difference between static and dynamic binding? 
+정적 바인딩: 컴파일러에 의해 컴파일에 걸리는 바인딩을 static 또는 early binding이라 한다. 
+모든 정적, 비공개 및 최종 메소드의 바인딩은 컴파일 시 수행된다. 
+
+
+55. What is Abstraction in Object oriented programming? 
+추상화는 필수적인 속성만을 보여주고 불필요한 정보를 숨기는 객체 지향 프로그래밍의 개념이다. 
+이는 프로그래밍의 복잡성과 노력을 줄이는데 도움이 된다. 
+
+
+56. How is Abstraction different from Encapsulation? 
+추상화: 특성을 일반화하고 세부사항을 제거하여 단순하게 만드는 과정
+캡슐화: 정보의 은닉을 위해 외부로부터 내부를 캡슐처럼 감싸서 숨기는 것. 
+외부에 공개하는 인터페이스에는 외부에서 보고 접근가능한 정보만 공객하고 실 구현이나 상태변경 등에 대한 내용은 내부로 숨긴다. 
+
+
+57. What is an abstract class in Java? 
+실제 클래스의 공통적인 부분을 추출해 어느정도 규격을 잡아놓은 추상적인 클래스. 
+실제 개체를 생성할 정도의 구체성을 가지는 반면, 추상클래스는 메소드와 내용이 추상적이므로 객체를 생성할 수 없다. 
+
+
+58. Is it allowed to mark a method abstract method without marking the class abstract? 
+추상 클래스 안의 추상 메소드는 반드시 하위 클래스에서 구현 해야한다. 
+이를 따르지 않으면 자식 클래스도 추상 클래스가 되어 객체를 만들 수 없다. 
+
+
+59. Is it allowed to mark a method abstract as well as final? 
+가능하다. 추상 클래스는 추상적이지도 최종적이지도 않고 단지 정규적인 메소드를 가질 수 있다. 
+이러한 메소드는 추상 클래스에서 구현되어야 하지만 클래스를 확장하면 해당 클래스를 
+재정의해야 하는지에 대한 여부는 개발자의 재량이다. 
+
+
+60. Can we instantiate an abstract class in Java? 
+할 수 없다. 익명 클래스를 만들고 인스턴스화하는 것은 가능하다. 
+
+
+ALGORITHM QUIZ (#28) 
+다음의 딕셔너리가 주어졌을 떄 한국의 면적과 가장 비슷한 국가와 그 차이를 출력하세요. 
+
+데이터
+nationWidth = {
+	'Korea': 220877,
+	'Rusia': 17098242,
+	'China': 9596961, 
+	'France': 543965,
+	'Japan': 377915,
+	'England': 242900 }
+
+출력 
+England 22023 
+
+
+class Country():
+    def land(args):
+        key_list = list(args.keys()) # key만 뽑은 리스트
+        value_list = list(args.values()) # value만 뽑은 리스트
+        tmp_v = value_list[0] # 결과값을 표시할 임시변수. 초기값은 한국면적으로 설정
+        tmp_k = '' # 결과값을 표시할 임시변수(국가명)
+
+        try:
+            for i in range(len(value_list)): # value 개수 만큼 반복
+                if abs(value_list[i] - value_list[0]) < tmp_v: # 한국과의 면적 차가 tmp_v보다 작으면
+                    tmp_v = value_list[i] # 해당 국가의 value값과 
+                    tmp_k = key_list[i] # 국가명 저장 
+        except: ""
+
+        result = [tmp_k, str(tmp_v)] # 출력을 위해 리스트화. 면적은 정수이므로 형 변환 
+    
+        return " ".join(result) # join으로 문자열 연결 
+            
+    
+nationWidth = {
+    'Korea': 220877,
+    'Rusia': 17098242,
+    'China': 9596961, 
+    'France': 543965,
+    'Japan': 377915,
+    'England': 242900 }
+
+Country.land(nationWidth) # 결과값을 확인해 봅시다 

@@ -1,0 +1,79 @@
+1. What is the difference between JDK and JRE? 
+JDK는 자바 개발 도구(JAVA Development kit)의 약자로, 아래의 JRE와 함께 개발을 위해 필요한 도구들(명령어, 컴파일러)까지 포함하고 있다.
+JRE는 자바 실행 환경(JAVA Runtime Environment)의 약자로 자바 프로그램을 동작시킬 때 필요한 라이브러리 파일과 기타 파일을 가지고 있다.
+
+Answer: 
+JDK stands for Java Development Kit. 
+It contains the tools and libraries for development of Java programs. 
+It also contains compilers and debuggers needed to compile Java program, 
+
+JRE stands for Java Runtime Environment. 
+This is included in JDK. 
+JRE provides librarise and JVM that is required to run a Java program. 
+
+2. What is Java Virtual Machine(JVM)? 
+자바 가상 머신(Java Virtual Machine)의 약자로 자바 소스코드로 만들어지는 자바 바이너리 파일을 실행할 수 있으며, 플랫폼에 의존적이다.
+
+Answer: 
+Java Virtual Machine(JVM) is an abstract machine that executes Java Bytecode.
+There are different JVM for different hardware and software platforms. 
+So JVM is platform dependent. 
+JVM is responsible for loading, verifying and executing the Bytecode on a platform.
+
+3. What are the different types of memory areas allocated by JVM? 
+메서드 영역(method area)
+: Class Area 로 불리어 집니다. 클래스파일을 읽어서 분석하여 클래스에 대한 정보(데이터)를 이곳에 저장합니다.
+힙(heap)
+: 인스턴스가 생성되는 공간으로서 new 연산자로 생성된 객체와 배열을 저장하는 공간입니다. 클래스 영역에 로드된 클래스만 생성이 가능합니다.
+호출스택(call stack 또는 execution stack)
+: 메서드가 호출될 때, 스택구조로 메모리가 할당되는 공간입니다. 즉 실행되는 순서에 따라 실행되는 Last In First Out(LIFO) 방식을 취합니다.
+
+Answer: 
+In Java, JVM allocates memory to different processes, methods and objects. 
+Some of the memory areas allocated by JVM are: 
+1. ClassLoader: It is a component of JVM used to load class files. 
+2. Class (Method) Area: It stores per-class structures such as the runtime constant pool, 
+field and method data, and the code for methods. 
+3. Heap: Heap is created a runtime and it contains the runtime data area in which objects are allocated. 
+4. Stack: Stack stores local variables and partial results at runtime. 
+It also helps in method invocation and return value. 
+Each thread creates a private JVM stack at the time of thread creation. 
+5. Program Counter Register: This memory area contains 
+the address of the Java virtual machine instruction that is currently being executed. 
+6. Native Method Stack: This area is reserved for all the native methods used in the application. 
+
+4. What is JIT compiler? 
+Just-In-Time의 약자로 자바 코드를 실행할 때 바이너리 코드 전체를 컴파일하여 네이티브 코드로 변경하고, 
+이후로는 더이상 인터프리터하지 않고 네이티브하지 않고 네이티브 코드를 직접 실행한다. 
+인터프리터로는 줄마다 수행하느라 속도가 느린데, 이를 어느정도 보완할 수 있게 된다.
+
+Answer: 
+Just In Time compiler also known as JIT compiler is used for performance improvement in Java.
+It is enabled by default. 
+It is compilation done at execution time rather earlier. 
+Java has popularized the use of JIT compiler by including it in JVM. 
+
+
+기수(Cardinal)를 입력하면 영어 서수(Ordinal)로 출력하는 함수를 작성합니다.
+1, 21, 31, 41, ... → 1st, 21st, 31st, 41st, ...
+2, 22, 32, 42, ... → 2nd, 22nd, 32nd, 42nd, ...
+3, 23, 33, 43, ... → 3rd, 23rd, 33rd, 43rd, ...
+11, 12, 13, 111, 112, 113, 211, 212, 213, ... → 11th, 12th, 13th, 111th, 112th, 113th, 211th, 212th, 213th, ...
+4, 5, 6, 11, 12, 13, 101, 111, 112, ... → 4th, 5th, 6th, 11th, 12th, 13th, 101th, 111th, 112th, ...
+
+Answer: 
+
+def num(n): 
+    if n % 10 == 1 and n % 100 != 11: 
+        return str(n) + 'st' 
+    elif n % 10 == 2 and n % 100 != 12: 
+        return str(n) + 'nd' 
+    elif n % 10 == 3 and n % 100 != 13:
+        return str(n) + 'rd' 
+    else:  
+        return str(n) + 'th' 
+
+print(num(1)) # 1st
+print(num(23)) # 23rd
+print(num(13)) # 13th
+print(num(102)) # 102nd 

@@ -1,0 +1,251 @@
+556. What will be the output after the following statements?
+x = 'Python Jobs' 
+if x.lower() == 'python jobs': print('Python jobs') 
+else: print('python 3 jobs’)
+
+a. python 3 jobs 	b. Python jobs 
+c. Python Jobs 	d. python jobs
+
+Answer: b
+
+
+557. What will be the output after the following statements?
+x = 'Python Jobs' 
+if x.isupper(): print('Python jobs') 
+else: print('python 3 jobs')
+
+a. python 3 jobs 	b. Python jobs 
+c. Python Jobs 	d. python jobs
+
+Answer: a
+
+
+558. What will be the output after the following statements?
+x = 'Python Jobs' 
+y = x.upper().lower().upper() 
+print(y)
+
+a. python Jobs b. PYTHON JOBS c. Python Jobs d. python jobs
+
+Answer: b
+
+
+559. What will be the output after the following statements?
+x = 'Python Jobs' y = x.upper().lower().isupper() 
+print(y)
+
+a. python jobs 	b. PYTHON JOBS 	c. False 	d. True
+
+Answer: c
+
+
+560. What will be the output after the following statements?
+x = ['Python', 'is', 'interesting'] 
+y = ' '.join(x) 
+print(y)
+
+a. 'Python', 'is', 'interesting' 		b. Python is interesting 
+c. Pythonisinteresting 		d. ['Python', 'is', 'interesting']
+
+Answer: b
+
+
+561. What will be the output after the following statements?
+x = 'Python is interesting' 
+y = x.split() 
+print(y)
+
+a. 'Python', 'is', 'interesting' 	b. Python is interesting 
+c. Pythonisinteresting 	d. ['Python', 'is', 'interesting’]
+
+Answer: d
+
+
+562. What will be the output after the following statements?
+x = '''Today is a nice day. 
+Let's go for a walk. 
+We'll also go to the park.''' 
+y = x.split('\n') 
+print(y)
+
+a. ['Today is a nice day.', "Let's go for a walk.", "We'll also go to the park."] 
+b. Today is a nice day.
+c. Let's go for a walk. 
+d. We'll also go to the park.
+
+Answer: a
+
+
+563. What will be the output after the following statements?
+x = 'Python 2 and Python 3' 
+print(x.strip('and'))
+
+a. Python 2 		b. Python 3 
+c. Python 2 and Python 3 	d. Python 2 Python 3
+
+Answer: c
+# 564번과 같으면서도 다른 경우의 문제.... 
+
+
+564. What will be the output after the following statements?
+x = 'Python 2 and Python 3' 
+print(x.strip('thon 3’))
+
+a. Python 2 		b. Python 2 and Py 
+c. Python 2 and Python 3 	d. Python 2 Python 3
+
+Answer: b
+# 인자가 되는 문자열의 모든 조합을 제거 
+
+
+565. What is the first line of the following statements on Windows?
+#! python3 
+x = 'Python 3’
+
+a. A comment 	b. Python String 
+c. Shebang line 	d. Python Variable
+
+Answer: a
+
+
+566. What will be the output after the following statements?
+import re 
+x = re.compile('r\d\d\d-\d\d\d\d') 
+y = x.search('The phone number is 444-4444') 
+print(y.group())
+
+a. The phone number is 444-4444 	b. \d\d\d-\d\d\d\d 
+c. 444-4444 			d. r'\d\d\d-\d\d\d\d’
+
+Answer: c
+# \d는 숫자를 의미. 즉 전화번호 포맷을 만들고자 하는 것 
+
+
+567. What will be the output after the following statements?
+import re 
+x = re.compile(r'(\d\d\d)-(\d\d\d\d)') 
+y = x.search('The phone number is 444-4444') 
+print(y.group(2))
+
+a. The phone number is 444-4444 
+b. 4444 		c. 444-4444 	d. 444
+
+Answer: b
+# 괄호를 기준으로 나뉘어져 저장된다 
+# 만약 y.group()에 0이 들어가 있다면 대입한 전체 문자열을 출력(444-4444)
+
+
+568. What will be the output after the following statements?
+import re 
+x = re.compile(r'(\d\d\d)-(\d\d\d\d)') 
+y = x.search('The phone number is 444-4444') 
+print(y.group(1))
+
+a. The phone number is 444-4444 
+b. 4444 		c. 444-4444 	d. 444
+
+Answer: d
+
+
+569. What will be the output after the following statements?
+import re 
+x = re.compile(r'(\d\d\d)-(\d\d\d\d)') 
+y = x.search('The phone number is 444-4444') 
+print(y.group(0))
+
+a. The phone number is 444-4444 
+b. 4444 		c. 444-4444 	d. 444
+
+Answer: c
+
+
+570. What will be the output after the following statements?
+import re 
+x = re.compile(r'(\d\d\d)-(\d\d\d\d)') 
+y = x.search('The phone number is 444-4444') 
+print(y.groups())
+
+a. ('444', '4444') 	b. 4444 	c. 444-4444 	d. 444
+
+Answer: c
+
+
+571. What will be the output after the following statements?
+import re 
+x = re.compile(r'(\(\d\d\d\))-(\d\d\d\d)') 
+y = x.search('The phone number is (444)-4444') 
+print(y.group(1))
+
+a. ('444', '4444') 	b. 444 	c. 444-4444 	d. (444)
+
+Answer: d
+# x에 이스케이프문자(와 )를 추가한 것으로 폼이 변경되었다
+
+
+572. What will be the output after the following statements?
+import re 
+x = re.compile(r'Python 2|Python 3') 
+y = x.search('Python 3 MCQ') 
+print(y.group())
+
+a. Python 2|Python 3 	b. Python 2 
+c. Python 3 		d. Python 3 MCQ
+
+Answer: c
+
+
+573. What will be the output after the following statements?
+import re 
+x = re.compile(r'Python 2|Python 3') 
+y = x.search('Python 2.7') 
+print(y.group())
+
+a. Python 2.7 	b. Python 2 
+c. Python 3 	d. Python 2|Python 3
+
+Answer: b
+
+
+574. What will be the output after the following statements?
+import re 
+x = re.compile(r'day') 
+y = x.search('Today is a nice day and a Sunday') 
+print(y.group())
+
+a. day 	b. Today 		c. nice day 	d. Sunday
+
+Answer: a
+# y에서 a탐색(?)
+
+
+575. What will be the output after the following statements?
+import re 
+x = re.compile(r'(Sun)?day') 
+y = x.search('Today is a nice day and a Sunday') 
+print(y.group())
+
+a. day 	b. Today 		c. nice day 	d. Sunday
+
+Answer: a
+# ㅇㅅㅇ... 
+
+
+ALGORITHM HOMEWORK(#16)
+주어진 문자열(공백 없이 쉼표로 구분되어 있음)을 가지고 아래
+문제에 대한 프로그램을 작성하세요.
+이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최승혁,
+이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경헌
+① 김씨와 이씨는 각각 몇 명 인가요?
+② "이재영"이란 이름이 몇 번 반복되나요?
+③ 중복을 제거한 이름을 출력하세요.
+④ 중복을 제거한 이름을 오름차순으로 정렬하여 출력하세요.
+
+names =
+"이유덕,이재영,권종표,이재영,박민호,강상희,이재영,김지완,최
+승혁,이성연,박영서,박민호,전경헌,송정환,김재성,이유덕,전경
+헌".split(",")
+
+#1
+#2
+#3
+#4

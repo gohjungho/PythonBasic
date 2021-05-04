@@ -1,0 +1,231 @@
+516. What will be the data type of y after the following statements?
+x = [1, 2, 3, 4] y = tuple(x)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: c
+
+
+517. What will be the data type of z after the following statements?
+x = [1, 2, 3, 4] y = tuple(x) z = list(y)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: d
+
+
+518. What will be the data type of the output after the following statements?
+x = 'Python' y = list(x) 
+print(y)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: d
+
+
+519. What will be the data type of the output after the following statements?
+x = 'Python' y = tuple(x) 
+print(y)
+
+a. TypeError 	b. String 		c. Tuple 		d. List
+
+Answer: c
+
+
+520. What will be the output after the following statements?
+x = ('Python') 
+print(x)
+
+a. ('P', 'y', 't', 'h', 'o', 'n') 	b. Python 
+c. P y t h o n 		d. ('Python')
+
+Answer: b
+
+
+521. What will be the output after the following statements?
+x = ('Python',) 
+print(x)
+
+a. ('Python',) 	b. Python 
+c. P y t h o n 	d. ('Python’)
+
+Answer: a
+
+
+522. What will be the output after the following statements?
+x = [0, 2, 4, 6] 
+print(tuple(x))
+
+a. [0, 2, 4, 6] 	b. (0, 2, 4, 6) 
+c. 0, 2, 4, 6 	d. 0 2 4 6
+
+Answer: b
+
+
+523. What will be the output after the following statements?
+x = (0, 2, 4, 6) 
+print(list(x))
+
+a. [0, 2, 4, 6] 	b. (0, 2, 4, 6) 
+c. 0, 2, 4, 6 	d. 0 2 4 6
+
+Answer: a
+
+
+524. What will be the output after the following statements?
+x = 'Python' 
+print(list(x))
+
+a. ('P', 'y', 't', 'h', 'o', 'n') 	b. (Python) 
+c. ['P', 'y', 't', 'h', 'o', 'n'] 	d. ['Python’]
+
+Answer: c
+
+
+525. What will be the output after the following statements?
+x = 'Python' 
+print(tuple(x))
+
+a. ('P', 'y', 't', 'h', 'o', 'n') 	b. (Python) 
+c. ['P', 'y', 't', 'h', 'o', 'n'] 	d. ['Python']
+
+Answer: a
+
+
+526. What will be the output after the following statements?
+x = [4, 5, 7, 8, 9] y = x 
+y[1] = 6 
+print(y)
+
+a. [4, 5, 7, 8, 9] 	b. [4, 5, 6, 7, 8, 9] 
+c. [4, 6, 7, 8, 9] 	d. [4, 7, 8, 9]
+
+Answer: c
+
+
+527. What will be the output after the following statements?
+x = [4, 5, 7, 8, 9] y = x 
+y[1] = 6 
+print(x)
+
+a. [4, 5, 7, 8, 9] 	b. [4, 5, 6, 7, 8, 9] 
+c. [4, 6, 7, 8, 9] 	d. [4, 7, 8, 9]
+
+Answer: a
+
+
+528. What will be the output after the following statements?
+def abc(z): z.append(44) 
+x = [7, 8, 9] 
+abc(x) 
+print(x)
+
+a. [7, 8, 9] 	b. [7, 8, 9, 44] 
+c. [7, 44, 8, 9] 	d. [44, 7, 8, 9]
+
+Answer: b
+
+
+529. What will be the output after the following statements?
+import copy 
+x = [5, 4, 3, 2, 1] y = copy.copy(x) 
+x.append(6) 
+print(y[-1])
+
+a. 5 	b. 6 	c. [5, 4, 3, 2, 1, 6] 	d. 1
+
+Answer: d
+
+
+530. What will be the output after the following statements?
+import copy 
+x = [5, 4, 3, 2, 1] y = copy.copy(x) 
+x[2] = 6 
+print(y[2])
+
+a. 3 	b. 6 	c. [5, 4, 6, 3, 2, 1] 	d. 4
+
+Answer: a
+
+
+531. What will be the output after the following statements?
+import copy 
+x = [5, 4, 3, 2, 1] y = [7, 8, 9] z = [x, y] 
+a = copy.copy(z) 
+x[2] = 6 
+print(a)
+
+a. [[5, 4, 3, 2, 1], [7, 8, 9]] 	b. [[5, 4, 6, 2, 1], [7, 8, 9]] 
+c. [5, 4, 6, 3, 2, 1] 		d. [5, 4, 6, 2, 1, 7, 8, 9]
+
+Answer: b
+
+
+532. What will be the output after the following statements?
+import copy 
+x = [5, 4, 3, 2, 1] y = [7, 8, 9] z = [x, y] 
+a = copy.deepcopy(z) 
+x[2] = 6 
+print(a)
+
+a. [[5, 4, 3, 2, 1], [7, 8, 9]] 	b. [[5, 4, 6, 2, 1], [7, 8, 9]] 
+c. [5, 4, 6, 3, 2, 1] 		d. [5, 4, 6, 2, 1, 7, 8, 9]
+
+Answer: a
+
+
+533. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+print(x['year’])
+
+a. day 	b. KeyError 	c. Sunday 	d. 10
+
+Answer: b
+
+
+534. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+for i in x.values(): print(i, end=' ‘)
+
+a. Sunday 10 	b. KeyError 	c. Sunday 	d. 10
+
+Answer: a
+
+
+535. What will be the output after the following statements?
+x = {'day':'Sunday', 'week':10} 
+for i in x: print(i, end=' ‘)
+
+a. Sunday 10 	b. day week 	c. Sunday 	d. 10
+
+Answer: b
+# key값을 뽑아낸다. 
+
+
+
+# ALGORITHM HOMEWORK (#12)
+프로그래머 X는 코딩을 하다가 문득, 수학 시간에 배운 정수와 소수를
+구별하는 방법을 떠올렸다. 정수와 소수의 차이는 분수로 표현이 되느냐,
+되지 않느냐에 따라 차이가 나기도 하며, 또한 파이 등 특정한 값을
+나타내는 것에 의하여 소수인지 정수인지 판별이 나게 된다.
+프로그래머 X는 입력값을 숫자를 입력하거나 문자를 입력하려고 하는데,
+만약 숫자를 입력하였으면 그것이 정수인지, 소수인지 구별하는
+프로그램을 짜보도록 하고,
+만약 문자를 입력하였으면 숫자가 아니므로 math error를 표시하게 하라.
+( try, except 를 사용, eval 함수 참고 )
+
+
+def distinction():
+    try: # try문 
+        num = float(input("숫자 입력: ")) # 숫자 입력. 
+        # input이 try-except문 바깥에 위치하면 문자가 들어왔을 때 바로 오류가 발생한다.
+        if num - int(num) != 0: # 입력받은 수 - 입력받은 수에서 소수점 떼어낸 수 = 0이 아니면 
+            print('소수입니다.') # 소수 출력 
+        else: # 0으로 나누어 떨어지면 
+            print('정수입니다.') # 정수 출력
+    except: # 이외의 값이 들어오면 
+        print('math error') # math error 출력 
+
+distinction() # 5.5
+distinction() # 3
+distinction() # ab

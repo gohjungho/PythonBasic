@@ -1,0 +1,93 @@
+61. What is an interface in Java?
+인터페이스는 일종의 추상클래스이다. 
+인터페이스는 추상클래스처럼 추상메서드를 갖지만 추상클래스보다 추상화 정도가 높아서 
+추상클래스와 달리 몸통을 갖춘 일반 메서드 또는 멤버변수를 구성원으로 가질 수 없다. 
+오직 추상메서드와 상수만을 멤버로 가질 수 있으며, 그 외의 다른 어떠한 요소도 허용하지 않는다. 
+
+
+62. Is it allowed to mark an interface method as static? 
+할 수 있다. 디폴트 메서드는 추상메서드의 기본적인 구현을 제공하는 메서드로, 
+추상 메서드가 아니기 때문에 디폴트 메서드가 새로 추가되어도 해당 인터페이스를 
+구현한 클래스를 변경하지 않아도 된다.
+ 
+
+63. Why an Interface cannot be marked as final in Java? 
+인터페이스에서 정의한 변수는 final선언과 같이 재정의가 불가능하다. 
+따라서 인터페이스에서 메소드를 final로 선언할 수 없다. 
+인터페이스로 정의 후 상속받은 구현체의 메서드에 final을 선언하여 추가적인 재정의를 막는 경우에 
+final 사용이 가능하다. 
+
+
+64. What is a marker interface? 
+마커 인터페이스는 일반적인 인터페이스와 동일하지만 사실상 아무 메소드도 선언하지 않은 인터페이스를 말한다.
+안에 메소드가 하나도 선언되어 있지 않다. 인터페이스에 메소드가 없으니 메소드를 구현할 필요가 없다. 그냥 선언만 해주면 된다
+
+
+65. What can we use instead of Marker interface? 
+애너테이션. 애너테이션은 미리 정의된 태그들을 이용해서 주석 안에 정보를 저장하고, 
+자바독스로 이 정보를 읽어서 문서를 작성하는데 사용하다. 
+
+
+66. How Annotations are better than Marker Interfaces? 
+마커 인터페이스나 어노테이션은 큰 차이가 없으나 
+인터페이스는 자식클래스에도 영향을 미치지만 어노테이션은 자식클래스와 무관하다. 
+상황에 맞게 사용하자. 
+
+
+67. What is the difference abstract class and interface in Java? 
+추상클래스는 단일상속만 가능하고 인터페이스는 다중상속이 허용된다. 
+추상클래스의 목적은 상속을 받아 기능을 확장시키는 것인 반면, 
+인터페이스의 목적은 구현하는 모든 클래스에 대해 특정 메서드가 반드시 존재하도록 강제하는 역할이다. 
+
+
+68. Does Java allow us to use private and protected modifiers for 
+variables in interfaces? 
+인터페이스에서의 접근제한자는 항상 public과 default만 가능하다. 
+
+
+69. How can we cast to an object reference to an interface reference? 
+인터페이스를 구현하고 클래스의 메서드에 본문을 제공하는 경우, 
+인터페이스의 참조 변수를 사용하여 해당 클래스의 개체를 보유할 수 있다. 
+즉, 인터페이스 참조에 객체 참조를 캐스트할 수 있다.
+
+하지만 이 기능을 사용하면 인터페이스의 메서드에만 액세스할 수 있다. 
+클래스의 메서드에 액세스하려고 하면 compile time error가 발생한다.
+
+
+70. How can you change the value of a final variable in Java? 
+최종 변수의 값은 일단 초기화되면 변경할 수 없다. 
+최종 변수는 컴파일 시 최종 변수의 값이 반드시 일정하지는 않기 때문에 상수와는 다르다. 
+최종 변수는 이니셜라이저 또는 할당 문을 통해 한 번만 초기화할 수 있다.
+
+
+ALGORITHM QUIZ (#29) 
+
+원범이는 편의점 아르바이트가 끝난 후 정산을 하고자 합니다. 
+정산을 빨리하고 집에가고  싶은 원범이는 프로그램을 만들려고 합니다. 
+숫자를 입력 받고 천 단위로 콤마(,)를 찍어주세요. 
+예를 들어, 123456789를 입력받았으면 123,456,789를 출력해야합니다. 
+
+class Third:
+    def num_split(self):
+        nums = str(abs(int(self)))
+
+        try:
+            if len(nums) <= 3: # 3자리 수 이하의 경우. 
+            # 길이로 구분하므로 0에 대한 예외처리는 불필요...
+                return self # 그대로 출력 
+
+            else: # 3자리를 넘어가는 경우
+                if int(self) >= 0: # 입력값이 양수라면 
+                    return Third.num_split(nums[:len(nums) - 3]) + ',' + nums[len(nums) - 3:]
+                    # 숫자 길이 기준 앞에서부터 천 자리씩 떼어다가 ',' 넣고 결합 
+                else: # 입력값이 음수라면 
+                    return '-' + Third.num_split(nums[:len(nums) - 3]) + ',' + nums[len(nums) - 3:]
+                    # 앞에 '-' 붙여서 재귀 돌림 
+        except: ''
+            
+    '''
+    print에 재귀 넣으면 뻑남... return이 없어도 뻑남... 
+    unsupported operand type(s) for +: 'NoneType' and 'str' 
+    '''
+
+Third.num_split("-123456789")
