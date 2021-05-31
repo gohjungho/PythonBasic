@@ -1,0 +1,139 @@
+231. Why we cannot create a generic array in Java? 
+A:
+Java does not allow creation of array with generics as elements. 
+In Java an array has to know the type information of its elements at runtime. 
+This information is used at runtime to throw ArrayStoreException if data type of an element to be inserted does not match the type of Array. 
+In case of Generics, the type information of a collection is erased at runtime by Type Erasure. Due to this array cannot use generics as elements. 
+
+
+232. What is a PriorityQueue in Java? 
+A:
+A PriorityQueue is data structure based on Queue. Unlike Queue, the elements on PriorityQueue are not returned in FIFO order. 
+A PriorityQueue maintains the natural order of its elements or it uses a Comparator provided at initialization. 
+It is an unbounded queue based on a priority heap. 
+PriorityQueue does not allow null values. We cannot add any object that does not provide natural ordering to PriorityQueue. 
+PriorityQueue in Java is not thread-safe. 
+It gives O(log n) time for enqueing and dequeing operations. 
+
+
+233. What are the important points to remember while using Java Collections Framework? 
+A: 
+Some of the important points to remember while using Java Collections Framework are: 
+1. Interfaces: For Collections, we should write code with generic interfaces instead of concrete implementation. Due to this we maintain the flexibility of changing the implementation at a later point of time. 
+2. Generics: We should use Generics for type-safety and to avoid ClassCastException at runtime. 
+3. Collection: It is recommended to use Collections utillity class for algorithms and various other common methods for Collections. 
+4. Right Type: We have to choose the right type of Java collection based on our need. If size is fixed, we can use Array over ArrayList. If we do not want duplicate elements we use Set. 
+
+
+234. How can we pass a Collection as an argument to a method and ensure that method will not be able to modify it? 
+A: 
+To ensure that a method is not able to modify a Collection passed as an argument, we have to make the Collection read only. 
+
+We 
+can 
+make 
+a 
+read 
+only 
+collection 
+by using 
+Collections.unmodifiableCollection(Collection c) method. 
+
+This will make sure that any operation to change the collection will throw UnsupportedOperationException. 
+
+
+235. Can you explain how HashMap works in Java? 
+A: 
+In Java, a HashMap works on the concept of hashing. 
+A HashMap in Jave stores both key and value objects, in a bucket. It is stored as an Entry object that implements Map. Entry interface. 
+The key object used in a HashMap has to provide implementation for hashCode() and equals() methods. 
+When put() method is used to store a key-value pair, the HashMap implementation calls hashCode() method on Key object to calculate a hash that is used to find a bucket where Entry object will be stored. 
+When get() method is used to retrieve a value stored against a key object, we first calculate a hash of Key object. Then we use this hash to find the bucket in which that particular key is stored. 
+Once Key object's location is found, it may happen that more than one Key is stored in same location. So now we use equals() method to find the exact Key object. Once the exact Key object is found we use it to get Value object. 
+
+
+236. Can you explain how HashSet is implemented in Java? 
+A: 
+Internally, a HashSet uses a HashMap to store the elements and to maintain the uniqueness of elements. 
+When we create a HashSet object, a corresponding HashMap object is also created. 
+When we insert an element in HashSet, it inserts it into corresponding HashMap. 
+
+
+237. What is a NavigableMap in Java? 
+A: 
+As the name suggests, NavigableMap provides the capability to navigate the keys of a Map in Java. A NavigableMap extends SortedMap interface. 
+Some of the interesting methods of a NavigableMap are descendingKeySet(), descendingMap(), headMap() and tailMap(). 
+
+
+238. What is the difference between descendingKeySet() and descendingMap() methods of NavigableMap? 
+A:
+The descendingKeySet() method of NavigableMap return a NavigableSet in which the elements are stored in reversed order as compared to the original key set. 
+The returned view is internally represented by the original KeySet of NavigableMap. Therefore any changes to the descending set also geet reflected in the original set. 
+But it is not recommended to remove elements directly from the key set. We should use the Map.remove() method. 
+
+There are two ways to handle this scenario. We can use these options: 
+Comparable: Implement the Comparable interface for Customer class and compare customer objects by firstName attribute. 
+Comparator: Implement Comparator for comparing two Customer objects on the basis of firstName attribute. Then use this comparator object in sort method of Collections class. 
+
+
+239. What is the advantage of NavigableMap over Map? 
+A: 
+The main advantage of NavigableMap over Map is the Navigation capability. 
+It provides the capabilities of a Map, SortedMap and navigation in one collection. 
+It even returns the closest matches for given search targets. 
+Methods like lowerEntry, floorEntry, ceilingEntry, and higherEntry return Map.Entry objects associated with keys respectively less than, less than or equal, greater than or equal, and greater than a given key. 
+Methods like lowerKey, floorKey, ceilingKey, and higherKey return only the associated keys. All of these methods are designed for locating, not traversing entries. 
+
+
+240. What is the difference between headMap(), tailMap() and subMap() methods of NavigableMap? 
+A:
+The headMap() method returns a view of the original NavigableMap that contains the elements that are less than a given element. 
+
+Navigablemap Original = new TreeMap(); 
+original.put("1", "1");
+original.put("2", "2");
+original.put("3", "3"); 
+// this headmap1 will contain elements "1" and "2" SortedMap headmap1 = original.headMap("3");
+// this headmap2 will contain elements "1", "2" and "3" because "inclusive" = true 
+
+NavigableMap headmap2 = original.headMap("3", true); The tailMap() method works similar to headMap() method, but it returns all elements that are higher than the given input element. 
+The subMap() method accepts two parameters demarcating the boundaries of the view map to return. 
+All the three methods return a subset of the original map in a view form. 
+
+
+
+ALGORITHM HOMEWORK(#264) 
+어글리 넘버는 1과 소수 2, 3, 5의 배수로 제한된 양의 정수입니다. 
+정수 n이 지정되면 n번째 어글리 넘버를 반환합니다. 
+[1,2,3,4,5,6,8,9,10,12 … ]
+
+input: n = 10 
+output: 12 
+
+input: n = 12
+output: 16
+
+input: n = 15
+output: 24 
+
+
+def uglynum(n):
+    ugly_list = [] # uglynumber에 해당하는 숫자를 넣을 빈 리스트 
+    tmp = 1 # 1부터 시작 
+    while len(ugly_list) < n: # 2, 3, 5로 소인수 분해 
+        i = tmp # 변수로 쓸 i 설정 
+        while i % 2 == 0:
+            i //= 2
+        while i % 3 == 0:
+            i //= 3 
+        while i % 5 == 0:
+            i //= 5
+        
+        if i == 1: # 소인수분해 결과 i가 1이면
+            ugly_list.append(tmp) # 리스트에 추가 
+        tmp += 1
+    return ugly_list[n - 1] # 0 이 아닌 1부터 시작했으므로 n-1 
+
+print(uglynum(10), end = " ")
+print(uglynum(12), end = " ")
+print(uglynum(15))

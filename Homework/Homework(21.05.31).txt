@@ -1,0 +1,118 @@
+281. What is the purpose of Thread Groups is Java? 
+A:
+Each thread belongs to a group of threads. 
+The JDK class java.lang.ThreadGroup provides some methods to handle a whole group of Threads. 
+With these methods we can, for example, interrupt all threads of set their maximum priority. 
+각 스레드는 스레드 그룹에 속한다. 
+JDK의 java.lang.ThreadGroup 클래스에 위치해 있고 이는 스레드를 처리하는 몇 가지 방법을 제공한다. 
+
+
+282. Why we should not stop a thread by calling its stop() method? 
+stop() 메서드로 스레드를 갑자기 종료하게 되면, 
+스레드가 사용중이던 자원들이 불완전한 상태로 남겨지기 때문에 이 방법은 지양되고 있다. 
+스레드를 안전하게 중지시키는 방법 중 하나는, 
+스레드의 run() 메서드가 정상적으로 종료되도록 유도하는 것이다. 
+
+
+283. How will you create a Thread in Java? 
+자바에서 스레드를 만드는 방법은 크게 Thread 클래스를 상속받는 방법과 Runnable 인터페이스를 구현하는 방법이 있다. 
+
+
+284. How can we stop a thread in the middle of execution in Java? 
+run() 메서드가 실행될 수 있도록 유도해 준다. 
+
+
+285. How do you access the current thread in a java program? 
+스레드 B에서 스레드 A로 접근하고자 한다면, 스레드 A의 레퍼런스를 B에 전달하면 된다. 
+스레드 B에서 메서드를 호출하면 클래스가 호스팅되지 않은 스레드 B에 의해 실행될 것이다. 
+
+
+286. What is Busy waiting in Multithreading? 
+우선 순위 방식과 순환 할당 방식이 있다. 
+우선 순위 방식은 개발자가 우선 순위 번호를 매겨 그 순서대로 실행되는 것이고, 
+순환 할당 방식은 시간 할당량을 정해서 정해진 시간만큼만 각각의 스레드를 실행시키는 방법이다. 단, JVM에 의해서 정해지기 때문에 제어가 불가능하다. 
+
+
+287. How can we prevent busy waiting in Java? 
+busy waiting은 CPU의 낭비가 심하므로 자원의 권한을 얻는데 많은 시간이 소요되지 않는 경우가 아니면 지양하는 것이 좋다. 
+
+프로세스를 대기 큐(wait queue)에 넣고 대기 상태로 전환하여 다른 프로세스가 실행되도록 한다. 
+
+
+288. Can we use Thread.sleep() method for real-time processing in Java? 
+A: 
+The number of milliseconds passed to an invocation of Thread.sleep() is only an indication for the scheduler how long the current thread does not need to be executed.
+sleep() 메서드의 매개변수에는 밀리초를 전달해 사용한다. 
+이는 현재 스레드가 실행될 필요가 없는 기간을 스케줄링 하기위함이다. 
+
+289. Can we wake up a thread that has been put to sleep by using Thread.sleep() method? 
+Thread.sleep() 메서드는 주어진 시간 동안 일시정지 상태가 되고 다시 실행 대기 상태로 돌아가는 메서드이다. 
+매개값에는 밀리세컨드(1/1000) 단위로 시간을 넣어주면 된다. 
+
+
+290. What are the two ways to check if a Thread has been interrupted? 
+스레드를 중지하는 방법에는 3가지가 있다. 
+1. 플래그를 사용하여 스레드 중지 
+2. Non-blocking 태스크의 경우 인터럽트 발생 여부를 확인하여 스레드 중지 
+3. Blocking 태스크의 경우 인터럽트를 catch하여 스레드 중지 
+
+
+
+
+ALGORITHM HOMEWORK(#64) 
+두 개의 배열 A와 B를 가지고 있다. 두 배열은 N개의 원소로 구성되어 있으며 
+배열의 원소는 모두 자연수이다. 최대 K번 바꿔치기 연산을 수행할 수 있는데 
+바꿔치기 연산이란 배열 A에 있는 원소 하나와 배열 B에 있는 원소 하나를 골라서 
+두 원소를 서로 바꾸는 것을 말한다. 
+최종목표는 배열 A의 모든 원소의 합이 최대가 되도록 하는 것이다. 
+- 첫 번째 줄에서 N, K가 공백으로 구분되어 입력된다. 
+- 두 번째 줄부터 각 열마다 배열들의 원소들이 공백으로 구분되어 입력된다. 
+- 세 번째 줄에 배열 B의 원소들이 공백으로 구분되어 입력된다. 
+최대 K번 바꿔치기 연산을 수행하여 만들 수 있는 배열 A의 모든 원소의 합의 
+최댓값을 출력한다. 
+
+input 
+5 3 
+1 2 5 4 3 
+5 5 6 6 5 
+
+ouput 
+26 
+
+<solution>
+
+def plus(argv): # 배열 A의 모든 값을 더해 줄 함수 
+    s = 0
+    for i in argv:
+        s += i
+    return s # 더한 값 반환 
+
+def switch(n, k):
+    a = list(map(int, input("배열 A의 요소: ").split())) # 배열 입력 
+    b = list(map(int, input("배열 B의 요소: ").split())) 
+    r = 0
+    while r < k: # k번 만큼 반복 
+        tmp_a = a[0]; tmp_b = b[0] # 최소, 최대값을 저장해둘 임시변수
+        for i in range(len(a)): # 배열 A의 길이 만큼 반복 
+            if tmp_a > a[i]: 
+                tmp_a = a[i] # 최소값을 찾아 임시변수에 저장
+            if i == len(a) - 1: 
+                a.remove(tmp_a) 
+            # for문 마지막까지 돌면 임시변수에 저장해둔 값에 해당하는 값을 A에서 삭제 
+        
+        for j in range(len(b)): # 배열 B의 길이 만큼 반복
+            if tmp_b < b[j]: 
+                tmp_b = b[j] # 최대값을 찾아 임시변수에 저장
+            if j == len(b) - 1: 
+                b.remove(tmp_b) 
+            # for문 마지막까지 돌면 임시변수에 저장해둔 값에 해당하는 값을 B에서 삭제
+                
+        tmp_a, tmp_b = tmp_b, tmp_a # 임시변수끼리 교환 
+        a.append(tmp_a) # 각각 배열에 추가
+        b.append(tmp_b)  
+        r += 1   
+
+    return plus(a) # 배열 A의 요소 합 반환 
+
+n, k = map(int, input("n, k의 값: ").split())
+switch(n, k)

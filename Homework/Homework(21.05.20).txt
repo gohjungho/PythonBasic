@@ -1,0 +1,79 @@
+211. How IdentityHashMap is different from a regular Map in Java? 
+1) IdentityHashMap은 "=="를 사용해 맵 내부의 키값을 비교하는 반면, Hashmap은 "="를 사용한다. 
+2) HashMap과 달리 IdentityHashMap은 System.identity를 사용하는 대신 hashCode()를 사용하지 않는다. 
+3) IdentityHashMap은 equal()을 사용하지 않기에 상대적으로 빠르다. 
+4) HashMap에 객체를 안전하게 저장하기 위한 기본 요구사항 중 하나가 키가 불변해야 한다는 것이고 
+IdentityHashMap은 동일 및 해시코드에 의존하지 않기 때문에 불변 키가 필요하지 않다. 
+
+
+212. What is the main use of IdentityHashMap? 
+맵 인터페이스를 구현하는 동안 의도적으로 맵의 
+일반 계약을 위반하여 객체를 비교할 때 equals() 방법을 사용한다.
+
+
+213. How can we improve the performance of IdentityHashMap? 
+
+
+214. Is IdentityHashMap thread-safe? 
+
+
+215. What is a WeakHashMap in Java? 
+
+
+216. How can you make a Collection class read Only in Java? 
+
+
+217. When is UnsupportedOperationException thrown in Java? 
+
+
+218. Let say there is a Customer class. We add objects of Customer class to 
+an ArrayList. How can we sort the Customer objects in ArrayList by using 
+customer firstName attribute of Customer class? 
+
+
+219. What is the difference between Synchronized Collection and Concurrent Collention? 
+
+
+220. What is the scenario to use ConcurrentHashMap in Java? 
+
+
+
+ALGORITHM HOMEWORK(#62) 
+하나의 수열에는 다양한 수가 존재한다. 이러한 수는 크기에 상관없이 나열되어 있다. 
+이 수를 큰 수부터 작은 수의 순서로 정렬해야 한다. 
+수열을 내림차순으로 정렬하는 프로그램을 만드시오. 
+
+- 첫째 줄의 수열에 속해 있는 수의 개수 N이 주어진다. 
+- 둘째 줄부터 N+1번째 줄까지 N개의 수가 입력된다. 
+- 수의 범위는 1이상 100000 이하의 자연수이다. 
+
+입력으로 주어진 수열이 내림차순으로 정렬된 결과를 공백으로 구분하여 출력한다. 
+동일한 수의 순서는 자유롭게 출력해도 괜찮다. 
+
+<입력예시> 
+3
+15
+27
+12
+<출력예시> 
+27 15 12 
+
+# 자바는 하다가 때려침...
+
+def rev(n):
+    num_list = [] # 빈 리스트 생성 
+
+    i = 0
+    while i < n: # 숫자 입력 
+        num_list.append(input('숫자 입력: '))
+        i += 1
+        
+    num_list = sorted(num_list) # 정렬 
+    
+    for j in reversed(num_list): # 역정렬한 값에서 하나씩 출력 
+        print(j, end=" ") 
+
+    
+n = int(input('수열에 속해 있는 수의 개수 입력: '))
+
+rev(n)

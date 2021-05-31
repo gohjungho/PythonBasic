@@ -1,0 +1,121 @@
+151. How will you convert an array of primitive integers int[] to a List collection?
+Apache Commons Lang 라이브러리에서 ArrayUtils를 사용할 수 있다.
+
+
+152. How will you run a filter on a Collection? 
+Apache의 CollectionUtils는 이렇게 사용할 수 있다. 먼저 필터 조건을 정의하는 술어를 만들어 filter() 메서드에 이를 적용할 수 있다.
+
+
+153. How will you convert a List to a Set? 
+HashSet 또는 TreeSet을 사용한다. 
+
+
+154. How will you remove duplicate elements from an ArrayList? 
+이 질문의 해답은 중복 요소를 허용하지 않는 컬렉션을 사용하는 것이다. 그래서 이를 위해 집합을 사용한다.
+
+
+155. How can you maintain a Collection with elements in Sorted order? 
+Java에서는 요소가 있는 컬렉션을 정렬된 순서로 유지하는 여러 가지 방법이 있다.
+TreeSet과 같은 일부 컬렉션은 요소를 자연적인 순서로 저장한다. 자연 주문의 경우. 자연적인 순서의 경우, 우리는 요소 비교를 위해 비교 가능한 인터페이스를 구현해야 한다.
+또한 컬렉션에 대한 사용자 지정 비교수단을 제공하여 맞춤 주문을 유지할 수 있다.
+또 다른 옵션은 유틸리티 메서드 Collections.sort()를 사용하여 목록을 정렬하는 것이다. 이 정렬은 nlog(n) 수행 순서를 제공한다. 그러나 이 방법을 여러 번 사용해야 한다면 성능에 많은 부담이 될 것이다.
+
+
+156. What are the differences between the two data structures: 
+a Vector and an ArrayList? 
+ArrayList는 Vector보다 최신 클래스이다. Vector는 Java에서 레거시 클래스로 간주된다. 둘의 차이점으로는:
+
+1. 동기화: 벡터는 동기화가 되지만 ArrayList는 동기화되지 않는다. 따라서 ArrayList는 Vector보다 연산 속도가 빠르다.
+
+2. 데이터의 증가: 내부적으로 ArrayList 및 벡터 모두 배열을 사용하여 데이터를 저장한다. ArrayList가 거의 가득 차면 크기가 배열 크기의 50%가 증가한다. 이 경우 벡터는 기본 배열 크기를 두 배로 늘린다.
+
+
+157. What are the differences between Collection and Collections in Java? 
+컬렉션과 컬렉션s의 주요 차이점:
+
+1. 유형: 컬렉션은 Java의 인터페이스이고 컬렉션s는 클래스이다.
+
+2. 특징: 컬렉션은 목록, 설정 및 대기열 인터페이스에 데이터 구조의 기본 기능을 제공한다.
+컬렉션s는 컬렉션 요소를 정렬하고 동기화하는 유틸리티 클래스이다. 컬렉션에서 작동하는 다형 알고리즘이 있다.
+
+
+158. In which scenario, LinkedList is better than ArrayList in Java? 
+ArrayList는 사용이 편리하고 요소에 대한 랜덤 액세스로 인해 LinkedList보다 더 인기가 좋다.
+그러나 LinkedList는 요소에 임의로 액세스할 필요가 없거나 요소가 많이 삽입되어 삭제되는 경우에 더 좋다.
+
+
+159. What are the differences between a List and Set collection in Java? 
+목록과 집합 모음의 주요 차이점.
+
+1. 순서: 목록 컬렉션은 요소의 순서이다. 집합은 순서가 지정되지 않은 요소의 고유한 집합일 뿐이다.
+
+2. 위치 액세스: 목록을 사용할 때 요소를 삽입할 위치를 지정할 수 있다. 집합에는 순서가 없으므로 주문에 대한 걱정 없이 요소를 어디에나 삽입할 수 있다.
+
+3. 중복: 목록에 중복 요소를 저장할 수 있다. 집합에는 고유한 요소만 포함될 수 있다.
+
+
+160. What are the differences between a HashSet and TreeSet collection in Java? 
+해시 집합과 트리 집합의 주요 차이점:
+
+1. Ordering: 해시 집합에서 요소는 임의로 저장되고 트리 집합에서의 요소는 자연적인 순서에 따라 저장된다.
+
+2. Null 값 요소: null 값을 해시 집합에 저장할 수 있지만 트리 집합에서는 null 값을 추가할 수 없다.
+
+3. 성능: 해시 집합은 일정한 크기 시간 내에 add(), remove(), contains(), size() 등과 같은 기본 작업을 수행한다. 
+트리 집합은 로그(n) 시간 순서대로 이러한 작업을 수행한다.
+
+4. 속도: add(), remove(), contains(), size() 등과 같은 대부분의 작업에 대해 해시 집합이 트리 집합보다 성능이 좋다.
+
+5. 내부 구조: Java의 해시 집합은 내부적으로 해시 집합을 백업한다. 탐색 가능한 맵은 트리 집합를 내부적으로 백업한다.
+
+
+
+ALGORITHM HOMEWORK(#44)
+N*M크기의 얼음 틀이 있다. 구멍이 뚫려 있는 부분은 0, 칸막이가 존재하는 부분은 
+1로 표시된다. 구멍이 뚫려 있는 부분끼리 상,하,좌,우로 붙어 있는 경우 서로 
+연결되어 있는 것으로 간주한다. 이때 얼음 틀의 모양이 주어졌을 때 생성되는 
+총 아이스크림의 개수를 구하는 프로그램을 작성하시오. 
+
+다음의 4*5 얼음 틀 예시에서는 아이스크림이 총 3개 생성된다. 
+00110
+00011
+11111
+00000
+
+<BACKGROUND> 
+DFS로 해결 
+얼음을 얼릴 수 있는 공간이 상, 하, 좌, 우로 연결되어 있다고 표현
+그래프 형태의 모델링 
+
+1. 특정한 지점의 주변 상,하,좌,우를 살펴본 뒤에 주변 지점 중 값이 '0'이면서 
+아직 방문하지 않은 지점이 있다면 방문
+2. 방문한 지점에서 다시 상,하,좌,우를 살펴보면서 방문을 다시 진행하면, 
+연결된 모든 지점을 방문할 수 있다. 
+
+1~2번의 과정을 모든 노드에 반복하여 방문하지 않은 지점의 수를 센다. 
+
+<REQUIREMENT>
+map, int, input, split, for, range, if, print 
+
+입력예시
+4 5
+00110
+00011
+11111
+00000
+
+출력예시 
+3
+
+
+# DFS: 깊이 우선 탐색. 루트 노드에서 시작해서 다음 분기(branch)로 
+# 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법
+
+n, m = map(int, input().split()) # 틀의 크기(행, 열 순서로 입력. 공백 삽입)
+graph = [] 
+for i in range(n): # 줄로 나눠 행렬값 입력 
+    graph.append(list(map(int,input()))) # graph에 추가 
+
+# 문제는 이해했지만 얘를 어떻게 코드로 짜야할지 모르겠네요... 
+
+print(graph)

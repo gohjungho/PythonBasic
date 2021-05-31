@@ -1,0 +1,134 @@
+161. In Java, how will you decide when to use a List, Set or a Map collection?
+중복값을 허용하지 않는 컬렉션을 원하는 경우 집합 기반 컬렉션을 사용한다. 
+컬렉션에서 요소의 삽입 순서를 유지하려면 리스트 기반 컬렉션을 사용한다. 
+키 값에 기반한 검색 작업을 위해 해시맵 기반 컬렉션을 사용한다. 
+요소를 정렬된 순서로 유지관리하려면 트리셋 기반 컬렉션을 사용한다. 
+
+
+162. What are the differences between a HashMap and a Hashtable in Java? 
+1. 동기화 - HashMap은 동기화를 지원하지 않는다. 반면 다중 스레드 환경에서 Hashtable은 동기화를 지원한다. 
+2. 반환값 - HashMap은 저장된 요소들의 순회를 위해 Fail-Fast Iterator를 반환한다. Hashtable은 같은 경우 Enumeration을 반환한다. 
+
+
+163. What are the differences between a HashMap and a TreeMap?
+1. HashMap은 순서가 없다. 반면 TreeMap은 자연적 순서에 따라 정렬된다. 
+2. 내부 HashMap 구현은 Hashing을 사용하고 TreeMap은 Red-Black 트리 구현을 사용한다. 
+3. HashMap은 하나의 null 키와 많은 null values를 저장할 수 있다. TreeMap은 null 키를 포함할 수 없지만 많은 null values을 포함할 수 있다.
+4. HashMap은 O(1)과 같은 get과 put 같은 기본 연산에 대해 일정한 시간 성능을 나타낸다. TreeMap은 get 및 put 메서드에 대한 log(n) 시간 보장 비용을 제공한다. 
+5. HashMap의 성능 시간은 대부분의 작업에서 TreeMap에 대해 일정하므로 HashMap은 TreeMap보다 훨씬 빠르다. 
+6. HashMap은 비교에 equals() 메서드를 사용하지만 TreeMap은 ordering을 유지하기 위해 compareTo() 메서드를 사용한다. 
+7. HashMap은 Map 인터페이스를 구현하고 TreeMap은 NavigableMap 인터페이스를 구현한다. 
+
+
+164. What are the differences between Comparable and Comparator? 
+1. 유형: Comparable은 자바 인터페이스이며, Comparator는 객체 유형인 인터페이스이다. 
+2. 정렬: Comparable에서는 하나의 정렬 순서만 만들 수 있다. Comparator는 여러 정렬 시퀀스를 만들 수 있다. 
+3. 사용 방법: Comparator는 public int compare() 메서드를 사용하고, Comparable은 compareTo() 메서드를 사용한다. 
+4. 비교 대상 객체: Comparator는 입력으로 주어진 두 객체를 비교하고, Comparable은 'this' 참조의 입력으로 주어진 객체와 비교한다. 
+5. 패키지 위치: Comparable은 java.lang 패키지에, Comparator는 java.util 패키지에 위치한다. 
+
+
+165. In Java, what is the purpose of Properties file? 
+1. 응용 프로그램의 구성 가능한 파라미터들을 저장하기위해 자바 관련 기술을 
+사용하는 파일들을 위한 파일 확장 
+2. 각 파라미터는 문자열들의 일부로 저장되며, 문자열은 파라미터의 이름(키)을 저장하며, 다른 하나는 값을 저장 
+3. .properties의 각 줄은 일반적으로 하나의 프로퍼티를 저장(키=값, 키=값 or 키:값, 키:값과 같은 형태)
+
+
+166. What is the reason for overriding equals() method? 
+객체는 기본적으로 다르기때문에 equals()메소드로 객체를 비교하면 무조건 false가 나온다. 
+그런데 객체안의 값이 같으면 같은 객체라고 인식하게 해서 똑같은 것이 나오지 않도록 하는 것이 이퀄즈 오버라이딩이다.(equals overriding)
+
+
+167. How does hashCode() method work in Java? 
+hashCode는 HashTable과 같은 자료구조를 사용할 때 데이터가 저장되는 위치를 결정하기 위해 사용된다.
+
+
+168. Is it a good idea to use Generics in collections? 
+Generics Collections는 컴파일 타입에 Type-Safe(형식이 안전한)하기에 
+Non-Generics collections 보다 성능이 좋다.
+
+
+169. What is the difference between Collections.emptyList() and creating 
+new instance of Collection? 
+API 설계를 할 때 특정 API 실행 후 리턴 하는 값이 List인 경우가 있다.
+문제는 의도치 않게 비어있는 List를 리턴해야하는 경우가 있는데, 
+emptyList() 메서드는 DB에서 User객체가 담긴 List를 조회해주는 메서드로
+만약 결과가 없는 경우 메서드를 사용하는 클라이언트 클래스에서는 결과가 없다는것을 알 수 있도록 비어있는 List를 통해 전달해 준다.
+하지만 이는 자주 사용되는 API의 경우 비어있는 List 객체일지라도 메모리 낭비가 발생할 수 있다.
+
+
+170. How will you copy elements from a Source List to another list? 
+Collections.copy()으로 대상 목록을 사용하려면 원본 목록보다 크거나 같아야 한다.
+Collections.copy()는 원본 목록의 모든 요소를 포함할 공간이 충분하지 않은 경우 대상 목록의 용량을 재할당하지 않는다. 인덱스 범위를 벗어나 예외를 발생시킨다.
+Collection.copy()의 이점은 복사가 선형 시간에 발생한다는 것이다. 또한 ArrayList 생성자에 메모리를 더 많이 할당하는 대신 배열을 재사용하고자 하는 시나리오에도 유용하다.
+
+
+
+ALGORITHM HOMEWORK
+버전1과 버전2의 두 버전 번호가 주어지면 비교합니다. 
+
+버전 번호는 점('.')으로 결합된 하나 이상의 구분된 형태로 구성됩니다. 
+각각의 구분된 형태는  숫자로 구성되며 선행 0을 포함할 수 있습니다. 
+버전 번호를 비교하려면 수정 버전을 왼쪽에서 오른쪽으로 순서대로 비교합니다. 
+선행 0을 무시한 정수 값을 사용하여 비교됩니다. 
+이것은 1과 001이 동일하다고 간주됨을 의미합니다. 
+버전 번호가 인덱스에서 구분된 형태로 지정하지 않으면 형태를 0으로 처리하십시오. 
+
+예를 들면 버전 1.0은 버전 1.1보다 작지만 버전 0과 버전 1은 0 < 1입니다.
+
+출력 조건 
+- 만약 버전1 < 버전2, -1을 출력 
+- 만약 버전1 > 버전2, 1을 출력 
+- 나머지 경우는 0을 출력 
+
+예1 
+입력: version1 = "1.01", version2 = "1.001" 
+출력: 0
+
+예2 
+입력: version1 = "1.0", version2 = "1.0.0" 
+출력: 0
+
+예3
+입력: version1 = "0.1", version2 = "1.1" 
+출력: -1
+
+예4
+입력: version1 = "1.0.1", version2 = "1" 
+출력: 1
+
+
+class Diff():
+    def compare(self,a, b): # 비교를 위한 함수 
+        try:
+            v1 = float(rmZero(a)) # 0을 뺀 값을 실수형으로 변환 
+            v2 = float(rmZero(b))
+            
+            # 크기 비교 
+            if v1 < v2: 
+                return -1 
+            elif v1 > v2: 
+                return 1
+            else:
+                return 0
+            
+        except: # 실수로 변환할 수 없는 경우.... ex) 1.2.3 
+            return 'None'
+
+        
+
+    def rmZero(self,args): # 0 제거를 위한 함수 
+        result = '' # 반환값을 받을 변수 
+        for i in range(len(args)):
+            if args[i] == '0' and i != 0: # i번째 자리가 0이나 첫 자리가 아니면
+                continue # 빼버림 
+            if args[i] == '.' and result[-1] == '.': # i번째 자리가 '.'이고 반환할 값의 마지막자리가 '.'이면
+                continue # 빼버림 
+            result+=args[i] # 반환값에 추가 
+        return result # 반환 
+
+ver1 = input('version1 = ')
+ver2 = input('version2 = ')
+diff = Diff()
+diff.compare(ver1, ver2

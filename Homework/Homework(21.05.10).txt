@@ -1,0 +1,89 @@
+131. Arrange the three classes String, StringBuffer and StringBuilder 
+in the order of efficiency for String processing operations? 
+StringBuilder는 효율적인 클래스이다. 동기화에 따른 오버헤드가 없다. 
+반면 StringBuffer는 동기화된 클래스이다. String보다 성능이 뛰어나지만 
+상대적으로 속도가 느리다. 
+
+
+132. What is Exception Handling in Java? 
+자바는 JVM에서 발생하는 런타임 오류를 처리하는 예외처리 매커니즘을 제공한다. 
+특정 상황에서 발생할 것으로 예상되는 프로그램에는 예외가 있다. 
+예외 처리 매커니즘은 이러한 예외를 포착하고 조치를 취할 것이다. 
+
+
+133. In Java, what are the differences between a Checked and Unchecked? 
+확인된 예외는 던질 수 있는 클래스(?)를 extend하지만 런타임은 확장하지 않는다. 예외 또는 오류 클래스이며 확인되지 않은 예외에의 런타임예외 클래스의 extend이다. 
+확인된 예외는 자바에서 컴파일할 때 확인한다. 확인되지 않은 예외는 런타임 때 발생하므로 컴파일할 때에는 알 수 없다. 
+IOException, SQLException 등은 확인된 예외의 예이다. 널포인터예외, 산술 예외 등은 확인되지 않은 예외의 예이다. 
+
+
+134. What is the base class for Error and Exception classes in Java? 
+모든 예외 클래스는 java.lang의 하위 유형이다. 예외 클래스는 던지는 클래스의 하위 클래스이다. 
+예외 클래스 외에 오류라는 다른 하위 클래스가 있고 이는 Droughable 클래스에서 파생된다. 
+
+
+135. What is a finally block in Java? 
+Finally은 try 또는 catch 블록을 만드는데 사용되는 키워드이다. 
+finally 블록은 try 블록 내에서 예외가 발생하는지 여부에 관계없이 항상 실행되는 연결, 흐음 등과 같은 중요한 코드를 포함한다. 
+finally 블록이 try-catch 블록으로 연결되면, catch 블록이 try 블록에 의해 던져진 예외를 처리했는지 여부를 항상 확인한다. 
+
+
+136. What is the use of finally block in Java? 
+finally 블록은 예외 처리 여부를 확인할 때 사용된다. 예외가 발생하든 않든 상관없이 모든 중요한 상태(?)가 포함되어있다. 
+
+
+137. Can we create a finally block without creating a catch block? 
+가능하다. 반면 try 블록 없이는 불가하다. 
+
+
+138. Do we have to always put a catch block after a try block? 
+catch와 finally는 선택사항이다. 하지만 try 부분은 뺄 수 없다. 
+
+
+139. In what scenarios, a finally block will not be executed? 
+finally 블록에 닿기 전 catch 블록이 해당 예외를 처리할 수 없으면, 예외는 처리되지 못한 채 해당 프로그램은 강제 종료된다. 
+
+
+140. Can we re-throw an Exception in Java? 
+가능하다. re-throw가 발생하는 범위에서 예외가 이미 발견되었기 때문에 다음 encloser try블록으로 처리할 수 없다. 
+encloser try 블록에 대한 모든 catch 블록에는 예외를 적용할 수 있다. 
+
+
+ALGORITHM HOMEWORK(#41) 
+여행가 A는 N * N 크기의 정사각형 공간 위에 서 있다. 이 공간은 1 * 1 크기의 
+정사각형으로 나누어져 있다. 가정 왼쪽 위 좌표는 (1,1)이며, 
+가장 오른쪽 아래 좌표는 (N,N)에 해당한다. 여행가 A는 상,하,좌,우 방향으로 
+이동할 수 있으며, 시작 좌표는 항상 (1,1)이다. 우리 앞에는 여행가 A가 
+이동할 계획이 적힌 계획서가 놓여 있다. 계획서에는 하나의 줄에 띄어쓰기를 
+기준으로 하여 L,R,U,D 중 하나의 문자가 반복적으로 적혀있다. 
+각 문자의 의미는 다음과 같다. 
+L: 왼쪽으로 한 칸 이동 
+R: 오른쪽으로 한 칸 이동 
+U: 위로 한 칸 이동 
+D: 아래로 한 칸 이동 
+이 때 여행가 A가 N * N 크기의 정사각형 공간을 벗어나는 움직임은 무시된다. 
+예를 들어, (1,1)의 위치에서 L 혹은 U를 만나면 무시된다. 
+
+입력 조건: 첫째 줄에 공간의 크기를 나타내는 N이 주어진다(1 <= N <= 100)
+둘째 줄에 여행가 A가 이동할 계획서 내용이 주어진다(1 <= 이동횟수 <= 100)
+출력 조건: 첫째 줄에 여행가 A가 최종적으로 도착할 지점의 좌표(X,Y)를 
+공백으로 구분하여 출력한다. 
+
+<BACKGROUND> 
+구현(implementation) 
+알고리즘을 소스코드로 바꾸는 과정 
+모든 범위의 코딩 문제 유형을 포함하는 개념 
+풀이를 떠올리는 것은 쉽지만 코드로 옮기기 어려운 문제 
+완전 탐색: 모든 경우의 수를 다 계산하는 방법 
+시뮬레이션: 알고리즘을 한 단계식 차례대로 직접 수행 
+파이썬에서 리스트의 크기(크기와 제한시간) 
+데이터의 개수 1000 - 메모리 약 4KB 
+데이터의 개수 1000000  - 메모리 약 4MB 
+데이터의 개수 10000000 - 메모리 약 40MB
+
+<REQUIREMENT> 
+사용할 함수: Int, Input, Split, For, Range, Print 
+입력예시: 5, RRRUDD 
+출력예시: 3, 4 
+
+

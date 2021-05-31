@@ -1,0 +1,113 @@
+141. What is the difference between throw and throws in Java? 
+자바는 메서드 또는 static 블록에서 예외를 던지기 위한 throw 키워드를 제공한다. 
+자바는 선언에서부터 메서드에 의해 던져질 수 있는 예외를 처리하기 위해 push 키워드를 제공한다. 
+throw 뒤에는 인스턴스가 나온다. 클래스 또는 예외는 throw 키워드를 따른다. 
+한 번에 한 가지 예외만 던질 수 있으나 던질 때 많은 예외를 언급할 수 있다. 
+
+
+142. What is the concept of Exception Propagation? 
+예외처리를 하지 않으면 계속 상위로 영향을 미치는 현상 
+예외 발생시 catch 처리되지 않으면 해당 클래스를 호출한 쪽에 전파된다. 
+
+
+143. When we override a method in a Child class, can we throw 
+an additional Exception that is not thrown by the Parent class method? 
+답 못 찾음... 
+
+
+144. What is the difference between Collection and Collections Framework in Java? 
+자바에서 집합은 하나의 단위로 동일한 유형의 여러 요소를 포함하는 객체이다. 
+이러한 여러 요소는 하나의 컬렉션을 통해 접근할 수 있다. 
++) 자바 컬렉션 프레임워크(Java Collections Framework)는 다양한 유형의 컬렉션을 
+만들고 업데이트하고 접근할 수 있는 공통 아키텍처를 제공하는 라이브러리이다. 
+
+
+145. What are the main benefits of Collections Framework in Java? 
+Collections Framework의 주요 이점 
+1. 재사용성 - 다른 유형의 컬렉션에서 사용할 수 있는 클래스 및 유틸리티 메서드를 제공한다. 이는 재사용성을 높인다. 
+2. 품질 - 이미 수천 명의 개발자들이 코드를 테스트하고, 사용하고 있기 때문에 프로그램 품질을 향상시키는데 도움이 된다. 
+3. 속도 - 핵심 논리에 초점을 맞추고 자바 프레임워크에서 제공하는 일반적인 컬렉션을 사용할 수 있기 때문에 개발 속도가 증가한다. 
+4. 유지 관리 - 대부분의 자바 컬렉션 프레임워크는 오픈 소스이며 API를 쉽게 구할 수 있다. 
+
+
+146. What is the root interface of Collection hierarchy in Java? 
+Collection hierarchy의 루트 인터페이스는 컬렉션 인터페이스이다. 
+컬렉션 인터페이스는 이터블(Iterable) 인터페이스를 확장하므로 이터블 인터페이스를 루트 인터페이스로 간주하기도 한다. 
+
+
+147. What are the main differences between Collection and Collections?
+Collection과 Collections의 주요 차이점 
+1. 컬렉션은 자바의 인터페이스이나 컬렉션s는 자바의 클래스이다. 
+2. 컬렉션은 기본 인터페이스이고 컬렉션s는 자바의 유틸리티 클래스이다. 
+3. 컬렉션은 객체를 포함하는 데이터 구조에 사용되는 메서드를 정의한다. 
+반면 컬렉션s는 컬렉션의 접근, 검색 등과 같은 작업에 사용되는 메서드를 정의한다. 
+
+
+148. What are the Thread-safe classes in Java Collections framework? 
+스택, 프로퍼티(Properties), 벡터, 해시 테이블, 차단대기열(BlockingQueue), 
+동시 지도(ConcurrentMap), 동시 탐색 가능 맵(ConcurrentNavigableMap)
+
+
+149. How will you efficiently remove elements while iterating a Collection? 
+ConcurrentModificationException: 삭제하려는 모든 객체를 수집하는 것으로, 
+반복을 마친 후에는 발견된 모든 객체를 제거한다. 
+
+
+150. How will you convert a List into an array of integers like-int[]?
+list의 크기만큼  배열을 만들어준 뒤 for문을 돌려 하나씩 값을 넣어준다. 
+
+
+
+
+ALGORITHM HOMEWORK(#42) 
+행복 왕국의 왕실 정원은 체스판과 같은 8*8 좌표 평면이다. 왕실 정원의 
+특정한 한 칸에 나이트가 서 있다. 나이트는 매우 충성스러운 신하로서 
+매일 무술을 연마한다. 나이트는 말을 타고 있기 때문에 이동을 할 때는 
+L자 형태로만 이동할 수 있으며 정원 밖으로는 나갈 수 없다. 나이트는 
+특정한 위치에서 다음과 같은 2가지 경우로 이동할 수 있다. 
+1. 수평으로 두 칸 이동한 뒤에 수직으로 한 칸 이동하기 
+2. 수직으로 두 칸 이동한 뒤에 수평으로 한 칸 이동하기 
+8*8 좌표 평면상에 나이트의 위치가 주어졌을 때 나이트가 이동할 수 있는 
+경우의 수를 출력하는 프로그램을 작성하시오. 왕실의 정원에서 행 위치를 
+표현할 때는 1부터 8로 표현하며 열 위치를 표현할 때는 a부터 h로 표현한다. 
+
+입력 조건: 첫째 줄에 8*8좌표 평면상에서 현재 나이트가 위치한 곳의 좌표를 
+나타내는 두 문자로 구성된 문자열이 입력된다. 
+입력 문자는 a1처럼 열과 행으로 이루어진다. 
+출력 조건: 첫째 줄에 나이트가 이동할 수 있는 경우의 수를 출력하시오. 
+
+<Background> 
+구현 - 알고리즘을 소스코드로 바꾸는 과정 
+모든 범위의 코딩 문제 유형을 포함하는 개념 
+풀이를 떠올리는 것은 쉽지만 코드로 옮기기 어려운 문제
+ 
+나이트가 이동할 수 있는 경로를 하나씩 확인
+• (-2,-1),(-1,-2),(1,-2),(2,-1),(2,1),(1,2),(-1,2),(-2,1)
+• 8*8 좌표평면을 벗어나지 않도록 꼼꼼하게 검사
+
+<Requirement> 
+int, input, ord, for, print 
+input: a1 / output: 2 
+
+
+class Chess: # 체스는 a1~h8의 범위를 가짐 
+    def knight(self, args):
+        row = int(args[1]) # 좌, 우 이동 
+        column = int(ord(args[0])) - int(ord('a')) + 1 
+        # 앞, 뒤 이동. 입력받은 값의 [1]번째값 ASCII 변환 후 'a'값 만큼 차감 필요 
+
+        # 나이트가 이동할 수 있는 방향 경우의 수: 8개 
+        case = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
+
+        result = 0 # 이동 가능한 경로의 수를 담을 변수 
+        for i in case: # 각 경우의 수의 위치로 이동이 가능한지 확인하기 
+            row_v = row + i[0] # 이동하고자 하는 위치
+            column_v = column + i[1]
+            if row_v >= 1 and row_v <= 8 and column_v >= 1 and column_v <= 8:
+            # 범위를 벗어나면 무시 
+                result += 1 # 해당 위치로 이동이 가능하다면 카운트 증가
+        return print(result)
+
+location = input("위치(a1~h8) 입력: ") 
+chess = Chess()
+chess.knight(location)

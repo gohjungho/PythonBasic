@@ -1,0 +1,73 @@
+201. How remove() method is implemented in a HashMap? 
+
+
+202. What is BlockingQueue in Java Collections?
+
+
+203. How is TreeMap class implemented in Java? 
+
+
+204. What is the difference between Fail-fast and Fail-safe iterator in Java? 
+
+
+205. How does ConcurrentHashMap work in Java? 
+
+
+206. What is the importance of hashCode() and equals() methods? 
+
+
+207. What is the contract of hashCode() and equals() methods in Java? 
+
+
+208. What is an EnumSet in Java? 
+
+
+209. What are the main Concurrent Collection classes in Java? 
+
+
+210. How will you convert a Collection to SynchronizedCollection in Java? 
+
+
+
+ALGORITHM HOMEWORK(#45) 
+스틴이는 N*M 크기의 직사각형 형태의 미로에 갇혀있다. 
+미로에는 여러 마리의 괴물이 있어 이를 피해 탈출해야 한다. 
+스틴이의 위치는 (1,1)이고 미로의 출구는 (N,M)의 위치에 존재하며 한 번에 
+한 칸씩 이동할 수 있다. 이때 괴물이 있는 부분은 0으로 괴물이 없는 부분은 
+1로 표시되어 있다. 미로는 반드시 탈출할 수 있는 형태로 제시된다. 
+이떄 스틴이가 탈출하기 위해 움직여야 하는 최소 칸의 개수를 구하시오. 
+(처음과 끝 칸 포함) 
+
+입력조건: 첫째 줄에 두 정수 N,M(4 <= N,M <= 200)이 주어진다. 
+다음 N개의 줄에는 각각 M개의 정수(0 또는 1)로 미로의 정보가 주어진다. 
+각각의 수들은 공백 없이 붙어서 입력으로 제시된다. 
+또한 시작 칸과 마지막 칸은 항상 1이다. 
+
+출력조건: 첫째 줄에 최소 이동 칸의 개수를 출력한다. 
+
+<Background> 
+- BFS로 해결 
+- 시작 지점에서 가까운 노드부터 차례대로 그래프의 모든 노드 탐색 
+- (1,1) 지점에서부터 BFS를 수행하여 모든 노드의 값이 거리 정보 
+- 특정 노드 방문 시 그 이전 노드의 거리에 1을 더한 값을 저장 
+
+1. 맨 처음에 (1,1)의 위치에서 시작. 시작 값은 항상 1 
+2. (1,1)좌표에서 상, 하, 좌, 우로 탐색을 진행. (1,2) 위치의 값을 2로 변경 
+3. BFS를 계속 수행하여 최단 경로의 값들이 1씩 증가하는 형태로 변경 
+
+<Requirement> 
+- From collections import deque 
+- deque(), deque. popleft() 
+- map, input, split, for, range, while, if, print 
+
+입력예시 
+5 6
+101010
+111111
+000001
+111111
+111111
+
+출력예시 
+10 
+

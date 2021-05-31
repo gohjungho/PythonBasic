@@ -1,0 +1,124 @@
+121. What is the meaning of Immutable in the context of String class in Java? 
+자바에서 문자열은 수정이 불가하다. 문자열 개체가 생성되면 해당 데이터 또는 상태를 변경할 수 없지만 새 문자열 개체를 생성하는 건 가능하다. 
+
+
+122. Why a String object is considered immutable in Java? 
+자바는 문자열(literal)의 개념을 사용하기 때문이다. 5개의 참조변수가 있다고 가정했을 때 모두 한 개체를 참조한다. 
+만약 하나의 참조변수의 값을 변경하면 모든 참조변수에 영향이 미치는데 이를 방지하지 위함이다. 
+
+
+123. How many objects does following code create? 
+Code: 
+String s1 = "HelloWorld";
+String s2 = " HelloWorld ";
+String s3 = " HelloWorld "; 
+
+3개. 각 변수에 해당 값이 저장된다. 
+
+
+124. How many ways are there in Java to create a String object? 
+String a = "apple" 의 일반적인 방식과 
+String b = new String("banana") 의 new를 사용해 변수를 따로 생성해서 곧바로 넣어주는 방식이 있다. 
+
+
+125. How many objects does following code create? (123과 중복. 삭제) 
+
+
+126. What is String interning? 
+String 객체는 불변이기 때문에 동일한 객체가 공유될 수 있는 특징이 있다. 
+이를 잘 활용하기 위해 동일한 문자열을 가지는 String 객체가 단 하나만 존재하도록 유지할 필요가 있는데 이러한 역할을 하는 것이 intern이다. 
+JVM 내부에서 초기에는 비어있는, 문자열 객체를 관리하는 풀(pool)을 생성한다. 
+String 객체의 intern 메서드가 호출되면 이 풀에 해당 문자열과 같은(String.equals() 반환값이 true인) 
+String 객체가 존재하는 경우 해당 객체를 반환하고, 존재하지 않는 경우 해당 객체를 풀에 추가하고 해당 객체를 반환한다. 
+
+
+127. Why Java uses String literal concept? 
+새 객체가 문자열 상수 풀에 이미 있으면 생성되지 않으므로 Java의 메모리 효율성을 높이기 위해 사용한다. 
+
+
+128. What is the basic difference between a String and StringBuffer object? 
+가장 큰 차이점은 String은 불변의 속성을 갖는다는 점이다. 
+String의 불변한 성질을 우회하기 위해 가변성을 가지는 StringBuffer와 StringBuilder를 사용해 문자열 변경을 가능케 한다. 
+
+
+129. How will you create an immutable class in Java? 
+자식 클래스를 만들 수 없도록 클래스를 final 클래스로 선언해야 한다. 
+클래스의 데이터 멤버를 비공개로 선언해야 한다(직접 액세스가 허용되지 않도록).
+클래스의 데이터 멤버는 final로 선언되어야 한다(객체 생성 후 값을 변경할 수 없음). 
+매개 변수화 된 생성자는 깊은 복사?(deep copy)를 수행하는 모든 필드를 초기화해야 한다(객체 참조로 데이터 멤버를 수정할 수 없음) 
+Getter 메서드에서 객체에 깊은 복사를 수행해야 한다(실제 개체 참조를 반환하지 않고 복사본을 반환하기 위함) 
+설정자 없음(인스턴스 변수의 값을 변경하는 옵션이 없는 경우) 
+
+
+130. What is the use of toString() method in java? 
+toString은 객체가 가지고 있는 정보나 값들을 문자열로 만들어 리턴하는 메소드이다. 
+
+
+
+ALGORITHM HOMEWORK 
+
+어떠한 수 N이 1이 될 때까지 다음의 두 과정 중 하나를 반복적으로 선택하여 
+수행하려고 한다. 단, 두 번째 연산은 N이 K로 나누어 떨어질 때만 선택할 수 있다. 
+1. N에서 1을 뺀다. 
+2. N을 K로 나눈다. 
+예를 들어 N이 17, K가 4라고 가정하자. 이때 1번의 과정을 한 번 수행하면 
+N은 16이 된다. 이후에 2번의 과정을 두 번 수행하면 N은 1이 된다. 결과적으로 
+이 경우 전체 과정을 실행한 횟수는 3이 된다. 이는 N을 1로 만드는 최소 횟수이다. 
+N과 K가 주어질 때 N이 1이 될 때까지 1번 혹은 2번의 과정을 수행해야 하는 
+최소 횟수를 구하는 프로그램을 작성하시오. 
+
+<BACKGROUND>
+- 그리디 알고리즘(탐욕법) 
+: 단순 무식하게, 탐욕적으로 문제를 푸는 알고리즘. 
+탐욕적의 의미는 현재 상황에서 지금 당장 좋은 것만 고르는 방법. 
+주어진 N에 대하여 '최대한 많이 나누기'를 수행. 
+가능하면 나누는 것이 항상 더 숫자를 빠르게 줄이는 방법 
+N이 K의 배수가 될 때까지 1씩 빼기, N을 K로 나누기 
+
+<REQUIREMENT>
+* map, int, input, split, while, print 만을 사용해 풀 것! 
+* Java로도 만들면 extra. 
+
+class onlyOne: 
+    def divide(self, a):
+        n, k = map(int, input("N, K 입력(공백으로 구분): ").split()) # N, K
+        cnt = 0 # 횟수 
+
+        while n >= 1: # n이 1보다 작거나 같을 때까지 반복 
+            if n == 1: # n이 1이면
+                return print(cnt)  # 총 횟수 출력 
+            if n % k == 0: # k로 나눠 0으로 떨어지면 
+                n = n // k # 몫을 n에 저장 
+            else: n -= 1 # 이외에는 1을 뺌 
+            cnt += 1 # 1회 지날 때마다 횟수를 1씩 더함 
+    
+    
+# N, K 공백으로 구분해 입력 받기 
+Cal = onlyOne()
+Cal.divide(a)
+
+
+// Java 
+import java.util.Scanner;
+
+class divide {
+    public static void main(String[] arg) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N 입력: ");
+        int n = sc.nextInt();
+        System.out.print("K 입력: ");
+        int k = sc.nextInt();
+        int cnt = 0; // 횟수
+
+        while (n >= 1) {
+            if (n == 1)
+                break;
+            if (n % k == 0)
+                n = n / k;
+            else
+                n -= 1;
+            cnt += 1;
+        }
+        System.out.println(cnt);
+    }
+}

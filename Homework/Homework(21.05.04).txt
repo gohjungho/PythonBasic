@@ -1,0 +1,90 @@
+111. What are the uses of Runtime class? 
+java.lang 패키지의 런타임 클래스는 외부 프로세스를 생성하는데 도움을 주는 클래스이다.
+
+
+112. What is a Nested class? 
+중첩 클래스는 클래스 안에 클래스가 있는 것을 말한다. 
+
+
+113. How many types of Nested classes are in Java? 
+4가지 형태로 구분된다. 
+1. 중첩 클래스(Inner Class): 클래스 내부에 또다른 클래스가 있는 형태. 중첩되는 클래스는 하나 이상이 될 수 있다. 클래스 관리의 효율을 높여준다. 일반 중첩 클래스 내부에서는 static과 관련된 멤버를 선언할 수 없다.
+2. 정적 중첩 클래스(Static Inner Class): 중첩 클래스 내부에서 static과 관련된 멤버를 선언할 수 있는 클래스. 클래스 이름 앞에 static 예약어가 붙는다. static 멤버를 선언할 수도 있고 static 메서드를 만들어 사용할 수 있다. 바깥 클래스의 static 멤버만 내부 클래스에서 사용할 수 있다. 
+3. 지역 중첩 클래스(Local Inner Class): 특정 메서드에 한정적인 용도로 사용하는 클래스. 접근 제한자와 지정 예약어를 사용할 수 없다. 일반 중첩 클래스와 형태가 유사하며 static 멤버를 선언할 수 없다. 객체 생성은 외부에서 할 수 없다. 
+4. 익명 중첩 클래스(Anonymous Inner Class): 기존 클래스의 특정 메서드를 오버라이딩하여 원하는 형태로 재정의, 사용하는 방식. 지역 중첩 클래스의 변형된 형태. class 예약어와 클래스명을 가지지 않고 단지 instance의 생성과 내용부의 정의만 가진다. 여기에 사용되는 중첩 클래스는 이미 기존에 존재하는 클래스여야 한다. 내부 클래스는 생성자를 만들 수 없다(생성자를 만들면 컴파일 에러 발생). 외부 멤버 중 final만 포함한다. 
+
+
+114. Why do we use Nested Classes? 
+소스의 가독성을 높이고, 유지보수를 용이하게 하기 위해 사용한다. 
+
+
+115. What is the difference between a Nested class and an Inner class in Java? 
+내부 클래스는 외부 클래스의 필드나 메소드를 자유로이 이용 가능하나 외부 클래스가 인스턴스화 된 이후부터 동작한다. 
+중첩 클래스는 외부 클래스의 static 영역에만 접근 가능하다. 외부 클래스를 인스턴스화 하지 않아도 바로 사용 가능하여 간편하다. 
+
+
+116. What is a Nested interface? 
+클래스의 멤버로 선언된 인터페이스. 해당 클래스와 긴밀한 관계를 맺는 구현 클래스를 만들기 위해 쓰인다. 특히 UI 프로그래밍에서 이벤트를 처리할 목적으로 많이 활용된다. 
+
+
+117. How can we access the non-final local variable, inside a Local Inner class? 
+메서드가 반환되는 순간 매개변수와 지역변수가 소멸한다. 그러므로 매개변수와 지역변수에 접근할 수 없다. 
+단, final로 선언된 변수의 접근은 허용된다. 접근 허용을 위해 final 변수를 로컬 내부 클래스의 인스턴스가 접근 가능한 영역(메모리의 static영역)에 복사한다. 
+메모리구조에서 클래스영역의 상수 메모리(constants pool)영역에 저장된다. 
+
+
+118. Can an Interface be defined in a Class? 
+클래스 안에 선언된 인터페이스를 중첩 인터페이스라고 한다. 
+
+
+119. Do we have to explicitly mark a Nested Interface public static? 
+로컬 클래스 또는 인터페이스에서는 접근 제한자와 static을 붙일 수 없다. 메서드 내부에서만 사용되므로 접근을 제한할 필요가 없기 때문이다. 
+로컬 클래스 내부에서는 인스턴스 필드와 메서드만 선언이 가능하고, 정적 필드와 메서드는 선언할 수 없다. 
+로컬 클래스는 메서드가 실행될 때 메서드 내에서 객체를 생성하고 사용해야 한다. 
+
+
+120. Why do we use Static Nested interface in Java? 
+해당 클래스와 긴말한 관계를 맺는 구현 클래스를 만들기 위해서이다. 주로 UI 프로그래밍에서 이벤트를 처리할 목적으로 많이 활용된다
+
+
+
+ALGORITHM HOMEWORK (#34) 
+
+철수는 회전초밥집에 갔습니다. 
+초밥집에 간 철수는 각 초밥에 점수를 매기고 낮은 점수의 순서로 초밥을 먹으려 합니다. 
+이때 n위치에 놓여진 초밥을 철수는 접시가 몇 번 지나가고 나서 먹을지 출력하세요. 
+
+1. 초밥은 놓여진 위치에서 옮겨지지 않습니다. 
+2. 지나간 초밥은 나머지 초밥이 지나간 후에 다시 돌아옵니다. 
+3. 초밥은 1개 이상 존재합니다. 
+
+예: A, B, C, D, E 초밥이 있고 각 점수가 1, 1, 3, 2, 5일 때 3번째(c초밥)을 먹게 되는 순서는 
+1인 초밥 A와 B를 먹고 다음 2인 D초밥을 먹어야 됩니다. 
+A B C D E의 순서로 접시가 도착하지만 C가 도착했을 때 먹지 못하는 상황이 옵니다. 
+2점을 주었던 D를 먼저 먹어야 C를 먹을 수 있습니다. 
+즉, A B C D E C, 접시가 5번 지나가고 먹게 됩니다. 
+
+
+# 동점수일 때 각각의 접시를 구분하지 못함. 예외처리 필요... 
+# testcase 2 결과값: 9 
+
+class dish: 
+    def solution(point, dish):
+        cnt = 0 # 초밥이 지나가는 횟수  
+        p_copy = point.copy() # 비교를 하며 바뀌는 변수. 원본 보존을 위해 복사함 
+        p_sort = sorted(point) # 값 비교를 할 point의 정렬  
+
+        i = 0    
+        while True: # 회전초밥 레일은 큐의 형식을 따름  
+            if p_sort[i] == p_copy[i]: # 포인트 값이 정렬한 값과 같으면 
+                if id(p_copy[i]) == id(point[dish - 1]): # 만약 내가 먹고자한 그 초밥인지 확인 
+                    return cnt # 지나간 횟수 반환 
+                p_sort.remove(p_sort[i]) # 먹음 
+                p_copy.remove(p_copy[i])
+            elif p_sort[i] != p_copy[i]: # 정렬한 값과 다르면 
+                p_copy.append(p_copy[i]) # 통과시킴(뒤로 보냄)  
+                p_copy.remove(p_copy[i]) 
+
+            cnt += 1 # 1씩 카운팅 
+
+print(dish.solution([1,1,3,2,5], 3)) # [1,1,3,2,5], 3, 5 / [5,2,3,1,2,5], 1, 10
