@@ -88,30 +88,15 @@ def plus(argv): # 배열 A의 모든 값을 더해 줄 함수
     return s # 더한 값 반환 
 
 def switch(n, k):
-    a = list(map(int, input("배열 A의 요소: ").split())) # 배열 입력 
-    b = list(map(int, input("배열 B의 요소: ").split())) 
-    r = 0
-    while r < k: # k번 만큼 반복 
-        tmp_a = a[0]; tmp_b = b[0] # 최소, 최대값을 저장해둘 임시변수
-        for i in range(len(a)): # 배열 A의 길이 만큼 반복 
-            if tmp_a > a[i]: 
-                tmp_a = a[i] # 최소값을 찾아 임시변수에 저장
-            if i == len(a) - 1: 
-                a.remove(tmp_a) 
-            # for문 마지막까지 돌면 임시변수에 저장해둔 값에 해당하는 값을 A에서 삭제 
-        
-        for j in range(len(b)): # 배열 B의 길이 만큼 반복
-            if tmp_b < b[j]: 
-                tmp_b = b[j] # 최대값을 찾아 임시변수에 저장
-            if j == len(b) - 1: 
-                b.remove(tmp_b) 
-            # for문 마지막까지 돌면 임시변수에 저장해둔 값에 해당하는 값을 B에서 삭제
-                
-        tmp_a, tmp_b = tmp_b, tmp_a # 임시변수끼리 교환 
-        a.append(tmp_a) # 각각 배열에 추가
-        b.append(tmp_b)  
-        r += 1   
-
+    a = list(map(int, input("배열 A의 요소: ").split())) # 배열 입력
+    b = list(map(int, input("배열 B의 요소: ").split()))
+    
+    a.sort(); b.sort(reverse=True) # 정렬. b는 역정렬 
+    
+    for i in range(k): # k번 만큼 반복 
+        if a[i] < b[i]: # a[i]의 값이 더 작으면 
+            a[i], b[i] = b[i], a[i] # 교환 
+              
     return plus(a) # 배열 A의 요소 합 반환 
 
 n, k = map(int, input("n, k의 값: ").split())

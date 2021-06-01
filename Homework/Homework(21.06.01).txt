@@ -1,0 +1,92 @@
+291. How can we make sure that Parent thread waits for termination of Child thread? 
+스레드의 우선순위를 지정해 상위 스레드를 대기시키고 하위 스레드를 먼저 실행시킨다. 
+
+
+292. How will you handle InterruptedException in Java? 
+InterruptedException은 자바 스레드의 인터럽트 매커니즘의 일부이다. 
+스레드에 하던 일을 멈추라는 신호를 보내기 위해 인터럽트를 사용한다. 
+한 스레드가 다른 스레드를 인터럽트 할 수 있고, 각 스레드는 자신이 인터럽트 되었는지 확인할 수 있다. 
+인터럽트된 스레드에서 이를 어떻게 처리해야 한다는 규칙은 없지만, 대부분의 경우 인터럽트는 하던 일을 멈추라는 신호이며, 해당 스레드는 이를 적절히 처리해야 한다. 
+
+
+293. Which intrinsic lock is acquired by a synchronized method in Java? 
+자바의 모든 객체는 lock을 가지고 있고 synchronized는 이 lock을 다루는 개념이다. 
+고유 락(intrinsic lock)은 특정 스레드가 synshronized 블록을 통해 객체에 대한 lock을 획득했다면 해당 객체에 다른 메서드의 lock을 획득한다. 
+
+
+294. Can we mark a constructor as synchronized in Java? 
+여러 생성자가 동시에 발생할 수 있을뿐만 아니라, 생성자에 대한 참조가 있는 생성자 내부의 스레드를 분기하여 동시서 문제를 얻을 수 있다. 
+
+
+295. Can we use primitive values for intrinsic locks? 
+?
+
+
+296. Do we have re-entrant property in intrinsic locks? 
+자바의 고유락은 재진입이 가능하다. 
+재진입이 가능하다는 것은 락의 획득이 호출 단위가 아닌 스레드 단위로 일어난다는 것을 의미한다. 
+이미 락을 획득한 스레드는 같은 락을 얻기 위해 대기할 필요가 없다. 
+이미 락을 갖고 있으므로, 같은 락에 대한 synchronized 블록을 만났을 때 대기없이 통과한다. 
+
+
+297. What is an atomic operation? 
+Atomic Operaton의 정의는 단순하게 Atomicity(원자성)은 깨지지 않는 성격이기에 
+즉, 중단되지 않는 연산이라고 볼 수 있다. 
+깨지지 않는 것과 중단되지 않는 것의 의미와 동일하게 사용하기도 한다. 
+
+
+298. Can we consider the statement i++ as an atomic operation in Java? 
+++연산자를 호출했을 때 다음 세 가지 연산이 순차적으로 수행된다. 
+1. 변수를 메모리에서 읽고 CPU의 캐시로 가져온다 .
+2. 증가시킨다(CPU가 연산) 
+3. 다시 메모리에 쓴다(write) 
+이는 동시성 프로그래밍에서 문제가 되는 전형적인 Read-Modift-write이다. 
+두 스레드가 동시에 같은 값을 읽고, 값을 증가시켜 저장하면, increase() 호출 횟수와 count값에 차이가 발생한다.
+동시성 문제는 결국 여러 스레드가 공유자원으로 접근하기 때문에 발생한다. 여기서 공유자원은 count 변수이다.
+동시성 문제를 해결하기 위해 count변수로 접근하는 스레드들을 제어해야한다.
+
+
+299. What are the Atomic operations in Java? 
+깨지지 않는 것과 중단되지 않는 것의 의미와 동일하게 사용하기도 한다. 
+
+
+300. Can you check if following code is thread-safe? 
+public class SingletonDoubleCheck {
+    private SingletonDoubleCheck instance = null;
+
+    public SingletonDoubleCheck getInstance() {
+        if (instance == null) {
+            synchronized (SingletonDoubleCheck.class) {
+                if (instance == null) {
+                    instance = new SingletonDoubleCheck();
+                }
+            }
+        }
+        return instance;
+    }
+}
+
+main(String[] args)이 없어 실행이 불가하다......
+
+
+
+ALGORITHM HOMEWORK 
+
+<solution> 
+
+def zigzag(a, b):
+    result = [] # 결과를 출력할 빈 리스트 
+    i = 0
+    while i < (len(b) if len(a) < len(b) else len(a)): 
+    # 둘중 길이가 더 긴 것 만큼 반복 
+        if i < len(a): # i가 a의 길이보다 작으면 
+            result.append(int(a[i])) # result에 a[i] 추가 
+        if i < len(b): # i가 b의 길이보다 작으면 
+            result.append(int(b[i])) # result에 b[i] 추가 
+        i += 1
+        
+    return result # 결과 반환 
+    
+v1 = list(input("v1 = ").split(','))
+v2 = list(input("v2 = ").split(','))
+zigzag(v1, v2)
